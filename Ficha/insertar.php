@@ -29,7 +29,7 @@ $capacidad = $_POST['capacidad'];
 
 // Insertar los valores en la tabla datos_empresa
 $sql_datos_empresa = "INSERT INTO datos(empresa, sede, departamento, nombre, nom_usuario, fecha, hora, serial, activo_fijo, ip_equipo , tipo_equipo, modelo, fabricante, nom_equipo, nom_procesador, so, ram, slot, componentes_add) 
-VALUES ('$empresa', '$sede', '$departamento', '$nombre', '$nom_usuario', '$fecha', '$hora', '$serial', '$activo_fijo', '$ip_equipo', '$tipo_equipo', '$modelo', '$fabricante', '$nom_equipo', '$nom_procesador', '$so', '$ram', '$slot', '$componentes_add')";
+VALUES ('$datos_empresa', '$sede', '$departamento', '$nombre', '$nom_usuario', '$fecha', '$hora', '$serial', '$activo_fijo', '$ip_equipo', '$tipo_equipo', '$modelo', '$fabricante', '$nom_equipo', '$nom_procesador', '$so', '$ram', '$slot', '$componentes_add')";
 
 if ($conn->query($sql_datos_empresa) === TRUE) {
     // Obtener el ID del último registro insertado en datos_empresa

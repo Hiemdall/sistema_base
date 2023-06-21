@@ -3,8 +3,10 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
-  <link rel="stylesheet" type="text/css" href="fich.css">
+    <title>Ficha tecnica</title>
+  <link rel="stylesheet" type="text/css" href="1002.css">
+  
+
   <!-- Favicon -->
   <link href="logo.png" rel="icon">
 
@@ -67,16 +69,16 @@
     
     <ul>
       
-      <li><a href="#"><i class="fa fa-fonticons" aria-hidden="true"></i> Ficha Técnica</a></li>
-      <li><a href="#"><i class="fa fa-history" aria-hidden="true"></i> Historial</a></li>
+      <li><a href="#"><i class="fa fa-fonticons" aria-hidden="true"></i>  Ficha Técnica</a></li>
+      <li><a href="../historico/"><i class="fa fa-history" aria-hidden="true"></i>  Historial</a></li>
       
-    </ul>
+    
 
     <script src="script.js"></script>
 
 
   <div class="dropdown">
-    <li class="dropbtn"><a><i class="fa fa-history" aria-hidden="true"></i> Reporte</a><li>
+    <li class="dropbtn"><a><i class="fa fa-history" aria-hidden="true"></i>  Reporte</a><li>
     <ul class="dropdown-content" style="margin-left: 20px;">
     <li><a href="#">Sede</a></li>
     <li><a href="#">Serial</a></li>
@@ -84,7 +86,8 @@
     </ul>
   </div>
 
-    
+  </ul>  
+
   </div>
     
    
@@ -255,8 +258,8 @@ $fechaActual = date('d-m-y');
 
 
     <div class="form-submit-btn">
-    <input type="submit" id="guardarBtn" name="agregar" value="Guardar"></input>
-    <input type="submit" name="editar" value="Editar"></input>
+    <input type="submit" id="guardarBtn" name="agregar" value="Guardar" style="width: 100px;  text-align: center;"></input>
+    <input type="submit" name="editar" value="Editar" style="width: 90px;   text-align: center;"></input>
     </div>
     
 
@@ -271,7 +274,7 @@ $fechaActual = date('d-m-y');
 if (isset($_POST['agregar'])) {
 // Código para manejar el registro
 //echo "Registro Guardado";
-include('web/Ficha/insertar.php');
+include('insertar.php');
 
 } else if (isset($_POST['editar'])) {
 // Código para manejar la edición de un registro
