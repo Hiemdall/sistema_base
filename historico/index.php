@@ -23,7 +23,7 @@
     <!-- Icon Font Stylesheet -->
     <link rel='stylesheet' href='https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css'> 
 <!-- Template Stylesheet -->
-<link rel="stylesheet" type="text/css" href="for.css">
+<link rel="stylesheet" type="text/css" href="1002.css">
 
 </head>
 <body>
@@ -74,7 +74,7 @@
       <li><a href="#"><i class="fa fa-fonticons" aria-hidden="true"></i> Ficha Técnica</a></li>
       <li><a href="#"><i class="fa fa-history" aria-hidden="true"></i> Historial</a></li>
       
-    </ul>
+    
 
     <script src="script.js"></script>
 
@@ -88,6 +88,7 @@
     </ul>
   </div>
 
+  </ul>
     
   </div>
     
@@ -191,7 +192,7 @@ $fechaActual = date('d-m-y');
     </select>
     </div>
 
-    <div class="user-input-box" style="width: 100% !important;">
+    <div class="user-input-box" style="width: 100% !important; margin-bottom: 20px;">
     <label for="observacion"> Diagnostico Actual:</label>
     <div class="user-input-mega-box">
     <label id="observacion" rows="4" name="observacion">sdfvk,sbadjknñlknafclansmdlkqwsdñlsñdlmsa,.dcma,.smcdña,smdñlamd,sd xñ,cvmsdañlfjmsadñlfcmñldmfcñlsadmñlsadm</label>
