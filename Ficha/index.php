@@ -4,7 +4,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Ficha tecnica</title>
-  <link rel="stylesheet" type="text/css" href="1002.css">
+  <link rel="stylesheet" type="text/css" href="1004.css">
   
 
   <!-- Favicon -->
@@ -27,8 +27,9 @@
 </head>
 <body>
   <div class="sidebar">
-    <div class="logo">
-        <img src="logo.png" alt="Logo">
+  <div class="logo"><a href="../menu_principal.php">
+        <img src="../logo.png" alt="Logo">
+        </a>
     </div>
 
     <?php
@@ -246,14 +247,7 @@ $fechaActual = date('d-m-y');
 
     <div class="user-input-box">
     <label for="nom_tec">Nombre del Técnico:</label>
-    <select class="custom-select" id="nom_tec" name="nom_tec">
-    <option value="">Nombre del Técnico:</option>
-    <option value="Denyer Bastida">Denyer Bastida</option>
-    <option value="Michael Asprilla">Michael Asprilla</option>
-    <option value="Steven Gomez">Steven Gomez</option>
-    <option value="Andrés Agudelo">Andrés Agudelo</option>
-    <option value="Heimdall Rojas">Heimdall Rojas</option>
-    </select>
+    <label class="tec" id="nom_tec" name="nom_tec"> <?php echo $username;?> </label>
     </div>
 
 
