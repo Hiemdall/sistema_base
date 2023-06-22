@@ -29,8 +29,9 @@
 <body>
 
 <div class="sidebar">
-    <div class="logo">
-        <img src="logo.png" alt="Logo">
+<div class="logo"><a href="../menu_principal.php">
+        <img src="../logo.png" alt="Logo">
+        </a>
     </div>
 
     <?php
@@ -71,7 +72,7 @@
     
     <ul>
       
-      <li><a href="#"><i class="fa fa-fonticons" aria-hidden="true"></i> Ficha Técnica</a></li>
+      <li><a href="../Ficha/index.php"><i class="fa fa-fonticons" aria-hidden="true"></i> Ficha Técnica</a></li>
       <li><a href="#"><i class="fa fa-history" aria-hidden="true"></i> Historial</a></li>
       
     
