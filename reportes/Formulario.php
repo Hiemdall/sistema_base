@@ -3,7 +3,7 @@ require_once 'dompdf/autoload.inc.php';
 use Dompdf\Dompdf;
 $dompdf = new Dompdf();
 
-$conexion = mysqli_connect("localhost", "root", "", "soporte_rso");
+$conexion = mysqli_connect("localhost", "root", "", "blockbl5_red_de_salud_oriente");
 
 
 $resultado = mysqli_query($conexion, "SELECT * FROM historial");

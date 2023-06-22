@@ -5,9 +5,31 @@
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Historiales por Sede</title>
-  <link rel="stylesheet" type="text/css" href="estilo.css">
+  <link rel="stylesheet" type="text/css" href="rep.css">
+<!-- Google Web Fonts -->
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link
+    href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500&family=Roboto:wght@500;700&display=swap"
+    rel="stylesheet">
+
+<!-- Libraries Stylesheet -->
+<link href="lib/animate/animate.min.css" rel="stylesheet">
+<link href="lib/owlcarousel/assets/owl.carousel.min.css" rel="stylesheet">
+<link href="lib/lightbox/css/lightbox.min.css" rel="stylesheet">
+
+    <!-- Icon Font Stylesheet -->
+    <link rel='stylesheet' href='https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css'> 
+<!-- Template Stylesheet -->
+<link rel="stylesheet" type="text/css" href="1002.css">
+
 </head>
 <body>
+
+<div class="container">
+
+<div class="box">
+
   <h1>Historiales por Sede</h1>
 
   <form method="post">
@@ -39,6 +61,9 @@
 
 
   </form>
+
+  </div>
+    </div> 
 
   <?php
   // Verificar si se envió el formulario
