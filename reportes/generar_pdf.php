@@ -10,7 +10,8 @@ if ($_SERVER['REQUEST_METHOD'] == 'POST') {
   // Validar que se haya seleccionado una sede
   if (!empty($sede)) {
     // Llamar al archivo de conexión a la base de datos
-    include("conexion.php");
+    include("../procesos/conexion.php");
+
 
     // Consulta en la base de datos
     $sql = "SELECT serial, empresa, sede, departamento, fecha, hora, tipo_mant, observacion, recomendaciones, nom_tec  FROM historial WHERE sede = '$sede'";

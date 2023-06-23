@@ -5,7 +5,6 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Reporte</title>
-    <link rel="stylesheet" href="rep.css">
 <!-- Google Web Fonts -->
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -28,7 +27,7 @@
 
 <div class="sidebar">
     <div class="logo"><a href="../menu_principal.php">
-        <img src="../logo.png" alt="Logo">
+        <img src="../img/logo.png" alt="Logo">
         </a>
     </div>
 
@@ -79,9 +78,9 @@
 
 
   <div class="dropdown">
-    <li class="dropbtn"><a><i class="fa fa-history" aria-hidden="true"></i> Reporte</a><li>
+    <li class="dropbtn"><a href="index.php"><i class="fa fa-history" aria-hidden="true"></i> Reporte</a><li>
     <ul class="dropdown-content" style="margin-left: 20px;">
-    <li><a href="#">Sede</a></li>
+    <li><a href="reporte_sede.php">Sede</a></li>
     <li><a href="#">Serial</a></li>
     <li><a href="#">General</a></li>
     </ul>
