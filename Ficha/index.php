@@ -226,6 +226,7 @@ $fechaActual = date('d-m-y');
     <option value="">Tipo de Equipo:</option>
     <option value="Escritorio">Escritorio</option>
     <option value="Portátil">Portátil</option>
+    <option value="Servidor">Servidor</option>
     </select>
     </div>
   
