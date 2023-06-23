@@ -6,7 +6,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Historial del Equipo</title>
     
-    <link href="logo.png" rel="icon">
+    <link href="../img/logo.png" rel="icon">
 
 <!-- Google Web Fonts -->
 <link rel="preconnect" href="https://fonts.googleapis.com">
@@ -23,7 +23,8 @@
     <!-- Icon Font Stylesheet -->
     <link rel='stylesheet' href='https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css'> 
 <!-- Template Stylesheet -->
-<link rel="stylesheet" type="text/css" href="1002.css">
+<link rel="stylesheet" type="text/css" href="../css/sidebar.css">
+<link rel="stylesheet" type="text/css" href="../css/formularios.css">
 
 </head>
 <body>
@@ -77,7 +78,7 @@
       
     
 
-    <script src="script.js"></script>
+    <script src="../js/script.js"></script>
 
 
   <div class="dropdown">

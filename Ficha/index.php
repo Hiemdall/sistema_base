@@ -4,11 +4,12 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Ficha tecnica</title>
-  <link rel="stylesheet" type="text/css" href="1004.css">
+  <link rel="stylesheet" type="text/css" href="../css/sidebar.css">
+  <link rel="stylesheet" type="text/css" href="../css/formularios.css">
   
 
   <!-- Favicon -->
-  <link href="logo.png" rel="icon">
+  <link href="../img/logo.png" rel="icon">
 
 <!-- Google Web Fonts -->
 <link rel="preconnect" href="https://fonts.googleapis.com">
@@ -75,7 +76,7 @@
       
     
 
-    <script src="script.js"></script>
+    <script src="../js/script.js"></script>
 
 
   <div class="dropdown">

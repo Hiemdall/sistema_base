@@ -9,8 +9,8 @@
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Quicksand:wght@400;700&display=swap" rel="stylesheet">
-    <link rel="stylesheet" href="css/normalize.css">
-    <link rel="stylesheet" href="css/1.css">
+    <link rel="stylesheet" href="css/login.css">
+
 </head>
 
 <body>
@@ -18,10 +18,10 @@
     <div class="contenedor-formulario contenedor">
         <div class="imagen-formulario">
         </div>
-        <form action="proceso_login.php" method="post" class="formulario">
+        <form action="./procesos/proceso_login.php" method="post" class="formulario">
             <div class="texto-formulario">
                 <article>
-                <img src="logo.png" alt="logo" class="logo">
+                <img src="./img/logo.png" alt="logo" class="logo">
                 </article>
                 <p>Inicia sesión con tu cuenta</p>
             </div>
@@ -34,15 +34,11 @@
             <option value="">Seleccionar Usuario</option>
             <?php
             // Conexión local
-            include("combo_cargo.php");
+            include("../Sistema-base/procesos/combo_cargo.php");
             ?>
              </select>
 
             </div>
-
-
-
-
 
             <div class="user-input-box">
                 <label for="password">Contraseña</label>

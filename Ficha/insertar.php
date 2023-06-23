@@ -1,7 +1,7 @@
 <?php
 //session_start(); // Iniciar la sesión
 // Llamar a el archivo conexion.php para hacer la conexion a la base de datos
-include("conexion.php");
+include("../procesos/conexion.php");
 
 
         

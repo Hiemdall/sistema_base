@@ -21,7 +21,7 @@
     <!-- Icon Font Stylesheet -->
     <link rel='stylesheet' href='https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css'> 
 <!-- Template Stylesheet -->
-<link rel="stylesheet" type="text/css" href="1002.css">
+<link rel="stylesheet" type="text/css" href="../css/sidebar.css">
 
 </head>
 <body>
@@ -75,7 +75,7 @@
       
     
 
-    <script src="script.js"></script>
+    <script src="../js/script.js"></script>
 
 
   <div class="dropdown">
@@ -107,25 +107,6 @@
 
 
   </div>  
-
-<div class="container">
-
-<div class="box">
-
-<h1>Menú de Reportes</h1>
-    <form method="post">
-
-        <input type="submit" name="sede" value="Sede">
-        <input type="submit" name="serial" value="Serial">
-        <input type="submit" name="pdf" value="PDF">
-
-    </form>
- 
-
-    </div>
-    </div> 
-
-
 
 <!-- Acciones de los botones -->
   <?php

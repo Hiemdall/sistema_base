@@ -1,6 +1,6 @@
 <?php
 // Llamar al archivo de conexión a la base de datos
-include("conexion.php");
+include("../procesos/conexion.php");
 
 // Verificar si se envió el formulario
 if ($_SERVER['REQUEST_METHOD'] == 'POST') {

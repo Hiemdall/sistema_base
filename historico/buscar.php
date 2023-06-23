@@ -1,6 +1,6 @@
 <?php
 // Conexión local
-include("conexion.php");
+include("../procesos/conexion.php");
 
 /* Obtener el valor del parámetro "input" enviado a través de una solicitud POST.
    Asignar el valor a la variable $serial para su posterior procesamiento. */

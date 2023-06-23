@@ -13,8 +13,8 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title></title>
-  <link rel="stylesheet" type="text/css" href="css/3.css">
-  <link rel="stylesheet" href="css/2014.css">
+  <link rel="stylesheet" type="text/css" href="css/sidebar.css">
+  <link rel="stylesheet" href="css/menu-i.css">
   <!-- Favicon -->
   <link href="logo.png" rel="icon">
 
@@ -36,7 +36,7 @@
 <body>
   <div class="sidebar">
     <div class="logo">
-        <img src="logo.png" alt="Logo">
+        <img src="./img/logo.png" alt="Logo">
     </div>
 
     <div class="usuario">
@@ -85,17 +85,15 @@
 
 
     
-    <div class="card">
-        <a href="Ficha">
-        <img src="img/Denyer.jpeg" alt="">
+    <a href="Ficha"><div class="card">
+        
         <h4>Ficha tecnica de Computadoras</h4>
         <p>Caracteristicas</p>
-        </a>
-    </div>
+        
+    </div></a>
 
     <div class="card">
         <a href="historico">
-        <img src="img/Denyer.jpeg" alt="">
         <h4>Historial de Computadoras</h4>
         <p>Caracteristicas</p>
         </a>
@@ -103,7 +101,6 @@
 
     <div class="card">
         <a href="/">
-        <img src="img/Denyer.jpeg" alt="">
         <h4>Ficha tecnica de Impresoras</h4>
         <p>Caracteristicas</p>
         </a>
@@ -111,7 +108,6 @@
 
     <div class="card">
         <a href="/">
-        <img src="img/Denyer.jpeg" alt="">
         <h4>Historial de Impresoras</h4>
         <p>Caracteristicas</p>
         </a>
@@ -119,7 +115,6 @@
 
     <div class="card">
         <a href="./reportes/">
-        <img src="img/Denyer.jpeg" alt="">
         <h4>Reporte</h4>
         <p>Caracteristicas</p>
         </a>
@@ -127,7 +122,6 @@
 
     <div class="card">
         <a href="/">
-        <img src="img/Denyer.jpeg" alt="">
         <h4>Configuraciones</h4>
         <p>Caracteristicas</p>
         </a>
@@ -135,7 +129,6 @@
 
     <div class="card">
         <a href="/">
-        <img src="img/Denyer.jpeg" alt="">
         <h4>Estadisticas</h4>
         <p>Caracteristicas</p>
         </a>
