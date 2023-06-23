@@ -7,7 +7,7 @@ include("conexion.php");
 $serial = $_POST["input"];
 
 // Consulta en la base de datos
-$sql_datos = "SELECT empresa, sede, departamento, nom_usuario, fecha, hora, tipo_equipo, activo_fijo, modelo, fabricante, nom_equipo, nom_procesador, ram, slot, nombre, ip_equipo ,componentes_add, so
+$sql_datos = "SELECT empresa, sede, departamento, nom_usuario, fecha, hora, tipo_equipo, activo_fijo, modelo, fabricante, nom_equipo, nom_procesador, ram, slot, nombre, ip_equipo ,componentes_add, so, disco
 FROM datos WHERE serial = '$serial'";
 
 // Consulta en la tabla "disco"
@@ -49,10 +49,11 @@ if (mysqli_num_rows($result_datos) > 0 && mysqli_num_rows($result_disco) > 0) {
         $slot = $row_datos["slot"];
         $nombre = $row_datos["nombre"];
         $componentes_add = $row_datos["componentes_add"];
+        $capacidad = $row_datos["disco"];
 
         // Variables de la tabla "disco"
-        $puntero = $row_disco["puntero"];
-        $capacidad = $row_disco["capacidad"];
+        //$puntero = $row_disco["puntero"];
+       // $capacidad = $row_disco["capacidad"];
         
                   
     // "name del input formulario  -> Variable que contiene el campo de la base de datos"
@@ -76,9 +77,8 @@ if (mysqli_num_rows($result_datos) > 0 && mysqli_num_rows($result_disco) > 0) {
         "so" => $so,
         "ram" => $ram,
         "slot" => $slot,
-        "nom_tec" => $nombre,
+        "nombre" => $nombre,
         "comp_add" => $componentes_add,
-        "puntero" => $puntero,
         "capacidad" => $capacidad,
         
               
@@ -112,9 +112,8 @@ if (mysqli_num_rows($result_datos) > 0 && mysqli_num_rows($result_disco) > 0) {
        "so" => "",
        "ram" => "",
        "slot" => "",
-       "nom_tec" => "",
+       "nombre" => "",
        "comp_add" => "",
-       "puntero" => "",
        "capacidad" => "",
        
     );

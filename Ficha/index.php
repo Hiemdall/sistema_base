@@ -81,7 +81,7 @@
   <div class="dropdown">
     <li class="dropbtn"><a><i class="fa fa-history" aria-hidden="true"></i>  Reporte</a><li>
     <ul class="dropdown-content" style="margin-left: 20px;">
-    <li><a href="#">Sede</a></li>
+    <li><a href="../reportes/heimdall.html">Sede</a></li>
     <li><a href="#">Serial</a></li>
     <li><a href="#">General</a></li>
     </ul>
@@ -110,6 +110,9 @@
 
 <div style="margin-left: 50px;">  
 
+
+
+<!-- *****************************           Formulario de ficha técnica           *****************************************-->
 <div class="container">
 
 <form method="post">
@@ -244,12 +247,11 @@ $fechaActual = date('d-m-y');
     <label for="comp_add">Componentes Adicionales:</label>
     <textarea id="comp_add" rows="4" name="comp_add"></textarea>  
     </div>
-
+    
     <div class="user-input-box">
-    <label for="nom_tec">Nombre del Técnico:</label>
-    <label class="tec" id="nom_tec" name="nom_tec"> <?php echo $username;?> </label>
+    <label for="nombre">Nombre Técnico:</label>
+    <input type="text" id="nombre" name="nombre" readonly>
     </div>
-
 
     <div class="form-submit-btn">
     <input type="submit" id="guardarBtn" name="agregar" value="Guardar" style="width: 100px;  text-align: center;"></input>
@@ -313,14 +315,14 @@ if (this.readyState === XMLHttpRequest.DONE && this.status === 200) {
     document.getElementById("nom_procesador").value = response.nom_procesador;
     document.getElementById("ram").value = response.ram;
     document.getElementById("slot").value = response.slot;
-    document.getElementById("puntero").value = response.puntero;
+    document.getElementById("nombre").value = response.nombre;
     document.getElementById("capacidad").value = response.capacidad;
     document.getElementById("comp_add").value = response.comp_add;
 
-    //**************************** Select sistema operativo *************************** */
-    // Este código se utiliza para cargar el combobox con los valores de la base de datos
-    // Obtener el elemento select
-    const selectElementSo = document.getElementById("so");
+
+//**************************** Select sistema operativo *************************** */
+ // Obtener el elemento select
+ const selectElementSo = document.getElementById("so");
    // Buscar si existe una opción con el valor de response.tipo_equipo
    let optionSo = selectElementSo.querySelector(`option[value="${response.so}"]`);
    if (!optionSo) {
@@ -333,7 +335,7 @@ if (this.readyState === XMLHttpRequest.DONE && this.status === 200) {
   // Establecer el atributo selected de la opción
   optionSo.selected = true;
 
-    //**************************** Select tipo de equipo *************************** */
+  //**************************** Select tipo de equipo *************************** */
     // Este código se utiliza para cargar el combobox con los valores de la base de datos
     // Obtener el elemento select
     const selectElementTipoEquipo = document.getElementById("tipo_equipo");
@@ -348,23 +350,7 @@ if (this.readyState === XMLHttpRequest.DONE && this.status === 200) {
   }   
   // Establecer el atributo selected de la opción
   optionTipoEquipo.selected = true;
-
- //**************************** Select técnico *************************** */
- // Obtener el elemento select
- const selectElementNomTec = document.getElementById("nom_tec");
- // Buscar si existe una opción con el valor de response.nom_tec
- let optionNomTec = selectElementNomTec.querySelector(`option[value="${response.nom_tec}"]`);
- if (!optionNomTec) {
- // Si no existe la opción, agregar una nueva
- optionNomTec = document.createElement("option");
- optionNomTec.value = response.nom_tec;
- optionNomTec.textContent = response.nom_tec;
- selectElementNomTec.appendChild(optionNomTec);
-}
-// Establecer el atributo selected de la opción
-optionNomTec.selected = true;
-    // Deshabilitar el botón de guardar si el equipo existe
-
+  
   }
 }
 };

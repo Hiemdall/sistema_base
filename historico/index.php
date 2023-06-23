@@ -83,7 +83,7 @@
   <div class="dropdown">
     <li class="dropbtn"><a><i class="fa fa-history" aria-hidden="true"></i> Reporte</a><li>
     <ul class="dropdown-content" style="margin-left: 20px;">
-    <li><a href="#">Sede</a></li>
+    <li><a href="../reportes/heimdall.html">Sede</a></li>
     <li><a href="#">Serial</a></li>
     <li><a href="#">General</a></li>
     </ul>

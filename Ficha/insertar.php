@@ -46,6 +46,10 @@ VALUES ('$datos_empresa', '$sede', '$departamento', '$username', '$nom_usuario',
 if ($conn->query($sql_datos_empresa) === TRUE) {
     // Obtener el ID del último registro insertado en datos_empresa
     $empresa_id = $conn->insert_id;
+    // Generar una alerta
+    $mensaje = "Ficha técnica guardada correctamente";
+    echo '<script>alert("'. $mensaje . '");</script>';
+
     /*
     // Insertar los valores en la tabla disco
     $sql_disco = "INSERT INTO disco (capacidad, serial_id) VALUES ('$capacidad', '$serial')";
