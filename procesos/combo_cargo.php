@@ -1,6 +1,6 @@
 <?php
       // Llamar a el archivo conexion.php para hacer la conexión a la base de datos
-      include("conexion.php");
+      include("../procesos/conexion.php");
 
      // Ejecutar una consulta para obtener los datos de los cargos
      $sql = "SELECT * FROM tbl_users";

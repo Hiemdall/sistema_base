@@ -29,7 +29,7 @@
 <body>
   <div class="sidebar">
   <div class="logo"><a href="../menu_principal.php">
-        <img src="../logo.png" alt="Logo">
+        <img src="../img/logo.png" alt="Logo">
         </a>
     </div>
 

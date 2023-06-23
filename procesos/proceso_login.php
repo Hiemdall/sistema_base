@@ -1,5 +1,5 @@
 <?php
-include 'conexion.php'; 
+include("../procesos/conexion.php");
 
 // Obtener el nombre de usuario y la contraseña del formulario de inicio de sesión
 $username = $_POST['username'];

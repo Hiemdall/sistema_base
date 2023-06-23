@@ -101,14 +101,7 @@
 
     <div class="card">
         <a href="/">
-        <h4>Ficha tecnica de Impresoras</h4>
-        <p>Caracteristicas</p>
-        </a>
-    </div>
-
-    <div class="card">
-        <a href="/">
-        <h4>Historial de Impresoras</h4>
+        <h4>Impresoras</h4>
         <p>Caracteristicas</p>
         </a>
     </div>
