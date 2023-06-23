@@ -5,10 +5,9 @@ $dompdf = new Dompdf();
 
 $conexion = mysqli_connect("localhost", "root", "", "blockbl5_red_de_salud_oriente");
 
+$sede = $_POST['sede'];
+$resultado = mysqli_query($conexion, "SELECT * FROM historial WHERE sede = '$sede'");
 
-$resultado = mysqli_query($conexion, "SELECT * FROM historial");
-$adi = "rgergjkj";
-$visita = "999";
 
 
 $html = '<html>';

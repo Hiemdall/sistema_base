@@ -2,8 +2,8 @@
 $servername = "localhost";
 $username = "root";
 $password = "";
-//$dbname = "blockbl5_red_de_salud_oriente";
-$dbname = "soporte_rso";
+$dbname = "blockbl5_red_de_salud_oriente";
+//$dbname = "soporte_rso";
 
 // Crear conexi贸n
 $conn = new mysqli($servername, $username, $password, $dbname);
