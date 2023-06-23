@@ -12,9 +12,9 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
-  <link rel="stylesheet" type="text/css" href="css/1002.css">
-  <link rel="stylesheet" href="css/2004.css">
+    <title></title>
+  <link rel="stylesheet" type="text/css" href="css/3.css">
+  <link rel="stylesheet" href="css/2014.css">
   <!-- Favicon -->
   <link href="logo.png" rel="icon">
 
@@ -66,7 +66,8 @@
     
 
     <div class="exit">
-    <a href="form_login.php"><i class='fa fa-sign-out'> Cerrar Seccion</i></a>
+    <a href="#"><i class="fa fa-cog" aria-hidden="true"></i></a>
+    <a href="form_login.php"><i class='fa fa-sign-out'> Cerrar Secciòn</i></a>
 
     <footer> 
       <a href="/">Desarrollado por Integratic © 2023</a>
@@ -117,7 +118,7 @@
     </div>
 
     <div class="card">
-        <a href="/">
+        <a href="./reportes/">
         <img src="img/Denyer.jpeg" alt="">
         <h4>Reporte</h4>
         <p>Caracteristicas</p>
