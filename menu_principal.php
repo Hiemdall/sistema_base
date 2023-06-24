@@ -79,7 +79,7 @@
     <div style="margin-left: 50px;">
 
     <div class="container">
-    <h1 class="title">Menù Principal</h1>
+    <h1 class="title">Menú Principal</h1>
 
     <div class="cards">
 
