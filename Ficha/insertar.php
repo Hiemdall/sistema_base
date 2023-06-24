@@ -1,8 +1,8 @@
 <?php
 //session_start(); // Iniciar la sesión
 // Llamar a el archivo conexion.php para hacer la conexion a la base de datos
+//include("conexion.php");
 include("../procesos/conexion.php");
-
 
         
 // Obtener los valores de la sesión
@@ -11,12 +11,10 @@ $access_level = $_SESSION['access_level'];
 $email = $_SESSION['email'];
 $archivo = $_SESSION['archivo'];
 
-
 // Obtener los valores del formulario
 $datos_empresa = $_POST['empresa'];
 $sede = $_POST['sede'];
 $departamento = $_POST['departamento'];
-//$nombre = $_POST['nom_tec'];
 $nom_usuario = $_POST['nom_usuario'];
 $fecha = $_POST['fecha'];
 $hora = $_POST['hora'];
@@ -33,8 +31,6 @@ $ram = $_POST['ram'];
 $slot = $_POST['slot'];
 $disco = $_POST['capacidad'];
 $componentes_add = $_POST['comp_add'];
-
-
 
 
 // Insertar los valores en la tabla datos_empresa
