@@ -35,8 +35,9 @@
 </head>
 <body>
   <div class="sidebar">
-    <div class="logo">
+  <div class="logo"><a href="#">
         <img src="./img/logo.png" alt="Logo">
+        </a>
     </div>
 
     <div class="usuario">
@@ -86,46 +87,40 @@
 
     
     <a href="Ficha"><div class="card">
-        
+        <i class="fa fa-file-text fa-5x" aria-hidden="true" style="color: white;"></i>
         <h4>Ficha tecnica de Computadoras</h4>
         <p>Caracteristicas</p>
-        
     </div></a>
 
-    <div class="card">
-        <a href="historico">
+    <a href="historico"><div class="card">
+        <i class="fa fa-history fa-5x" aria-hidden="true" style="color: white;"></i>
         <h4>Historial de Computadoras</h4>
         <p>Caracteristicas</p>
-        </a>
-    </div>
+    </div></a>
 
-    <div class="card">
-        <a href="/">
+    <a href="/"><div class="card">
+        <i class="fa fa-print fa-5x" aria-hidden="true" style="color: white;"></i>
         <h4>Impresoras</h4>
         <p>Caracteristicas</p>
-        </a>
-    </div>
+    </div></a>
 
-    <div class="card">
-        <a href="./reportes/">
+    <a href="./reportes/"><div class="card">
+        <i class="fa fa-files-o fa-5x" aria-hidden="true" style="color: white;"></i>
         <h4>Reporte</h4>
         <p>Caracteristicas</p>
-        </a>
-    </div>
+    </div></a>
 
-    <div class="card">
-        <a href="/">
+    <a href="/"><div class="card">
+        <i class="fa fa-cog fa-5x" aria-hidden="true" style="color: white;"></i>
         <h4>Configuraciones</h4>
         <p>Caracteristicas</p>
-        </a>
-    </div>
+    </div></a>
 
-    <div class="card">
-        <a href="/">
+    <a href="/"><div class="card">
+        <i class="fa fa-bar-chart fa-5x" aria-hidden="true" style="color: white;"></i>
         <h4>Estadisticas</h4>
         <p>Caracteristicas</p>
-        </a>
-    </div>
+    </div></a>
 
     </div>
 

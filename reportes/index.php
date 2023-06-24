@@ -81,7 +81,7 @@
     <li class="dropbtn"><a href="index.php"><i class="fa fa-history" aria-hidden="true"></i> Reporte</a><li>
     <ul class="dropdown-content" style="margin-left: 20px;">
     <li><a href="reporte_sede.php">Sede</a></li>
-    <li><a href="#">Serial</a></li>
+    <li><a href="reporte_general.php">Serial</a></li>
     <li><a href="#">General</a></li>
     </ul>
   </div>

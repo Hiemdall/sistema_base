@@ -1,11 +1,11 @@
 <?php
     // Verificar si se ha enviado el formulario para generar el PDF
-    if ($_SERVER['REQUEST_METHOD'] == 'POST' && isset($_POST['Formulario'])) {
+    if ($_SERVER['REQUEST_METHOD'] == 'POST' && isset($_POST['formulario'])) {
     // Obtener el valor de la sede seleccionada
     $sede = $_POST['sede'];
 
     // Redirigir al archivo generar_pdf.php y pasar la sede como parámetro
-    header('Location: Formulario.php?sede=' . urlencode($sede));
+    header('Location: formulario.php?sede=' . urlencode($sede));
     exit();
     }
     ?>
@@ -55,7 +55,7 @@
     <input type="submit" name="buscar" value="Buscar">
 
     <?php if ($_SERVER['REQUEST_METHOD'] == 'POST' && isset($_POST['sede'])): ?>
-    <button type="submit" name="Formulario">Generar PDF</button>
+    <button type="submit" name="formulario">Generar PDF</button>
     <?php endif; ?>
 
 
@@ -72,7 +72,7 @@
     // Validar que se haya seleccionado una sede
     if (!empty($sede)) {
       // Llamar al archivo de conexión a la base de datos
-      include("conexion.php");
+      include("./procesos/conexion.php");
 
       // Consulta en la base de datos
       $sql = "SELECT serial, empresa, sede, departamento, fecha, hora, tipo_mant, observacion, recomendaciones, nom_tec  FROM historial WHERE sede = '$sede'";

@@ -34,7 +34,7 @@
             <option value="">Seleccionar Usuario</option>
             <?php
             // Conexión local
-            include("../Sistema-base/procesos/combo_cargo.php");
+            include("./procesos/combo_cargo.php");
             ?>
              </select>
 

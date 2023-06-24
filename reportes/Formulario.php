@@ -5,10 +5,10 @@ $dompdf = new Dompdf();
 
 $conexion = mysqli_connect("localhost", "root", "", "blockbl5_red_de_salud_oriente");
 
+
 $sede = $_POST['sede'];
-$resultado = mysqli_query($conexion, "SELECT * FROM historial");
-
-
+$sql = "SELECT serial, empresa, sede, departamento, fecha, hora, tipo_mant, observacion, recomendaciones, nom_tec  FROM historial WHERE sede = '$sede'";
+$resultado = mysqli_query($conn, $sql);
 
 $html = '<html>';
 $html = '<head>
@@ -137,7 +137,7 @@ img{
 while ($fila = mysqli_fetch_assoc($resultado)) {
     $html .= '
     <body>
-
+  <img src="logo_form.jpg" alt="" class="logo_form">
   <p class="empresa">'. $fila['empresa'] .'</p>
   <p class="sede">'. $fila['sede'] .'</p>
   <p class="fecha">'. $fila['fecha'] .'</p>
