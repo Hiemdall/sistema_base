@@ -1,6 +1,7 @@
 <?php
 // Conexión local
 include("../procesos/conexion.php");
+//include("conexion.php");
 
 /* Obtener el valor del parámetro "input" enviado a través de una solicitud POST.
    Asignar el valor a la variable $serial para su posterior procesamiento. */
@@ -11,8 +12,8 @@ $sql_datos = "SELECT empresa, sede, departamento, nom_usuario, fecha, hora, tipo
 FROM datos WHERE serial = '$serial'";
 
 // Consulta en la tabla "disco"
-$sql_disco = "SELECT puntero, capacidad, serial_id
-FROM disco WHERE serial_id = '$serial'";
+//$sql_disco = "SELECT puntero, capacidad, serial_id
+//FROM disco WHERE serial_id = '$serial'";
 
 //Con una sola tabla
 //$result = mysqli_query($conn, $sql);
@@ -23,11 +24,11 @@ FROM disco WHERE serial_id = '$serial'";
 $result_datos = mysqli_query($conn, $sql_datos);
 
 // Ejecutar la consulta en la tabla "disco"
-$result_disco = mysqli_query($conn, $sql_disco);
+//$result_disco = mysqli_query($conn, $sql_disco);
 
-if (mysqli_num_rows($result_datos) > 0 && mysqli_num_rows($result_disco) > 0) {
+if (mysqli_num_rows($result_datos) > 0 ) {  //&& mysqli_num_rows($result_disco) > 0
     $row_datos = mysqli_fetch_assoc($result_datos);
-    $row_disco = mysqli_fetch_assoc($result_disco);
+    //$row_disco = mysqli_fetch_assoc($result_disco);
     
 
     //Variable   ->     Campo (BD)

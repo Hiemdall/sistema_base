@@ -2,6 +2,12 @@
 // Llamar al archivo de conexión a la base de datos
 include("../procesos/conexion.php");
 
+// Obtener los valores de la sesión
+$username = $_SESSION['username'];
+$access_level = $_SESSION['access_level'];
+$email = $_SESSION['email'];
+$archivo = $_SESSION['archivo'];
+
 // Verificar si se envió el formulario
 if ($_SERVER['REQUEST_METHOD'] == 'POST') {
   // Obtener los valores del formulario
@@ -20,14 +26,13 @@ if ($_SERVER['REQUEST_METHOD'] == 'POST') {
   $so = $_POST['so'];
   $ram = $_POST['ram'];
   $slot = $_POST['slot'];
-  $nom_tec = $_POST['nombre'];
   $disco = $_POST['capacidad'];
   $componentes_add = $_POST['comp_add'];
 
   // Realizar la consulta para actualizar los campos
   $sql_datos = "UPDATE datos SET empresa='$empresa', sede='$sede', departamento='$departamento', nom_usuario='$nom_usuario', tipo_equipo='$tipo_equipo', 
   activo_fijo='$activo_fijo', ip_equipo='$ip_equipo', modelo='$modelo', fabricante='$fabricante', nom_equipo='$nom_equipo', nom_procesador='$nom_procesador', so='$so', ram='$ram', 
-  slot='$slot', nombre='$nom_tec', disco='$disco', componentes_add='$componentes_add' WHERE serial='$serial'";
+  slot='$slot', nombre='$username', disco='$disco', componentes_add='$componentes_add' WHERE serial='$serial'";
 
   // Ejecutar la consulta SQL
   if (mysqli_query($conn, $sql_datos)) {
