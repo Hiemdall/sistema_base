@@ -1,14 +1,3 @@
-<?php
-    // Verificar si se ha enviado el formulario para generar el PDF
-    if ($_SERVER['REQUEST_METHOD'] == 'POST' && isset($_POST['formulario'])) {
-    // Obtener el valor de la sede seleccionada
-    $sede = $_POST['sede'];
-
-    // Redirigir al archivo generar_pdf.php y pasar la sede como parámetro
-    header('Location: formulario.php?sede=' . urlencode($sede));
-    exit();
-    }
-    ?>
 <!DOCTYPE html>
 <html lang="es">
 <head>
@@ -120,34 +109,48 @@
   </div>  
 
 <div style="margin-left: 50px;">  
- <div class="container">
+
+<div class="container">
+
   <div class="box-sede">
-   <h1>Historiales por Sede</h1>
-   <form method="post">
-     <label for="sede">Seleccionar Sede:</label>
-     <select id="sede" name="sede">
-      <option value="">Seleccione una sede</option>
-      <option value="Charco Azul">Charco Azul</option>
-      <option value="Comuneros II">Comuneros II</option>
-      <option value="Calipso">Calipso</option>
-      <!-- Agrega más opciones según tus necesidades -->
-     </select>
 
-     <div class="form-submit-btn">
-     <input type="submit" name="buscar" value="Buscar">
-     </div>
+  <h1>Historiales por Sede</h1>
 
-     <div class="form-submit-btn">
-     <?php if ($_SERVER['REQUEST_METHOD'] == 'POST' && isset($_POST['sede'])): ?>
-    
-     <button type="submit" name="formulario">Generar PDF</button>
-    
-     <?php endif; ?>
-     </div>
+<form method="post">
+  <label for="sede">Seleccionar Sede:</label>
+  <select id="sede" name="sede">
+    <option value="">Seleccione una sede</option>
+    <option value="Charco Azul">Charco Azul</option>
+    <option value="Comuneros II">Comuneros II</option>
+    <option value="Calipso">Calipso</option>
+    <!-- Agrega más opciones según tus necesidades -->
+  </select>
+  <input type="submit" name="buscar" value="Buscar">
 
-    <?php
-    // Verificar si se envió el formulario
-    if ($_SERVER['REQUEST_METHOD'] == 'POST') {
+  <?php if ($_SERVER['REQUEST_METHOD'] == 'POST' && isset($_POST['sede'])): ?>
+  <button type="submit" name="Formulario">Generar PDF</button>
+  <?php endif; ?>
+
+  <?php
+  // Verificar si se ha enviado el formulario para generar el PDF
+  if ($_SERVER['REQUEST_METHOD'] == 'POST' && isset($_POST['Formulario'])) {
+  // Obtener el valor de la sede seleccionada
+  $sede = $_POST['sede'];
+
+  // Redirigir al archivo generar_pdf.php y pasar la sede como parámetro
+  header('Location: Formulario.php?sede=' . urlencode($sede));
+  exit();
+  }
+  ?>
+
+
+</form>
+
+<div class="pantalla" style="width: 500px; height: 500px;">
+
+  <?php
+  // Verificar si se envió el formulario
+  if ($_SERVER['REQUEST_METHOD'] == 'POST') {
     // Obtener el valor de la sede seleccionada
     $sede = $_POST['sede'];
 
@@ -204,13 +207,15 @@
     } else {
       echo 'Por favor, seleccione una sede.';
     }
-    }
-    ?>
+  }
+  ?>
 
-   
-   </form>
-  </div>
- </div>
 </div>
+
+  </div>
+
+</div>
+  </div> 
+
 </body>
 </html>
