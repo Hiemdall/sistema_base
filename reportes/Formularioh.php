@@ -6,7 +6,7 @@ $dompdf = new Dompdf();
 $conexion = mysqli_connect("localhost", "root", "", "blockbl5_red_de_salud_oriente");
 
 
-$resultado = mysqli_query($conexion, "SELECT * FROM datos WHERE sede = 'Charco Azul'");
+$resultado = mysqli_query($conexion, "SELECT * FROM historial WHERE sede = 'Charco Azul'");
 
 
 $html = '<html>';
@@ -17,17 +17,17 @@ $html = '<head>
 <title>Document</title>
 <style>
 body{
-background-image: url(../img/Formato_ficha.jpg);
-
+background-image: url(FichaHistorica.jpg);
+background-size: cover; 
 background-repeat: no-repeat;
-background-size: 99.9%;
+background-size: 100%;
 }
 
 .empresa{
   position: absolute;
   margin: 0;
-  top: 142px;
-  left: 12%;
+  top: 15px;
+  left: 16%;
 }
 
 .fecha{
@@ -56,35 +56,28 @@ background-size: 99.9%;
   position: absolute;
   margin: 0;
   top: 142px;
-  left: 57%;
+  left: 8%;
 }
 
 .departamento{
   position: absolute;
   margin: 0;
-  top: 172px;
-  left: 19%;
-}
-
-.activo{
-  position: absolute;
-  margin: 0;
-  top: 239px;
-  left: 16%;
+  top: 142px;
+  left: 61%;
 }
 
 .tecnico{
   position: absolute;
   margin: 0;
-  top: 572px;
+  top: 172px;
   left: 12%;
 }
 
 .usuario{
   position: absolute;
   margin: 0;
-  top: 173px;
-  left: 59%;
+  top: 172px;
+  left: 55%;
 }
 
 .tip_mant{
@@ -111,8 +104,8 @@ background-size: 99.9%;
 .adi{
   position: absolute;
   margin: 0;
-  top: 44%;
-  left: 1%;
+  top: 20%;
+  left: 2%;
 }
 
 img{
@@ -143,21 +136,25 @@ img{
 while ($fila = mysqli_fetch_assoc($resultado)) {
     $html .= '
     <body>
+  <img src="logo_form.jpg" alt="" class="logo_form">
   <p class="empresa">'. $fila['empresa'] .'</p>
   <p class="sede">'. $fila['sede'] .'</p>
   <p class="fecha">'. $fila['fecha'] .'</p>
   <p class="hora">'. $fila['hora'] .'</p>
   <p class="serial"> Serial: '. $fila['serial'] .'</p>
   <p class="departamento">'. $fila['departamento'] .'</p>
-  <p class="tip_mant">Tipo de Mantenimiento:</p>
-  <p class="usuario">'. $fila['nom_usuario'] .'</p>
-  <p class="activo">'. $fila['activo_fijo'] .'</p>
+  <p class="tip_mant">Tipo de Mantenimiento: '. $fila['tipo_mant'] .'</p>
+  <p class="visita">N.visita: '.$fila['visita'].'</p>
+  <p class="observacion"> Observaciones: '. $fila['observacion'] .'</p>
+  <p class="recomendaciones"> Recomendaciones: '. $fila['recomendaciones'] .'</p>
   <p class="adi">Acepto utilizar este servicio únicamente para fines legales y de acuerdo con las leyes y regulaciones aplicables.
-  Entiendo y cionada en este formulario es precisa y verídica.
-  Reconozco que cualquier uso indebido o fraudulento de este servicio puede resultar en la cancelación de mi cuenta y posibles accionetos términos de servicio en cualquier momento y es mi responsabilidad revisarlos periódicamente.</p>
-  <p class="tecnico">'. $fila['nombre'] .'</p>';
+  Entiendo y acepto que toda la información proporcionada en este formulario es precisa y verídica.
+  Reconozco que cualquier uso indebido o fraudulento de este servicio puede resultar en la cancelación de mi cuenta y posibles acciones legales.
+  Acepto que la información proporcionada en este formulario puede ser utilizada y procesada de acuerdo con la política de privacidad.
+  Entiendo se reserva el derecho de modificar o actualizar estos términos de servicio en cualquier momento y es mi responsabilidad revisarlos periódicamente.</p>
+  <p class="tecnico">'. $fila['nom_tec'] .'</p>';
 
-  $tecnico = $fila['nombre'];
+  $tecnico = $fila['nom_tec'];
   $imagenFirma = obtenerImagenFirma($tecnico);
  
   $html .= '<img src="' . $imagenFirma . '" alt="Firma del técnico" style="width: 150px; height: 75px;">';
