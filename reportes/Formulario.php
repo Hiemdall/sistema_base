@@ -6,8 +6,7 @@ $dompdf = new Dompdf();
 $conexion = mysqli_connect("localhost", "root", "", "blockbl5_red_de_salud_oriente");
 
 
-$resultado = mysqli_query($conexion, "SELECT * FROM datos WHERE sede = 'Charco Azul'");
-
+$resultado = mysqli_query($conexion, "SELECT * FROM datos WHERE sede = '$sede'");
 
 $html = '<html>';
 $html = '<head>
@@ -17,10 +16,10 @@ $html = '<head>
 <title>Document</title>
 <style>
 body{
-background-image: url(../img/Formato_ficha.jpg);
-
+background-image: url(../img/Fichatecnica.jpeg);
+background-size: cover; 
 background-repeat: no-repeat;
-background-size: 99.9%;
+background-size: 100%;
 }
 
 .empresa{

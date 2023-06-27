@@ -23,11 +23,11 @@ FROM disco WHERE serial_id = '$serial'";
 $result_datos = mysqli_query($conn, $sql_datos);
 
 // Ejecutar la consulta en la tabla "disco"
-$result_disco = mysqli_query($conn, $sql_disco);
+//$result_disco = mysqli_query($conn, $sql_disco);
 
-if (mysqli_num_rows($result_datos) > 0 && mysqli_num_rows($result_disco) > 0) {
+if (mysqli_num_rows($result_datos) > 0) {      //&& mysqli_num_rows($result_disco) > 0
     $row_datos = mysqli_fetch_assoc($result_datos);
-    $row_disco = mysqli_fetch_assoc($result_disco);
+    //$row_disco = mysqli_fetch_assoc($result_disco);
     
 
     //Variable   ->     Campo (BD)
