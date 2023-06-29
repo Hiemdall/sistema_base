@@ -172,12 +172,6 @@ $fechaActual = date('d-m-y');
     <input type="text" id="departamento" name="departamento" placeholder="Departamento:">
     </div>
 
-    <!-- <div class="user-input-box">
-    <label for="usuario" style="margin: 5px;">Usuario:</label>
-    <input type="text" id="nom_usuario" name="nom_usuario" placeholder="Nombre de Usuario:">
-    </div>
-    --> 
-
     <div class="user-input-box">
     <label for="activo" style="margin: 5px;">Activo Fijo:</label>
     <input type="text" id="activo_fijo" name="activo_fijo" placeholder="Activo Fijo:">
@@ -193,37 +187,10 @@ $fechaActual = date('d-m-y');
     <input type="text" id="fabricante" name="fabricante" placeholder="Fabricante:">
     </div>
      
-    <!--
-    <div class="user-input-box">
-    <label for="n_equipo" style="margin: 5px;">Nombre de Equipo:</label>
-    <input type="text" id="nom_equipo" name="nom_equipo" placeholder="Nombre de Equipo:">
-    </div>
-    -->
-
     <div class="user-input-box">
     <label for="IP" style="margin: 5px;">IP del Equipo:</label>
     <input type="text" id="ip_equipo" name="ip_equipo" placeholder="IP del Equipo:">
     </div>
-
-    <!--
-    <div class="user-input-box">
-    <label for="procesador" style="margin: 5px;">Procesador:</label>
-    <input type="text" id="nom_procesador" name="nom_procesador" placeholder="Nombre de Procesador:">
-    </div>
-
-    <div class="user-input-box">
-    <label for="" style="margin: 5px;">Sistema Operaivo:</label>
-    <select class="custom-select" id="so" name="so">
-    <option value="">Sistema Operaivo:</option>
-    <option value="Windows 10">Windows 10</option>
-    <option value="Windows 11">Windows 11</option>
-    <option value="Windows 8">Windows 8</option>
-    <option value="Windows 7">Windows 7</option>
-    <option value="Linux">Linux</option>
-    <option value="macOS">macOS</option>
-    </select>
-    </div>
-    -->
 
     <div class="user-input-box">
     <label for="" style="margin: 5px;">Tipo de Equipo:</label>
@@ -237,33 +204,6 @@ $fechaActual = date('d-m-y');
     </select>
     </div>
     
-    <!--
-    <div class="user-input-box">
-    <label for="ram">RAM:</label>
-    <input type="text" id="ram" name="ram" placeholder="8">
-    </div>
-
-    <div class="user-input-box">
-    <label for="slot">Slot:</label>
-    <input type="text" id="slot" name="slot" placeholder="2">
-    </div>
-
-    <div class="user-input-box">
-    <label for="capacidad">Disco:</label>
-    <input type="text" id="capacidad" name="capacidad" placeholder="500 GB HDD">
-    </div>
-
-    <div class="user-input-box" style="width: 100% !important;">
-    <label for="comp_add">Componentes Adicionales:</label>
-    <textarea id="comp_add" rows="4" name="comp_add"></textarea>  
-    </div>
-    
-    <div class="user-input-box">
-    <label for="nombre">Nombre Técnico:</label>
-    <input type="text" id="nombre" name="nombre" readonly>
-    </div>
-    -->
-
     <div class="user-input-box" style="width: 100% !important;">
     <label for="observacion"> Diagnostico:</label>
     <textarea id="observacion" rows="4" name="observacion"></textarea>
@@ -308,16 +248,8 @@ include('insertar.php');
 include('modificar.php');
 //echo "Registro Editado";
 //include('modificar.php');
-
-
-} else if (isset($_POST['eliminar'])) {
-// Código para manejar la eliminación de un registro
-echo "Registro eliminado";
-// include('eliminar.php');
-}
+} 
 ?>
-
-
 
 <!--Script para buscar en tiempo real la cedula, llamando el archivo buscar.php-->
 <script>
@@ -335,39 +267,20 @@ if (this.readyState === XMLHttpRequest.DONE && this.status === 200) {
     document.getElementById("empresa").value = response.empresa;
     document.getElementById("sede").value = response.sede;
     document.getElementById("departamento").value = response.departamento;
-    document.getElementById("nom_usuario").value = response.nom_usuario;
     document.getElementById("fecha").value = response.fecha;
     document.getElementById("hora").value = response.hora;
     document.getElementById("activo_fijo").value = response.activo_fijo;
     document.getElementById("modelo").value = response.modelo;
     document.getElementById("fabricante").value = response.fabricante;
-    document.getElementById("nom_equipo").value = response.nom_equipo;
     document.getElementById("ip_equipo").value = response.ip_equipo;
-    document.getElementById("nom_procesador").value = response.nom_procesador;
-    document.getElementById("ram").value = response.ram;
-    document.getElementById("slot").value = response.slot;
-    document.getElementById("nombre").value = response.nombre;
-    document.getElementById("capacidad").value = response.capacidad;
-    document.getElementById("comp_add").value = response.comp_add;
+    document.getElementById("observacion").value = response.observacion;
+    document.getElementById("recomendaciones").value = response.recomendaciones;
+    
 
 
-//**************************** Select sistema operativo *************************** */
- // Obtener el elemento select
- const selectElementSo = document.getElementById("so");
-   // Buscar si existe una opción con el valor de response.tipo_equipo
-   let optionSo = selectElementSo.querySelector(`option[value="${response.so}"]`);
-   if (!optionSo) {
-   // Si no existe la opción, agregar una nueva
-   optionSo = document.createElement("option");
-   optionSo.value = response.so;
-   optionSo.textContent = response.so;
-   selectElementSo.appendChild(optionSo);
-  }   
-  // Establecer el atributo selected de la opción
-  optionSo.selected = true;
 
-  //**************************** Select tipo de equipo *************************** */
-    // Este código se utiliza para cargar el combobox con los valores de la base de datos
+   //**************************** Select tipo de equipo *************************** */
+   // Este código se utiliza para cargar el combobox con los valores de la base de datos
     // Obtener el elemento select
     const selectElementTipoEquipo = document.getElementById("tipo_equipo");
    // Buscar si existe una opción con el valor de response.tipo_equipo
@@ -381,6 +294,7 @@ if (this.readyState === XMLHttpRequest.DONE && this.status === 200) {
   }   
   // Establecer el atributo selected de la opción
   optionTipoEquipo.selected = true;
+
   
   }
 }
