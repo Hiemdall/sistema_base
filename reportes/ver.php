@@ -1,57 +1,4 @@
-
-<!DOCTYPE html>
-<html lang="es">
-<head>
-  <meta charset="UTF-8">
-  <meta http-equiv="X-UA-Compatible" content="IE=edge">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Reporte General</title>
-  <link rel="stylesheet" type="text/css" href="rep.css">
-<!-- Google Web Fonts -->
-<link rel="preconnect" href="https://fonts.googleapis.com">
-<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link
-    href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500&family=Roboto:wght@500;700&display=swap"
-    rel="stylesheet">
-
-<!-- Libraries Stylesheet -->
-<link href="lib/animate/animate.min.css" rel="stylesheet">
-<link href="lib/owlcarousel/assets/owl.carousel.min.css" rel="stylesheet">
-<link href="lib/lightbox/css/lightbox.min.css" rel="stylesheet">
-
-    <!-- Icon Font Stylesheet -->
-    <link rel='stylesheet' href='https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css'> 
-<!-- Template Stylesheet -->
-<link rel="stylesheet" type="text/css" href="1002.css">
-
-</head>
-<body>
-
-<div class="container">
-
-<div class="box">
-
-  <h1>Historiales por Sede</h1>
-
-  <form method="post">
-    <label for="sede">Seleccionar Sede:</label>
-    <select id="sede" name="sede">
-      <option value="">Seleccione una sede</option>
-      <option value="Charco Azul">Charco Azul</option>
-      <option value="Comuneros II">Comuneros II</option>
-      <option value="Calipso">Calipso</option>
-      <!-- Agrega más opciones según tus necesidades -->
-    </select>
-    <input type="submit" name="buscar" value="Buscar">
-
-    <?php if ($_SERVER['REQUEST_METHOD'] == 'POST' && isset($_POST['sede'])): ?>
-    <button type="submit" name="formulario">Generar PDF</button>
-    <?php endif; ?>
-
-
-
-
- 
+<div class="pantalla" style="width: 500px; height: 500px;">
 
   <?php
   // Verificar si se envió el formulario
@@ -62,7 +9,7 @@
     // Validar que se haya seleccionado una sede
     if (!empty($sede)) {
       // Llamar al archivo de conexión a la base de datos
-      include("./procesos/conexion.php");
+      include("../procesos/conexion.php");
 
       // Consulta en la base de datos
       $sql = "SELECT serial, empresa, sede, departamento, fecha, hora, tipo_mant, observacion, recomendaciones, nom_tec  FROM historial WHERE sede = '$sede'";
@@ -115,11 +62,4 @@
   }
   ?>
 
-</form>
-
 </div>
-  </div> 
-
-</body>
-</html>
-
