@@ -73,22 +73,24 @@
       
       <li><a href="#"><i class="fa fa-fonticons" aria-hidden="true"></i>  Ficha Técnica</a></li>
       <li><a href="../historico/"><i class="fa fa-history" aria-hidden="true"></i>  Historial</a></li>
+      <li><a href="../impresora/"><i class="fa fa-print" aria-hidden="true" style="color: white;"></i>  Impresora</a></li>
       
     
 
     <script src="../js/script.js"></script>
 
 
-  <div class="dropdown">
-    <li class="dropbtn"><a><i class="fa fa-history" aria-hidden="true"></i>  Reporte</a><li>
+    <div class="dropdown">
+    <li class="dropbtn"><a href="index.php"><i class="fa fa-history" aria-hidden="true"></i> Reporte</a><li>
     <ul class="dropdown-content" style="margin-left: 20px;">
-    <li><a href="../reportes/heimdall.html">Sede</a></li>
-    <li><a href="#">Serial</a></li>
+    <li><a href="../reportes/reporte_sede.php">Ficha por sede</a></li>
+    <li><a href="../reportes/reporte_sede_historial.php">historial por Sede</a></li>
+
+
+    <li><a href="reporte_general.php">Serial</a></li>
     <li><a href="#">General</a></li>
     </ul>
-  </div>
-
-  </ul>  
+    </div>
 
   </div>
     

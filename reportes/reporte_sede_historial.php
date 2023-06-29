@@ -1,10 +1,10 @@
 <!DOCTYPE html>
 <html lang="es">
 <head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Reporte</title>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Sede Historial</title>
 <!-- Google Web Fonts -->
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -21,6 +21,7 @@
     <link rel='stylesheet' href='https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css'> 
 <!-- Template Stylesheet -->
 <link rel="stylesheet" type="text/css" href="../css/sidebar.css">
+<link rel="stylesheet" type="text/css" href="../css/formularios.css">
 
 </head>
 <body>
@@ -77,7 +78,7 @@
     <script src="../js/script.js"></script>
 
 
-  <div class="dropdown">
+    <div class="dropdown">
     <li class="dropbtn"><a href="index.php"><i class="fa fa-history" aria-hidden="true"></i> Reporte</a><li>
     <ul class="dropdown-content" style="margin-left: 20px;">
     <li><a href="reporte_sede.php">Ficha por sede</a></li>
@@ -87,7 +88,7 @@
     <li><a href="reporte_general.php">Serial</a></li>
     <li><a href="#">General</a></li>
     </ul>
-  </div>
+    </div>
 
   </ul>
     
@@ -109,6 +110,39 @@
 
 
   </div>  
+
+<div style="margin-left: 50px;">  
+
+<div class="container">
+
+  <div class="box-sede">
+
+  <h1>Historiales por Sede</h1>
+
+<form method="post" action="historial.php">
+  <label for="sede">Seleccionar Sede:</label>
+  <select id="sede" name="sede">
+    <option value="">Seleccione una sede</option>
+    <option value="Charco Azul">Charco Azul</option>
+    <option value="Comuneros II">Comuneros II</option>
+    <option value="Calipso">Calipso</option>
+    <!-- Agrega más opciones según tus necesidades -->
+  </select>
+  <div class="form-submit-btn">
+  <button type="submit" name="Formulario">Generar PDF</button>
+  </div>
+
+
+</form>
+
+
+
+
+
+  </div>
+
+</div>
+  </div> 
 
 </body>
 </html>
