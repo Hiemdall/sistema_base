@@ -98,7 +98,7 @@
         <p>Caracteristicas</p>
     </div></a>
 
-    <a href="/"><div class="card">
+    <a href="impresora"><div class="card">
         <i class="fa fa-print fa-5x" aria-hidden="true" style="color: white;"></i>
         <h4>Impresoras</h4>
         <p>Caracteristicas</p>
