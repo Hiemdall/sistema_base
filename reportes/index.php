@@ -80,9 +80,22 @@
   <div class="dropdown">
     <li class="dropbtn"><a href="index.php"><i class="fa fa-history" aria-hidden="true"></i> Reporte</a><li>
     <ul class="dropdown-content" style="margin-left: 20px;">
-    <li><a href="reporte_sede.php">Sede</a></li>
+
+
+    <div class="dropdown">
+    <li class="dropbtn"><a>Sede</a></li>
+    <ul class="dropdown-content" style="margin-left: 20px;">
+    <li><a href="">Ficha tecnica</a></li>
+    <li><a href="">Historial</a></li>
+    </ul>
+    </div>
+
+
+
     <li><a href="reporte_general.php">Serial</a></li>
+
     <li><a href="#">General</a></li>
+
     </ul>
   </div>
 
