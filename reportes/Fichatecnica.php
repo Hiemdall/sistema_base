@@ -177,8 +177,8 @@ if ($_SERVER['REQUEST_METHOD'] == 'POST') {
           .img{
             position: absolute;
             margin: 0;
-            top: 81%;
-            left: 12%;
+            top: 83%;
+            left: 35%;
             width: 150px;
             height: 75px;
           }

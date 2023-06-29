@@ -88,7 +88,7 @@
     
     <a href="Ficha"><div class="card">
         <i class="fa fa-file-text fa-5x" aria-hidden="true" style="color: white;"></i>
-        <h4>Ficha tecnica de Computadoras</h4>
+        <h4>Ficha técnica de Computadoras</h4>
         <p>Caracteristicas</p>
     </div></a>
 

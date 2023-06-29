@@ -11,10 +11,10 @@ $sql = "SELECT empresa, sede, departamento
 FROM datos WHERE serial = '$serial'";
 
 //Con una sola tabla
-
 $result = mysqli_query($conn, $sql);
 if (mysqli_num_rows($result) > 0) {
     $row = mysqli_fetch_assoc($result);
+
     //Variable   ->     Campo (BD)
         $empresa = $row["empresa"];
         $sede = $row["sede"];
