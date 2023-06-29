@@ -207,7 +207,7 @@ if ($_SERVER['REQUEST_METHOD'] == 'POST') {
 
     .observacion{
       position: absolute;
-      top: 430px;
+      top: 225px;
       left: 2%;
       width: 660px;
       overflow: hidden;
@@ -216,7 +216,16 @@ if ($_SERVER['REQUEST_METHOD'] == 'POST') {
 
     .recomendaciones{
       position: absolute;
-      top: 430px;
+      top: 378px;
+      left: 2%;
+      width: 660px;
+      overflow: hidden;
+      word-wrap: break-word;
+    }
+
+    .repuesto{
+      position: absolute;
+      top: 555px;
       left: 2%;
       width: 660px;
       overflow: hidden;
@@ -242,6 +251,7 @@ if ($_SERVER['REQUEST_METHOD'] == 'POST') {
       $html .= '<p class="visita">'. $fila['visita'] .'</p>';
       $html .= '<p class="observacion">'. $fila['observacion'] .'</p>';
       $html .= '<p class="recomendaciones">'. $fila['recomendaciones'] .'</p>';
+      $html .= '<p class="repuesto">Repuestos: '. $fila['repuesto'] .'</p>';
 
   
       $tecnico = $fila['nom_tec'];

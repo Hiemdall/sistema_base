@@ -73,7 +73,7 @@
       
       <li><a href="#"><i class="fa fa-fonticons" aria-hidden="true"></i>  Ficha Técnica</a></li>
       <li><a href="../historico/"><i class="fa fa-history" aria-hidden="true"></i>  Historial</a></li>
-      <li><a href="../impresora/"><i class="fa fa-fonticons" aria-hidden="true"></i>  Impresoras</a></li>
+      <li><a href="../impresora/"><i class="fa fa-print" aria-hidden="true" style="color: white;"></i>  Impresora</a></li>
       
     
 
