@@ -11,27 +11,10 @@ $sql = "SELECT empresa, sede, departamento
 FROM datos WHERE serial = '$serial'";
 
 //Con una sola tabla
-<<<<<<< HEAD
-//$result = mysqli_query($conn, $sql);
-//if (mysqli_num_rows($result) > 0) {
-    //$row = mysqli_fetch_assoc($result);
-
-// Ejecutar la consulta en la tabla "datos"
-$result_datos = mysqli_query($conn, $sql_datos);
-
-// Ejecutar la consulta en la tabla "disco"
-//$result_disco = mysqli_query($conn, $sql_disco);
-
-if (mysqli_num_rows($result_datos) > 0) {      //&& mysqli_num_rows($result_disco) > 0
-    $row_datos = mysqli_fetch_assoc($result_datos);
-    //$row_disco = mysqli_fetch_assoc($result_disco);
-    
-
-=======
 $result = mysqli_query($conn, $sql);
 if (mysqli_num_rows($result) > 0) {
     $row = mysqli_fetch_assoc($result);
->>>>>>> 732dba2d994fd78731f2e3729fbb1136bc4a5e53
+
     //Variable   ->     Campo (BD)
         $empresa = $row["empresa"];
         $sede = $row["sede"];
