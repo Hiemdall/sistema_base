@@ -190,15 +190,8 @@ $fechaActual = date('d-m-y');
     </select>
     </div>
 
-    <div class="user-input-box" style="width: 100% !important; margin-bottom: 20px;">
-    <label for="observacion"> Diagnostico Actual:</label>
-    <div class="user-input-mega-box">
-    <label id="observacion" rows="4" name="observacion">sdfvk,sbadjknñlknafclansmdlkqwsdñlsñdlmsa,.dcma,.smcdña,smdñlamd,sd xñ,cvmsdañlfjmsadñlfcmñldmfcñlsadmñlsadm</label>
-    </div>
-    </div>
-
     <div class="user-input-box" style="width: 100% !important;">
-    <label for="observacion"> Diagnostico Actual:</label>
+    <label for="observacion"> Diagnostico:</label>
     <textarea id="observacion" rows="4" name="observacion"></textarea>
     </div>
 
@@ -206,27 +199,26 @@ $fechaActual = date('d-m-y');
     <label for="recomendaciones">Recomendaciones:</label>
     <textarea id="recomendaciones" rows="4" name="recomendaciones"></textarea>
     </div>
-    <!--
-    <label for="nom_tec">Nombre del Técnico:</label>
-    <input type="text" id="nom_tec" name="nom_tec">-->
+    
+    <div class="user-input-box" style="width: 20% !important;">
+    <label for="repuesto">Repuesto:</label>
+    <input type="checkbox" id="repuesto" name="repuesto" value="1">
+    </div>
 
-
-
-<!-- Botones-->
+    <div class="user-input-box" style="width: 100% !important;">
+    <label for="detalle"></label>
+    <textarea id="detalle" rows="4" name="detalle"></textarea>
+    </div>
+    
+    <!-- Botones-->
     <div class="form-submit-btn">
     <input type="submit" id="guardarBtn" name="agregar" value="Guardar"></input>
-    <input type="submit" name="editar" value="Editar"></input>
     </div>
     
 </div>
 
 </div>
 </form>
-
-  
-
-
-     
 
 <!-- Acciones de los botones -->
   <?php
