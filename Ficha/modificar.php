@@ -36,10 +36,16 @@ if ($_SERVER['REQUEST_METHOD'] == 'POST') {
 
   // Ejecutar la consulta SQL
   if (mysqli_query($conn, $sql_datos)) {
-     // Generar una alerta
-     $mensaje = "Los campos se actualizaron correctamente";
-     echo '<script>alert("' . $mensaje . '");</script>';
-     //echo "Los campos se actualizaron correctamente";
+    // Generar una alerta con SweetAlert 
+   echo '<script>';
+   echo 'Swal.fire({';
+   echo '  icon: "success",';
+   echo '  title: "Los Campos se Actualizaron Correctamente",';
+   echo '  showConfirmButton: true';
+   //echo '  confirmButtonColor: "#ff0000"';
+   echo '});';
+   echo '</script>';
+     
  } else {
      echo "Error al actualizar los campos: " . mysqli_error($conn);
  }
