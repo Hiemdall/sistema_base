@@ -212,8 +212,8 @@ if ($_SERVER['REQUEST_METHOD'] == 'POST') {
       $html .= '<p class="modelo">Modelo: '. $fila['modelo'] .'</p>';
       $html .= '<p class="fabricante">Fabricante:  '. $fila['fabricante'] .' </p>';
       $html .= '<p class="equipo">Nombre del equipo:  '. $fila['nom_equipo'] .' </p>';
-      $html .= '<p class="ip">Ip del equipo: '. $fila['nom_procesador'] .'</p>';
-      $html .= '<p class="procesador">Procesador: '. $fila['ip_equipo'] .'</p>';
+      $html .= '<p class="ip">Ip del equipo: '. $fila['ip_equipo'] .'</p>';
+      $html .= '<p class="procesador">Procesador: '. $fila['nom_procesador'] .'</p>';
       $html .= '<p class="disco">Disco: '. $fila['disco'] .'</p>';
       $html .= '<p class="tequipo">Tipo de equipo: '. $fila['tipo_equipo'] .' </p>';
       $html .= '<p class="ram">Ram: '. $fila['ram'] .' </p>';
