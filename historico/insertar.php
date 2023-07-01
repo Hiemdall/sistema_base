@@ -25,10 +25,16 @@ $sql = "INSERT INTO historial (empresa, sede, departamento, serial, fecha, hora,
        VALUES ('$empresa', '$sede', '$departamento', '$serial', '$fecha', '$hora', '$tipo_mant', ".VISITA.", '$observacion', '$recomendaciones','$username','$repuesto','$detalle')";        
 
 if ($conn->query($sql) === TRUE) {
-  // Generar una alerta
-  $mensaje = "Los datos se insertaron correctamente.";
-  echo '<script>alert("'. $mensaje . '");</script>';
- // echo "Los datos se insertaron correctamente.";
+   // Generar una alerta con SweetAlert 
+   echo '<script>';
+   echo 'Swal.fire({';
+   echo '  icon: "success",';
+   echo '  title: "El historico fue Guardado Correctamente",';
+   echo '  showConfirmButton: true';
+   //echo '  confirmButtonColor: "#ff0000"';
+   echo '});';
+   echo '</script>';
+ 
 } else {
   echo "Error al insertar los datos: " . $conn->error;
 }
