@@ -7,9 +7,16 @@ include("../procesos/conexion.php");
    Asignar el valor a la variable $serial para su posterior procesamiento. */
 $serial = $_POST["input"];
 
+// Verificar si el checkbox está marcado
+$repuesto = isset($_POST['repuesto']) ? 1 : 0;
+
 // Consulta en la base de datos
 //$sql_datos = "SELECT empresa, sede, departamento, nom_tec, fecha, hora, serial, activo_fijo, ip_equipo , tipo_equipo, modelo, fabricante, visita, diagnostico, recomendaciones, repuesto, detalle_repuesto
-$sql_datos = "SELECT * FROM tbl_impresora WHERE serial = '$serial'";
+
+//$sql_datos = "SELECT * FROM tbl_impresora WHERE serial = '$serial'";
+// Consulta en la base de datos
+$sql_datos = "SELECT *, IF(repuesto = 1, 'Sí', 'No') AS repuesto FROM tbl_impresora WHERE serial = '$serial'";
+
 
 // Ejecutar la consulta en la tabla "datos"
 $result_datos = mysqli_query($conn, $sql_datos);
@@ -30,6 +37,8 @@ if (mysqli_num_rows($result_datos) > 0 ) {
         $tipo_equipo = $row_datos["tipo_equipo"];
         $observacion = $row_datos["diagnostico"];
         $recomendaciones = $row_datos["recomendaciones"];
+        $repuesto = $row_datos["repuesto"];
+        $detalle = $row_datos["detalle_repuesto"];
         
        
     // "name del input  -> Variable que contiene el campo de la base de datos"
@@ -47,8 +56,9 @@ if (mysqli_num_rows($result_datos) > 0 ) {
         "tipo_equipo" => $tipo_equipo,
         "observacion" => $observacion,
         "recomendaciones" => $recomendaciones,
-        
-              
+        "repuesto" => $repuesto,
+        "detalle" => $detalle,
+                   
     );
     
     echo json_encode($data);
@@ -75,6 +85,8 @@ if (mysqli_num_rows($result_datos) > 0 ) {
        "tipo_equipo" => "",
        "observacion" => "",
        "recomendaciones" => "",
+       "repuesto" => "",
+       "detalle" => "",
     );
     echo json_encode($data);
     //echo "El valor ingresado no existe en la base de datos";

@@ -277,7 +277,15 @@ if (this.readyState === XMLHttpRequest.DONE && this.status === 200) {
     document.getElementById("ip_equipo").value = response.ip_equipo;
     document.getElementById("observacion").value = response.observacion;
     document.getElementById("recomendaciones").value = response.recomendaciones;
+    document.getElementById("detalle").value = response.detalle;
     
+    // Checkbox de repuesto
+    var repuestoCheckbox = document.getElementById("repuesto");
+        if (response.repuesto === "Sí") {
+          repuestoCheckbox.checked = true;
+        } else {
+          repuestoCheckbox.checked = false;
+        }
 
 
 
