@@ -5,15 +5,8 @@ $dompdf = new Dompdf();
 
 $conexion = mysqli_connect("localhost", "root", "", "blockbl5_red_de_salud_oriente");
 
-if ($_SERVER['REQUEST_METHOD'] == 'POST') {
-  // Obtener el valor de la sede seleccionada
-  $sede = $_POST['sede'];
-
-  // Validar que se haya seleccionado una sede
-  if (!empty($sede)) {
-    // Modificar la consulta en la base de datos para filtrar por sede
-    $consulta = "SELECT * FROM historial WHERE sede = '$sede'";
-    $resultado = mysqli_query($conexion, $consulta);
+$consulta = "SELECT * FROM historial";
+$resultado = mysqli_query($conexion, $consulta);
 
     $html = '<html>';
     $html .= '<head>
@@ -230,17 +223,14 @@ if ($_SERVER['REQUEST_METHOD'] == 'POST') {
       width: 660px;
       overflow: hidden;
       word-wrap: break-word;
-    }
+    }  
+    </style>
 
-    
-
-  
-  </style>
-</head>';
+    </head>';
   
     while ($fila = mysqli_fetch_assoc($resultado)) {
       $html .= '<body>';
-     
+      
       $html .= '<p class="empresa">Empresa: '. $fila['empresa'] .'</p>';
       $html .= '<p class="sede">Sede: '. $fila['sede'] .'</p>';
       $html .= '<p class="fecha">Fecha: '. $fila['fecha'] .'</p>';
@@ -263,35 +253,34 @@ if ($_SERVER['REQUEST_METHOD'] == 'POST') {
       $html .= '<div style="page-break-after: always;"></div>';
   
       $html .= '</body>';
-    }
-  
-    $html .= '</html>';
-  
-    $dompdf->setPaper('A4', 'portrait');
-    $dompdf->loadHtml($html);
-    $dompdf->render();
-  
-    // Descargar el archivo PDF
-    $dompdf->stream("Historico.pdf", ["Attachment" => false]);
-  }
-}
+
+    }    
+     $html .= '</html>';
+
+$dompdf->setPaper('A4', 'portrait');
+$dompdf->loadHtml($html);
+$dompdf->render();
+
+// Descargar el archivo PDF
+$dompdf->stream("Historico.pdf", ["Attachment" => false]);
+
 
 function obtenerImagenFirma($tecnico) {
   // Puedes implementar tu lógica para obtener la ruta de la imagen de firma según el técnico
   // Por ejemplo, puedes tener un array asociativo donde las claves sean los nombres de los técnicos y los valores sean las rutas de las imágenes
   $firmaTecnicos = array(
-    'Heimdall Rojas' => 'firmas/heimdall.jpg',
-    'Denyer Bastida' => 'firmas/denyer.jpg',
+      'Heimdall Rojas' => 'firmas/heimdall.jpg',
+      'Denyer Bastida' => 'firmas/denyer.jpg',
      
-    // Agrega más técnicos y sus respectivas rutas de imagen aquí
+      // Agrega más técnicos y sus respectivas rutas de imagen aquí
   );
 
   // Verificar si el técnico tiene una firma definida
   if (isset($firmaTecnicos[$tecnico])) {
-    return $firmaTecnicos[$tecnico];
+      return $firmaTecnicos[$tecnico];
   } else {
-    // Si no hay una firma definida para el técnico, puedes retornar una imagen por defecto o una ruta genérica
-    return 'ruta/a/la/imagen/firma_default.jpg';
+      // Si no hay una firma definida para el técnico, puedes retornar una imagen por defecto o una ruta genérica
+      return 'ruta/a/la/imagen/firma_default.jpg';
   }
 }
 ?>
