@@ -28,10 +28,11 @@ if (isset($_POST['repuesto'])) {
     $repuesto = ""; // Valor por defecto si no se proporciona el campo repuesto
 }
 $detalle = $_POST["detalle"];
+$tipo_mant = $_POST["tipo_mant"];
 
 // Insertar los valores en la tabla datos_empresa
-$sql_datos_empresa = "INSERT INTO tbl_impresora(empresa, sede, departamento, nom_tec, fecha, hora, serial, activo_fijo, ip_equipo , tipo_equipo, modelo, fabricante, visita, diagnostico, recomendaciones, repuesto, detalle_repuesto) 
-VALUES ('$datos_empresa', '$sede', '$departamento', '$username','$fecha', '$hora', '$serial', '$activo_fijo', '$ip_equipo', '$tipo_equipo', '$modelo', '$fabricante',".VISITA.", '$observacion', '$recomendaciones', '$repuesto', '$detalle')";
+$sql_datos_empresa = "INSERT INTO tbl_impresora(empresa, sede, departamento, nom_tec, fecha, hora, serial, activo_fijo, ip_equipo , tipo_equipo, modelo, fabricante, visita, diagnostico, recomendaciones, repuesto, detalle_repuesto ,tipo_mant) 
+VALUES ('$datos_empresa', '$sede', '$departamento', '$username','$fecha', '$hora', '$serial', '$activo_fijo', '$ip_equipo', '$tipo_equipo', '$modelo', '$fabricante',".VISITA.", '$observacion', '$recomendaciones', '$repuesto', '$detalle', '$tipo_mant')";
 
 if ($conn->query($sql_datos_empresa) === TRUE) {
     // Obtener el ID del último registro insertado en datos_empresa

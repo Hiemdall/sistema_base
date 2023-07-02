@@ -14,7 +14,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title></title>
   <link rel="stylesheet" type="text/css" href="css/sidebar.css">
-  <link rel="stylesheet" href="css/menub.css">
+  <link rel="stylesheet" href="css/menu5.css">
   <!-- Favicon -->
   <link href="logo.png" rel="icon">
 
@@ -64,7 +64,7 @@
 
     <div class="exit">
     <!--<a href="#"><i class="fa fa-cog" aria-hidden="true"></i></a>-->
-    <a href="form_login.php"><i class='fa fa-sign-out'> Cerrar Secciòn</i></a>
+    <a href="form_login.php"><i class='fa fa-sign-out'> Cerrar Sección</i></a>
 
     <footer> 
       <a href="/">Desarrollado por Integratic © 2023</a>
@@ -106,7 +106,7 @@
      
     </div></a>
 
-    <a href="/"><div class="card">
+    <a href="./vistas/index.php"><div class="card">
         <i class="fa fa-eye fa-5x" aria-hidden="true" style="color: white;"></i>
         <h4>Vistas</h4>
     </div></a>
@@ -114,7 +114,7 @@
 
     <a href="/"><div class="card">
         <i class="fa fa-bar-chart fa-5x" aria-hidden="true" style="color: white;"></i>
-        <h4>Estadisticas</h4>
+        <h4>Estadísticas</h4>
       
     </div></a>
 

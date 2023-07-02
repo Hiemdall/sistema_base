@@ -11,11 +11,7 @@ body{
     height: 100vh
 }
 
-.poup{
-    display: grid;
-    width: 20px;
-    height: 20px;
-}
+
 
 .popup {
   display: none;
@@ -61,23 +57,6 @@ body{
     width: 100%;
     align-items: center;
     justify-content: end;
-}
-
-.btos .poup{
-    background-color: white;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    margin-right: 0;
-}
-
-.btos .poup i{
-    color: rgba(13, 75, 133, 1);
-}
-
-
-.btn{
-    display: flex;
-    justify-content: end;
+    
 }
 

@@ -72,7 +72,7 @@
       
       <li><a href="../Ficha/index.php"><i class="fa fa-fonticons" aria-hidden="true"></i> Ficha Técnica</a></li>
       <li><a href="#"><i class="fa fa-history" aria-hidden="true"></i> Historial</a></li>
-      <li><a href="../impresora/"><i class="fa fa-print" aria-hidden="true"></i>  Impresora</a></li>
+      <li><a href="../impresora/"><i class="fa fa-print" aria-hidden="true"></i>  Dispositivos</a></li>
       <li><a href="/"><i class="fa fa-eye" aria-hidden="true"></i>  Vistas</a></li>
     
 
@@ -104,7 +104,8 @@
 
     <div class="exit">
     <!--<a href="#"><i class="fa fa-cog" aria-hidden="true"></i></a>-->
-    <a href="form_login.php"><i class='fa fa-sign-out'> Cerrar Secciòn</i></a>
+    <a href="../form_login.php"><i class='fa fa-sign-out'> Cerrar Sección</i></a>
+
 
     <footer> 
       <a href="/">Desarrollado por Integratic © 2023</a>
