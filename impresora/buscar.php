@@ -39,6 +39,7 @@ if (mysqli_num_rows($result_datos) > 0 ) {
         $recomendaciones = $row_datos["recomendaciones"];
         $repuesto = $row_datos["repuesto"];
         $detalle = $row_datos["detalle_repuesto"];
+        $nombre = $row_datos["nom_tec"];
         
        
     // "name del input  -> Variable que contiene el campo de la base de datos"
@@ -58,7 +59,7 @@ if (mysqli_num_rows($result_datos) > 0 ) {
         "recomendaciones" => $recomendaciones,
         "repuesto" => $repuesto,
         "detalle" => $detalle,
-                   
+        "nombre" => $nombre,
     );
     
     echo json_encode($data);
@@ -87,6 +88,7 @@ if (mysqli_num_rows($result_datos) > 0 ) {
        "recomendaciones" => "",
        "repuesto" => "",
        "detalle" => "",
+       "nombre" => "",
     );
     echo json_encode($data);
     //echo "El valor ingresado no existe en la base de datos";
