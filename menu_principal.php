@@ -14,7 +14,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title></title>
   <link rel="stylesheet" type="text/css" href="css/sidebar.css">
-  <link rel="stylesheet" href="css/menu-A.css">
+  <link rel="stylesheet" href="css/menub.css">
   <!-- Favicon -->
   <link href="logo.png" rel="icon">
 
@@ -67,7 +67,7 @@
     
 
     <div class="exit">
-    <a href="#"><i class="fa fa-cog" aria-hidden="true"></i></a>
+    <!--<a href="#"><i class="fa fa-cog" aria-hidden="true"></i></a>-->
     <a href="form_login.php"><i class='fa fa-sign-out'> Cerrar Secciòn</i></a>
 
     <footer> 
@@ -89,37 +89,42 @@
     <a href="Ficha"><div class="card">
         <i class="fa fa-file-text fa-5x" aria-hidden="true" style="color: white;"></i>
         <h4>Ficha técnica de Computadoras</h4>
-        <p>Caracteristicas</p>
+       
     </div></a>
 
     <a href="historico"><div class="card">
         <i class="fa fa-history fa-5x" aria-hidden="true" style="color: white;"></i>
         <h4>Historial de Computadoras</h4>
-        <p>Caracteristicas</p>
+       
     </div></a>
 
     <a href="impresora"><div class="card">
         <i class="fa fa-print fa-5x" aria-hidden="true" style="color: white;"></i>
         <h4>Impresoras</h4>
-        <p>Caracteristicas</p>
+      
     </div></a>
 
     <a href="./reportes/"><div class="card">
         <i class="fa fa-files-o fa-5x" aria-hidden="true" style="color: white;"></i>
         <h4>Reporte</h4>
-        <p>Caracteristicas</p>
+     
     </div></a>
 
     <a href="/"><div class="card">
         <i class="fa fa-cog fa-5x" aria-hidden="true" style="color: white;"></i>
         <h4>Configuraciones</h4>
-        <p>Caracteristicas</p>
+      
     </div></a>
 
     <a href="/"><div class="card">
         <i class="fa fa-bar-chart fa-5x" aria-hidden="true" style="color: white;"></i>
         <h4>Estadisticas</h4>
-        <p>Caracteristicas</p>
+      
+    </div></a>
+
+    <a href="/"><div class="card">
+        <i class="fa fa-bar-chart fa-5x" aria-hidden="true" style="color: white;"></i>
+        <h4>Vistas</h4>
     </div></a>
 
     </div>

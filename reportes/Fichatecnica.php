@@ -1,4 +1,4 @@
-<?php
+﻿<?php
 require_once 'dompdf/autoload.inc.php';
 use Dompdf\Dompdf;
 $dompdf = new Dompdf();
@@ -15,11 +15,11 @@ if ($_SERVER['REQUEST_METHOD'] == 'POST') {
     $consulta = "SELECT * FROM datos WHERE sede = '$sede'";
     $resultado = mysqli_query($conexion, $consulta);
 
+    while ($fila = mysqli_fetch_assoc($resultado)) {
+
     $html = '<html>';
     $html .= '<head>
     <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
     <style>
           body{
@@ -27,6 +27,8 @@ if ($_SERVER['REQUEST_METHOD'] == 'POST') {
           background-size: cover; 
           background-repeat: no-repeat;
           background-size: 100%;
+          font-family: Arial, sans-serif;
+          font-size: 16px;
           }
       
           .fecha{
@@ -198,7 +200,7 @@ if ($_SERVER['REQUEST_METHOD'] == 'POST') {
         </style>
     </head>';
   
-    while ($fila = mysqli_fetch_assoc($resultado)) {
+    
       $html .= '<body>';
     
       $html .= '<p class="empresa">Empresa: '. $fila['empresa'] .'</p>';
@@ -235,10 +237,13 @@ if ($_SERVER['REQUEST_METHOD'] == 'POST') {
       $html .= '<div style="page-break-after: always;"></div>';
   
       $html .= '</body>';
-    }
+   
   
     $html .= '</html>';
   
+  }
+
+
     $dompdf->setPaper('A4', 'portrait');
     $dompdf->loadHtml($html);
     $dompdf->render();

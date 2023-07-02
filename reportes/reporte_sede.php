@@ -20,8 +20,8 @@
     <!-- Icon Font Stylesheet -->
     <link rel='stylesheet' href='https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css'> 
 <!-- Template Stylesheet -->
-<link rel="stylesheet" type="text/css" href="../css/sidebar.css">
-<link rel="stylesheet" type="text/css" href="../css/formularios.css">
+<link rel="stylesheet" type="text/css" href="../css/sidebar2.css">
+     <link rel="stylesheet" type="text/css" href="../css/formularios4.css">
 
 </head>
 <body>
@@ -79,14 +79,16 @@
 
 
     <div class="dropdown">
-    <li class="dropbtn"><a href="index.php"><i class="fa fa-history" aria-hidden="true"></i> Reporte</a><li>
-    <ul class="dropdown-content" style="margin-left: 20px;">
-    <li><a href="reporte_sede.php">Ficha por sede</a></li>
-    <li><a href="reporte_sede_historial.php">historial por Sede</a></li>
+    <li class="dropbtn"><a href="index.php"><i class="fa fa-history" aria-hidden="true" style="color: white;"></i>  Reporte</a><li>
+    <ul class="dropdown-content">
+    <li><a href="reporte_sede.php">Ficha sede</a></li>
+    <li><a href="reporte_sede_historial.php">historial Sede</a></li>
 
+    <li><a href="reporte_general.php">Serial Ficha</a></li>
+    <li><a href="reporte_general.php">Serial Historial</a></li>
 
-    <li><a href="reporte_general.php">Serial</a></li>
-    <li><a href="#">General</a></li>
+    <li><a href="reporte_general.php">General Ficha</a></li>
+    <li><a href="reporte_general_historial.php">General Historial</a></li>
     </ul>
   </div>
 
@@ -97,7 +99,7 @@
    
 
     <div class="exit">
-    <a href="#"><i class="fa fa-cog" aria-hidden="true"></i></a>
+    <!--<a href="#"><i class="fa fa-cog" aria-hidden="true"></i></a>-->
     <a href="form_login.php"><i class='fa fa-sign-out'> Cerrar Secciòn</i></a>
 
     <footer> 
