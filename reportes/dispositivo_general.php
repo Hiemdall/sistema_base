@@ -6,7 +6,6 @@
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Reporte General</title>
-
 <!-- Google Web Fonts -->
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -14,14 +13,11 @@
     href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500&family=Roboto:wght@500;700&display=swap"
     rel="stylesheet">
 
-
-
     <!-- Icon Font Stylesheet -->
     <link rel='stylesheet' href='https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css'> 
 <!-- Template Stylesheet -->
 <link rel="stylesheet" type="text/css" href="../css/sidebar.css">
      <link rel="stylesheet" type="text/css" href="../css/formulari.css">
-
 </head>
 <body>
 
@@ -94,7 +90,6 @@
     <li><a href="reporte_dispositivos.php">Dispositivo sede</a></li>
     </ul>
     </div>
-
   </ul>
     
 </div>
@@ -102,7 +97,7 @@
    
 
     <div class="exit">
-    <!--<a href="#"><i class="fa fa-cog" aria-hidden="true"></i></a>-->
+   <!--<a href="#"><i class="fa fa-cog" aria-hidden="true"></i></a>-->
     <a href="form_login.php"><i class='fa fa-sign-out'> Cerrar Secciòn</i></a>
 
     <footer> 
@@ -118,21 +113,24 @@
 
 <div style="margin-left: 50px;">
 
-
 <div class="container">
 
-<div class="box">
+<div class="box-sede">
 
-  <h1>Historial General</h1>
+  <h1>Dispositivo General</h1>
 
-  <form action="general_historial.php">
+  <form  method="post" action="general_dispositivo.php">
 
   <div class="form-submit-btn">
-  <button type="submit">Generar PDF</button>
+  <button type="submit" name="Formulario">Generar PDF </button>
   </div>
 
 
+
 </form>
+
+
+  </div>
 
 </div>
   </div> 

@@ -12,11 +12,6 @@
     href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500&family=Roboto:wght@500;700&display=swap"
     rel="stylesheet">
 
-<!-- Libraries Stylesheet -->
-<link href="lib/animate/animate.min.css" rel="stylesheet">
-<link href="lib/owlcarousel/assets/owl.carousel.min.css" rel="stylesheet">
-<link href="lib/lightbox/css/lightbox.min.css" rel="stylesheet">
-
     <!-- Icon Font Stylesheet -->
     <link rel='stylesheet' href='https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css'> 
 <!-- Template Stylesheet -->
@@ -80,18 +75,21 @@
 
 
     <div class="dropdown">
-    <li class="dropbtn"><a href="index.php"><i class="fa fa-history" aria-hidden="true" style="color: white;"></i>  Reporte</a><li>
+    <li class="dropbtn"><a href="index.php"><i class="fa fa-history" aria-hidden="true"></i>  Reporte</a><li>
     <ul class="dropdown-content">
     <li><a href="reporte_sede.php">Ficha sede</a></li>
     <li><a href="reporte_sede_historial.php">historial Sede</a></li>
 
-    <li><a href="reporte_general.php">Serial Ficha</a></li>
-    <li><a href="reporte_general.php">Serial Historial</a></li>
+    <li><a href="/">Serial Ficha</a></li>
+    <li><a href="/">Serial Historial</a></li>
 
     <li><a href="reporte_general.php">General Ficha</a></li>
     <li><a href="reporte_general_historial.php">General Historial</a></li>
+
+    <li><a href="dispositivo_general.php">Dispositivo general</a></li>
+    <li><a href="reporte_dispositivos.php">Dispositivo sede</a></li>
     </ul>
-  </div>
+    </div>
 
   </ul>
     
@@ -120,7 +118,7 @@
 
   <div class="box-sede">
 
-  <h1>Ficha técnica por Sede</h1>
+  <h1>Dispositivo por Sede</h1>
 
 <form method="post" action="dispositivos.php">
   <label for="sede">Seleccionar Sede:</label>
@@ -131,16 +129,13 @@
     <option value="Calipso">Calipso</option>
     <!-- Agrega más opciones según tus necesidades -->
   </select>
+  
   <div class="form-submit-btn">
   <button type="submit" name="Formulario">Generar PDF</button>
   </div>
 
 
 </form>
-
-
-
-
 
   </div>
 

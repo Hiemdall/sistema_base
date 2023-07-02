@@ -85,11 +85,14 @@
     <li><a href="reporte_sede.php">Ficha sede</a></li>
     <li><a href="reporte_sede_historial.php">historial Sede</a></li>
 
-    <li><a href="reporte_general.php">Serial Ficha</a></li>
-    <li><a href="reporte_general.php">Serial Historial</a></li>
+    <li><a href="/">Serial Ficha</a></li>
+    <li><a href="/">Serial Historial</a></li>
 
     <li><a href="reporte_general.php">General Ficha</a></li>
     <li><a href="reporte_general_historial.php">General Historial</a></li>
+
+    <li><a href="dispositivo_general.php">Dispositivo general</a></li>
+    <li><a href="reporte_dispositivos.php">Dispositivo sede</a></li>
     </ul>
     </div>
 
