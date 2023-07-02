@@ -71,14 +71,14 @@
       
       <li><a href="../Ficha/index.php"><i class="fa fa-fonticons" aria-hidden="true"></i> Ficha Técnica</a></li>
       <li><a href="#"><i class="fa fa-history" aria-hidden="true"></i> Historial</a></li>
-      <li><a href="../impresora/"><i class="fa fa-print" aria-hidden="true" style="color: white;"></i>  Impresora</a></li>
+      <li><a href="../impresora/"><i class="fa fa-print" aria-hidden="true"></i>  Impresora</a></li>
     
 
     <script src="../js/script.js"></script>
 
 
   <div class="dropdown">
-    <li class="dropbtn"><a href="index.php"><i class="fa fa-history" aria-hidden="true" style="color: white;"></i>  Reporte</a><li>
+    <li class="dropbtn"><a href="index.php"><i class="fa fa-history" aria-hidden="true"></i>  Reporte</a><li>
     <ul class="dropdown-content">
     <li><a href="reporte_sede.php">Ficha sede</a></li>
     <li><a href="reporte_sede_historial.php">historial Sede</a></li>
@@ -98,7 +98,7 @@
    
 
     <div class="exit">
-    <a href="#"><i class="fa fa-cog" aria-hidden="true"></i></a>
+    <!--<a href="#"><i class="fa fa-cog" aria-hidden="true"></i></a>-->
     <a href="form_login.php"><i class='fa fa-sign-out'> Cerrar Secciòn</i></a>
 
     <footer> 

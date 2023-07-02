@@ -19,6 +19,8 @@ $conexion = mysqli_connect("localhost", "root", "", "blockbl5_red_de_salud_orien
           background-size: cover; 
           background-repeat: no-repeat;
           background-size: 100%;
+          font-family: Arial, sans-serif;
+          font-size: 16px;
           }
       
           .fecha{
