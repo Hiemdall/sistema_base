@@ -1,7 +1,6 @@
 <?php
 // Llamar a el archivo conexion.php para hacer la conexion a la base de datos
 include("../procesos/conexion.php");
-
         
 // Obtener los valores de la sesión
 $username = $_SESSION['username'];
@@ -22,21 +21,30 @@ $modelo = $_POST['modelo'];
 $fabricante = $_POST['fabricante'];
 $observacion = $_POST["observacion"];
 $recomendaciones = $_POST["recomendaciones"];
-$repuesto = $_POST["repuesto"];
+//$repuesto = $_POST["repuesto"];
+if (isset($_POST['repuesto'])) {
+    $repuesto = $_POST['repuesto'];
+} else {
+    $repuesto = ""; // Valor por defecto si no se proporciona el campo repuesto
+}
 $detalle = $_POST["detalle"];
 
 // Insertar los valores en la tabla datos_empresa
 $sql_datos_empresa = "INSERT INTO tbl_impresora(empresa, sede, departamento, nom_tec, fecha, hora, serial, activo_fijo, ip_equipo , tipo_equipo, modelo, fabricante, visita, diagnostico, recomendaciones, repuesto, detalle_repuesto) 
 VALUES ('$datos_empresa', '$sede', '$departamento', '$username','$fecha', '$hora', '$serial', '$activo_fijo', '$ip_equipo', '$tipo_equipo', '$modelo', '$fabricante',".VISITA.", '$observacion', '$recomendaciones', '$repuesto', '$detalle')";
 
-
-
 if ($conn->query($sql_datos_empresa) === TRUE) {
     // Obtener el ID del último registro insertado en datos_empresa
     $empresa_id = $conn->insert_id;
-    // Generar una alerta
-    $mensaje = "Ficha técnica guardada correctamente";
-    echo '<script>alert("'. $mensaje . '");</script>';
+     // Generar una alerta con SweetAlert 
+   echo '<script>';
+   echo 'Swal.fire({';
+   echo '  icon: "success",';
+   echo '  title: "Ficha del Dispositivo guardado Correctamente",';
+   echo '  showConfirmButton: true';
+   //echo '  confirmButtonColor: "#ff0000"';
+   echo '});';
+   echo '</script>';
     
 } else {
     echo "Error al guardar la ficha técnica en la tabla datos_empresa: " . $conn->error;

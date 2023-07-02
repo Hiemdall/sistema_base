@@ -16,8 +16,14 @@ $hora = $_POST["hora"];
 $tipo_mant = $_POST["tipo_mant"];
 $observacion = $_POST["observacion"];
 $recomendaciones = $_POST["recomendaciones"];
-$repuesto = $_POST["repuesto"];
+//$repuesto = $_POST["repuesto"];
+if (isset($_POST['repuesto'])) {
+  $repuesto = $_POST['repuesto'];
+} else {
+  $repuesto = ""; // Valor por defecto si no se proporciona el campo repuesto
+}
 $detalle = $_POST["detalle"];
+
 
 // Insertar los datos en la base de datos
      
