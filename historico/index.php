@@ -169,37 +169,30 @@ $fechaActual = date('d-m-y');
 
     <div class="user-input-box" style="width: 50% !important; justify-content: end;">
     <div class="user-input-box" style="width: 60% !important;">
-    <label for="nom_tec">Nombre del Técnico:</label>
-    <select class="custom-select" id="nom_tec" name="nom_tec">
-    <option value="">Nombre del Técnico:</option>
-    <option value="Denyer Bastida">Denyer Bastida</option>
-    <option value="Michael Asprilla">Michael Asprilla</option>
-    <option value="Steven Gomez">Steven Gomez</option>
-    <option value="Andrés Agudelo">Andrés Agudelo</option>
-    <option value="Heimdall Rojas">Heimdall Rojas</option>
-    </select>
+    <label for="nom_tec" style="display: none;">Nombre Técnico:</label>
+    <input type="text" id="nom_tec" name="nom_tec" readonly style="display: none;">
     </div>
     </div>
 
 
     <div class="user-input-box">
     <label for="empresa" style="margin: 5px;">Empresa:</label>
-    <input type="text" id="empresa" name="empresa" placeholder="Nombre de la Empresa:">
+    <input type="text" id="empresa" name="empresa" placeholder="Nombre de la Empresa:" onkeydown="moveToNextInput(event, 'sede')">
     </div>
 
     <div class="user-input-box">
     <label for="sede" style="margin: 5px;">Sede:</label>
-    <input type="text" id="sede" name="sede" placeholder="Sede:">
+    <input type="text" id="sede" name="sede" placeholder="Sede:" onkeydown="moveToNextInput(event, 'departamento')">
     </div>
 
     <div class="user-input-box">
     <label for="departamento" style="margin: 5px;">Departamento:</label>
-    <input type="text" id="departamento" name="departamento" placeholder="Departamento:">
+    <input type="text" id="departamento" name="departamento" placeholder="Departamento:" onkeydown="moveToNextInput(event, 'tipo_mant')">
     </div>
 
     <div class="user-input-box">
     <label for="" style="margin: 5px;">Tipo de Mantenimiento</label>
-    <select class="custom-select" id="tipo_mant" name="tipo_mant">
+    <select class="custom-select" id="tipo_mant" name="tipo_mant" onkeydown="moveToNextInput(event, 'observacion')">
       <option value="">Tipo de Mantenimiento:</option>
       <option value="Diagnóstico">Diagnóstico</option>
       <option value="Preventivo">Preventivo</option>
@@ -305,6 +298,13 @@ if (isset($_POST['agregar'])) {
 
 <!--Script para buscar en tiempo real la cedula, llamando el archivo buscar.php-->
 <script>
+  // Esta función mueve el foco al siguiente campo de entrada cuando se presiona la tecla Enter
+function moveToNextInput(event, nextInputId) {
+  if (event.keyCode === 13) {
+    event.preventDefault();
+    document.getElementById(nextInputId).focus();
+  }
+}
 
 //Ventana emergente diagnostico
 function diagnostico() {

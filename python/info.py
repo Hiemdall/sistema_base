@@ -15,7 +15,7 @@ print ("Soporte Técnico Integeratic SAS")
 print ("Este programa fue desarrollado por el :")
 print ("Departamento de Desarrollo de Software y Hardware de Integratic SAS.")
 print ("Autores:")
-print ("Denyer Bastida")
+print ("Denyer Bastidas")
 print ("Heimdall Rojas\n")
 print("-----------------------------------------------------------------------------------------------------------------------") 
 print ("                                                 Ficha Técnica                                                        ")
@@ -25,7 +25,7 @@ print ("Empresa : ", emprersa)
 #********* Técnicos *********
 tecnicos = [
     "Heimdall Rojas",
-    "Denyer Bastida",
+    "Denyer Bastidas",
     "Andrés Agudelo",
     "Michael Asprilla",
     "Steven Gomez",
@@ -196,8 +196,6 @@ if clave == "4020":
     "disco" : capacidad,
     "so" : so,
     "compo" : Componentes_add,
-    
-    
     }
   # Enviar la solicitud POST
     response = requests.post(url, data=data)
