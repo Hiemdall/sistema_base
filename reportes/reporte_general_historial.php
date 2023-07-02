@@ -19,8 +19,8 @@
     <!-- Icon Font Stylesheet -->
     <link rel='stylesheet' href='https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css'> 
 <!-- Template Stylesheet -->
-<link rel="stylesheet" type="text/css" href="../css/sidebar2.css">
-     <link rel="stylesheet" type="text/css" href="../css/formularios4.css">
+<link rel="stylesheet" type="text/css" href="../css/sidebar.css">
+     <link rel="stylesheet" type="text/css" href="../css/formulari.css">
 
 </head>
 <body>
@@ -71,7 +71,8 @@
       
       <li><a href="../Ficha/index.php"><i class="fa fa-fonticons" aria-hidden="true"></i> Ficha Técnica</a></li>
       <li><a href="#"><i class="fa fa-history" aria-hidden="true"></i> Historial</a></li>
-      <li><a href="../impresora/"><i class="fa fa-print" aria-hidden="true" style="color: white;"></i>  Impresora</a></li>
+      <li><a href="../impresora/"><i class="fa fa-print" aria-hidden="true"></i>  Impresora</a></li>
+      <li><a href="/"><i class="fa fa-eye" aria-hidden="true"></i>  Vistas</a></li>
     
 
     <script src="../js/script.js"></script>

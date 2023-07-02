@@ -111,10 +111,10 @@
     </div></a>
 
     <a href="/"><div class="card">
-        <i class="fa fa-cog fa-5x" aria-hidden="true" style="color: white;"></i>
-        <h4>Configuraciones</h4>
-      
+        <i class="fa fa-eye fa-5x" aria-hidden="true" style="color: white;"></i>
+        <h4>Vistas</h4>
     </div></a>
+
 
     <a href="/"><div class="card">
         <i class="fa fa-bar-chart fa-5x" aria-hidden="true" style="color: white;"></i>
@@ -123,9 +123,11 @@
     </div></a>
 
     <a href="/"><div class="card">
-        <i class="fa fa-bar-chart fa-5x" aria-hidden="true" style="color: white;"></i>
-        <h4>Vistas</h4>
+        <i class="fa fa-cog fa-5x" aria-hidden="true" style="color: white;"></i>
+        <h4>Configuraciones</h4>
     </div></a>
+
+   
 
     </div>
 

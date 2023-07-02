@@ -4,8 +4,8 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Ficha técnica</title>
-     <link rel="stylesheet" type="text/css" href="../css/sidebar2.css">
-     <link rel="stylesheet" type="text/css" href="../css/formularios4.css">
+     <link rel="stylesheet" type="text/css" href="../css/sidebar.css">
+     <link rel="stylesheet" type="text/css" href="../css/formulari.css">
      <!-- Generar una alerta con SweetAlert -->
      <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/sweetalert2@11.0.18/dist/sweetalert2.min.css">
      <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11.0.18/dist/sweetalert2.min.js"></script>
@@ -71,7 +71,8 @@
       
       <li><a href="#"><i class="fa fa-fonticons" aria-hidden="true"></i>  Ficha Técnica</a></li>
       <li><a href="../historico/"><i class="fa fa-history" aria-hidden="true"></i>  Historial</a></li>
-      <li><a href="../impresora/"><i class="fa fa-print" aria-hidden="true" style="color: white;"></i>  Impresora</a></li>
+      <li><a href="../impresora/"><i class="fa fa-print" aria-hidden="true"></i>  Impresora</a></li>
+      <li><a href="/"><i class="fa fa-eye" aria-hidden="true"></i>  Vistas</a></li>
       
     
 
