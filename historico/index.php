@@ -5,6 +5,11 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Historial del Equipo</title>
+    <link rel="stylesheet" href="style.css">
+     <!-- Generar una alerta con SweetAlert -->
+     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/sweetalert2@11.0.18/dist/sweetalert2.min.css">
+     <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11.0.18/dist/sweetalert2.min.js"></script>
+  
     
     <link href="../img/logo.png" rel="icon">
 
@@ -192,25 +197,35 @@ $fechaActual = date('d-m-y');
     </select>
     </div>
 
-    <div class="user-input-box" style="width: 100% !important;">
-    <label for="observacion"> Diagnostico:</label>
-    <textarea id="observacion" rows="4" name="observacion"></textarea>
-    </div>
-
-    <div class="user-input-box" style="width: 100% !important;">
-    <label for="recomendaciones">Recomendaciones:</label>
-    <textarea id="recomendaciones" rows="4" name="recomendaciones"></textarea>
-    </div>
+     <div class="user-input-box" style="width: 100% !important;">
+        <label for="observacion">Diagnostico:</label>
+        <textarea id="observacion" rows="4" name="observacion"></textarea>
+      </div>
+      <div class="btos">
+        <button class="poup" type="button" onclick="diagnostico()"><i class="fa fa-question-circle fa-lg" aria-hidden="true"></i></button>
+      </div>
     
-    <div class="user-input-box" style="width: 20% !important;">
-    <label for="repuesto">Repuesto:</label>
-    <input type="checkbox" id="repuesto" name="repuesto" value="1">
-    </div>
+      <div class="user-input-box" style="width: 100% !important;">
+        <label for="recomendaciones">Solución:</label>
+        <textarea id="recomendaciones" rows="4" name="recomendaciones"></textarea>
+      </div>
+      <div class="btos">
+        <button class="poup" type="button" onclick="agregarRecomendacion()"><i class="fa fa-question-circle fa-lg" aria-hidden="true"></i></button>
+      </div>
 
-    <div class="user-input-box" style="width: 100% !important;">
-    <label for="detalle"></label>
-    <textarea id="detalle" rows="4" name="detalle"></textarea>
-    </div>
+      <div class="user-input-box" style="width: 20% !important;">
+      <label for="repuesto">Repuesto:</label>
+      <input type="checkbox" id="repuesto" name="repuesto" value="1">
+      </div>
+   
+     <div class="user-input-box" style="width: 100% !important;">
+        <label for="detalle"></label>
+        <textarea id="detalle" rows="4" name="detalle"></textarea>
+      </div>
+      <div class="btos">
+        <button class="poup" type="button" onclick="agregarRepuesto()"><i class="fa fa-question-circle fa-lg" aria-hidden="true"></i></button>
+      </div>
+    
     
     <!-- Botones-->
     <div class="form-submit-btn">
@@ -221,6 +236,39 @@ $fechaActual = date('d-m-y');
 
 </div>
 </form>
+
+<!-- Descripciones de diagnóstico -->
+<div class="popup">
+      <h1>Descripciones del diagnóstico</h1>
+    <p>Acumulación de polvo y residuos: Se observó una acumulación significativa de polvo y residuos en los componentes internos y externos del equipo, incluyendo ventiladores, disipadores de calor y filtros de aire. Esta acumulación está afectando el flujo de aire adecuado y aumentando el riesgo de sobrecalentamiento del sistema, también se constató que la pasta térmica en el procesador ha perdido sus propiedades y no está proporcionando una disipación de calor eficiente. Esto contribuye al sobrecalentamiento del procesador y puede causar problemas de rendimiento y estabilidad.</p>
+       <h1>--------------------------------------------------------------------------------------</h1>
+    <p>Conexiones y cables mal ajustados: Se detectaron cables y conexiones mal ajustados en el interior del equipo. Estos problemas pueden causar interrupciones en el suministro de energía y la transmisión de datos, lo que afecta negativamente el rendimiento general del sistema.</p>
+       <h1>--------------------------------------------------------------------------------------</h1>
+    <p>Rendimiento lento y congelamientos: Los usuarios han experimentado una disminución en el rendimiento general del sistema, incluyendo tiempos de respuesta lentos, congelamientos ocasionales y retrasos al ejecutar aplicaciones o tareas.</p>
+    <button id="cerrar">Cerrar</button>  
+</div>
+
+<!-- Descripciones de solución -->
+<div class="popup1">
+      <h1>Descripciones de la solución</h1>
+       <p>Limpieza exhaustiva de componentes internos y externos: Se llevó a cabo una limpieza minuciosa de todos los componentes del equipo, incluyendo ventiladores, disipadores de calor y cualquier otra área propensa a la acumulación de polvo y residuos; Se removió la pasta térmica antigua en el procesador y se aplicó una nueva capa de pasta térmica de alta calidad. También se verificó y aseguró que todos los cables y conexiones estuvieran correctamente enchufados y en buen estado de funcionamiento.</p>
+       <h1>--------------------------------------------------------------------------------------</h1>
+       <p>Inspección detallada: Se llevó a cabo una inspección exhaustiva de todas las conexiones y cables en el interior del equipo. Se verificó cada uno de ellos para identificar aquellos que estuvieran sueltos, mal enchufados o dañados. También se organizó y aseguró la correcta disposición de los cables dentro del equipo. Se utilizó sujetadores o bridas para mantener los cables en su lugar y evitar enredos o interferencias entre ellos.</p>
+       <h1>--------------------------------------------------------------------------------------</h1>
+       <p>Optimización del sistema operativo: Se llevó a cabo una optimización exhaustiva del sistema operativo. Esto incluyó la eliminación de archivos temporales, la limpieza del registro, la desfragmentación del disco y la desinstalación de programas innecesarios o que consumían muchos recursos. También se verificaron y se actualizaron todos los controladores del sistema, incluyendo los controladores de la tarjeta gráfica, el chipset, el audio y otros dispositivos importantes.</p>
+    <button id="cerrar1">Cerrar</button>  
+</div>
+
+<!-- Descripciones de respuestos -->
+<div class="popup2">
+      <h1>Descripciones de respuestos</h1>
+       <p>Disco de estado sólido (SSD): Recomendaría un SSD de 256 GB con una velocidad de lectura/escritura de 550 MB/s.<br>Memoria RAM adicional de 8 GB DDR4 para PC de escritorio.</p>
+       <h1>--------------------------------------------------------------------------------------</h1>
+       <p>Fuente de alimentación ATX, con una potencia de 750 vatios.</p>
+       <h1>--------------------------------------------------------------------------------------</h1>
+       <p>Teclado y mouse ergonómico USB</p>
+    <button id="cerrar2">Cerrar</button>  
+</div>
 
 <!-- Acciones de los botones -->
   <?php
@@ -246,6 +294,61 @@ if (isset($_POST['agregar'])) {
 
 <!--Script para buscar en tiempo real la cedula, llamando el archivo buscar.php-->
 <script>
+
+//Ventana emergente diagnostico
+function diagnostico() {
+    var popup = document.querySelector('.popup');
+    popup.style.display = 'block';
+
+    var popupTexts = popup.getElementsByTagName('p');
+    for (var i = 0; i < popupTexts.length; i++) {
+      popupTexts[i].addEventListener('click', function() {
+        document.getElementById('observacion').value = this.innerText;
+        popup.style.display = 'none';
+      });
+    }
+    document.getElementById('cerrar').addEventListener('click', function() {
+    popup.style.display = 'none';
+});
+}
+
+//Ventana emergente soluciones
+function agregarRecomendacion() {
+  var popup1 = document.querySelector('.popup1');
+  popup1.style.display = 'block';
+
+  var popupTexts1 = popup1.getElementsByTagName('p');
+  for (var i = 0; i < popupTexts1.length; i++) {
+    popupTexts1[i].addEventListener('click', function() {
+      document.getElementById('recomendaciones').value = this.innerText;
+      popup1.style.display = 'none';
+    });
+  }
+
+  document.getElementById('cerrar1').addEventListener('click', function() {
+    popup1.style.display = 'none';
+  });
+}
+
+//Ventana emergente repuestos
+function agregarRepuesto() {
+  var popup2 = document.querySelector('.popup2');
+  popup2.style.display = 'block';
+
+  var popupTexts2 = popup2.getElementsByTagName('p');
+  for (var i = 0; i < popupTexts2.length; i++) {
+    popupTexts2[i].addEventListener('click', function() {
+      document.getElementById('detalle').value = this.innerText;
+      popup2.style.display = 'none';
+    });
+  }
+
+  document.getElementById('cerrar2').addEventListener('click', function() {
+    popup2.style.display = 'none';
+  });
+}
+
+
 //La infomación de la base de datos va a cada input del formulario
 document.getElementById("serial").addEventListener("input", function() {
   var input = this.value;
