@@ -28,8 +28,8 @@
     <!-- Icon Font Stylesheet -->
     <link rel='stylesheet' href='https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css'> 
 <!-- Template Stylesheet -->
-<link rel="stylesheet" type="text/css" href="../css/sidebar.css">
-<link rel="stylesheet" type="text/css" href="../css/formularios.css">
+<link rel="stylesheet" type="text/css" href="../css/sidebar2.css">
+<link rel="stylesheet" type="text/css" href="../css/formularios4.css">
 
 </head>
 <body>
@@ -151,10 +151,26 @@ $fechaActual = date('d-m-y');
 
     <div class="main-user-info">
 
-    <div class="user-input-box" style="width: 100% !important; justify-content: start;">
-    <div class="user-input-box">
+    <div class="user-input-box" style="width: 50% !important; justify-content: start;">
+    <div class="user-input-box" style="width: 60% !important;">
     <label for="serial" style="margin: 5px;">Serial:</label>
-    <input class="serial" type="text" id="serial" name="serial" placeholder="Serial del Equipo:">
+    <input class="serial" type="text" id="serial" name="serial" placeholder="Serial del Equipo:" onkeydown="moveToNextInput(event, 'empresa')">
+    </div>
+    </div>
+
+
+
+    <div class="user-input-box" style="width: 50% !important; justify-content: end;">
+    <div class="user-input-box" style="width: 60% !important;">
+    <label for="nom_tec">Nombre del Técnico:</label>
+    <select class="custom-select" id="nom_tec" name="nom_tec">
+    <option value="">Nombre del Técnico:</option>
+    <option value="Denyer Bastida">Denyer Bastida</option>
+    <option value="Michael Asprilla">Michael Asprilla</option>
+    <option value="Steven Gomez">Steven Gomez</option>
+    <option value="Andrés Agudelo">Andrés Agudelo</option>
+    <option value="Heimdall Rojas">Heimdall Rojas</option>
+    </select>
     </div>
     </div>
 
@@ -185,17 +201,7 @@ $fechaActual = date('d-m-y');
     </select>
     </div>
 
-    <div class="user-input-box">
-    <label for="nom_tec">Nombre del Técnico:</label>
-    <select class="custom-select" id="nom_tec" name="nom_tec">
-    <option value="">Nombre del Técnico:</option>
-    <option value="Denyer Bastida">Denyer Bastida</option>
-    <option value="Michael Asprilla">Michael Asprilla</option>
-    <option value="Steven Gomez">Steven Gomez</option>
-    <option value="Andrés Agudelo">Andrés Agudelo</option>
-    <option value="Heimdall Rojas">Heimdall Rojas</option>
-    </select>
-    </div>
+
 
      <div class="user-input-box" style="width: 100% !important;">
         <label for="observacion">Diagnostico:</label>
@@ -212,16 +218,14 @@ $fechaActual = date('d-m-y');
       <div class="btos">
         <button class="poup" type="button" onclick="agregarRecomendacion()"><i class="fa fa-question-circle fa-lg" aria-hidden="true"></i></button>
       </div>
-
-      <div class="user-input-box" style="width: 20% !important;">
-      <label for="repuesto">Repuesto:</label>
-      <input type="checkbox" id="repuesto" name="repuesto" value="1">
-      </div>
    
      <div class="user-input-box" style="width: 100% !important;">
-        <label for="detalle"></label>
+        <label for="repuesto" style="width: 10% !important;">Repuesto:</label>
+        <input type="checkbox" id="repuesto" name="repuesto" value="1" style="width: 5% !important;"> 
+        <label for="detalle" style="width: 80% !important;"></label>
         <textarea id="detalle" rows="4" name="detalle"></textarea>
       </div>
+
       <div class="btos">
         <button class="poup" type="button" onclick="agregarRepuesto()"><i class="fa fa-question-circle fa-lg" aria-hidden="true"></i></button>
       </div>

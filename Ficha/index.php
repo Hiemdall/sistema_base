@@ -4,8 +4,8 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Ficha técnica</title>
-     <link rel="stylesheet" type="text/css" href="../css/sidebar.css">
-     <link rel="stylesheet" type="text/css" href="../css/formularios.css">
+     <link rel="stylesheet" type="text/css" href="../css/sidebar2.css">
+     <link rel="stylesheet" type="text/css" href="../css/formularios4.css">
      <!-- Generar una alerta con SweetAlert -->
      <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/sweetalert2@11.0.18/dist/sweetalert2.min.css">
      <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11.0.18/dist/sweetalert2.min.js"></script>
@@ -65,7 +65,7 @@
 
     </div>
 
-    <div class="list-opcion">
+  <div class="list-opcion">
     
     <ul>
       
@@ -79,23 +79,27 @@
 
 
     <div class="dropdown">
-    <li class="dropbtn"><a href="index.php"><i class="fa fa-history" aria-hidden="true"></i> Reporte</a><li>
-    <ul class="dropdown-content" style="margin-left: 20px;">
-    <li><a href="../reportes/reporte_sede.php">Ficha por sede</a></li>
-    <li><a href="../reportes/reporte_general_historial.php">historial por Sede</a></li>
+    <li class="dropbtn"><a href="index.php"><i class="fa fa-history" aria-hidden="true"></i>  Reporte</a><li>
+    <ul class="dropdown-content">
+    <li><a href="reporte_sede.php">Ficha sede</a></li>
+    <li><a href="reporte_sede_historial.php">historial Sede</a></li>
 
+    <li><a href="reporte_general.php">Serial Ficha</a></li>
+    <li><a href="reporte_general.php">Serial Historial</a></li>
 
-    <li><a href="reporte_general.php">Serial</a></li>
-    <li><a href="#">General</a></li>
+    <li><a href="reporte_general.php">General Ficha</a></li>
+    <li><a href="reporte_general_historial.php">General Historial</a></li>
     </ul>
     </div>
 
+
+    </ul>
   </div>
     
    
 
     <div class="exit">
-    <a href="#"><i class="fa fa-cog" aria-hidden="true"></i></a>
+    <!--<a href="#"><i class="fa fa-cog" aria-hidden="true"></i></a>-->
     <a href="form_login.php"><i class='fa fa-sign-out'> Cerrar Secciòn</i></a>
 
     <footer> 
@@ -103,11 +107,8 @@
     </footer>
     </div>
 
-    
-
-
-
   </div>
+
 
 <div style="margin-left: 50px;">  
 
@@ -150,10 +151,17 @@ $fechaActual = date('d-m-y');
 <div class="main-user-info">
 
 
-    <div class="user-input-box" style="width: 100% !important; justify-content: start;">
-    <div class="user-input-box">
+    <div class="user-input-box" style="width: 50% !important; justify-content: start;">
+    <div class="user-input-box" style="width: 60% !important;">
     <label for="serial" style="margin: 5px;">Serial:</label>
     <input class="serial" type="text" id="serial" name="serial" placeholder="Serial del Equipo:" onkeydown="moveToNextInput(event, 'empresa')">
+    </div>
+    </div>
+
+    <div class="user-input-box" style="width: 50% !important; justify-content: end;">
+    <div class="user-input-box" style="width: 60% !important;">
+    <label for="nombre">Nombre Técnico:</label>
+    <input type="text" id="nombre" name="nombre" readonly>
     </div>
     </div>
 
@@ -250,14 +258,11 @@ $fechaActual = date('d-m-y');
     <textarea id="comp_add" rows="4" name="comp_add"></textarea>  
     </div>
     
-    <div class="user-input-box">
-    <label for="nombre">Nombre Técnico:</label>
-    <input type="text" id="nombre" name="nombre" readonly>
-    </div>
+
 
     <div class="form-submit-btn">
-    <input type="submit" id="guardarBtn" name="agregar" value="Guardar" style="width: 100px;  text-align: center;"></input>
-    <input type="submit" name="editar" value="Editar" style="width: 90px;   text-align: center;"></input>
+    <input type="submit" id="guardarBtn" name="agregar" value="Guardar" style="width: 100px;  text-align: center; margin: 12px"></input>
+    <input type="submit" name="editar" value="Editar" style="width: 90px;   text-align: center; margin: 12px"></input>
     </div>
     
 

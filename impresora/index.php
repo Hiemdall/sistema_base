@@ -4,8 +4,8 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Ficha Impresora</title>
-  <link rel="stylesheet" type="text/css" href="../css/sidebar.css">
-  <link rel="stylesheet" type="text/css" href="../css/formularios.css">
+    <link rel="stylesheet" type="text/css" href="../css/sidebar2.css">
+     <link rel="stylesheet" type="text/css" href="../css/formularios4.css">
   
 
   <!-- Favicon -->
@@ -18,10 +18,6 @@
     href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500&family=Roboto:wght@500;700&display=swap"
     rel="stylesheet">
 
-<!-- Libraries Stylesheet -->
-<link href="lib/animate/animate.min.css" rel="stylesheet">
-<link href="lib/owlcarousel/assets/owl.carousel.min.css" rel="stylesheet">
-<link href="lib/lightbox/css/lightbox.min.css" rel="stylesheet">
 
     <!-- Icon Font Stylesheet -->
     <link rel='stylesheet' href='https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css'> 
@@ -81,16 +77,20 @@
 
 
     <div class="dropdown">
-    <li class="dropbtn"><a href="index.php"><i class="fa fa-history" aria-hidden="true"></i> Reporte</a><li>
-    <ul class="dropdown-content" style="margin-left: 20px;">
-    <li><a href="../reportes/reporte_sede.php">Ficha por sede</a></li>
-    <li><a href="../reportes/reporte_sede_historial.php">historial por Sede</a></li>
+    <li class="dropbtn"><a href="index.php"><i class="fa fa-history" aria-hidden="true"></i>  Reporte</a><li>
+    <ul class="dropdown-content">
+    <li><a href="reporte_sede.php">Ficha sede</a></li>
+    <li><a href="reporte_sede_historial.php">historial Sede</a></li>
 
+    <li><a href="reporte_general.php">Serial Ficha</a></li>
+    <li><a href="reporte_general.php">Serial Historial</a></li>
 
-    <li><a href="reporte_general.php">Serial</a></li>
-    <li><a href="#">General</a></li>
+    <li><a href="reporte_general.php">General Ficha</a></li>
+    <li><a href="reporte_general_historial.php">General Historial</a></li>
     </ul>
-    </div>
+  </div>
+
+   </ul>
 
   </div>
     
@@ -152,7 +152,7 @@ $fechaActual = date('d-m-y');
 <div class="main-user-info">
 
 
-    <div class="user-input-box" style="width: 100% !important; justify-content: start;">
+    <div class="user-input-box" style="width: 100% !important; justify-content: start; ">
     <div class="user-input-box">
     <label for="serial" style="margin: 5px;">Serial:</label>
     <input class="serial" type="text" id="serial" name="serial" placeholder="Serial del Equipo:">
@@ -216,19 +216,16 @@ $fechaActual = date('d-m-y');
     <textarea id="recomendaciones" rows="4" name="recomendaciones"></textarea>
     </div>
     
-    <div class="user-input-box" style="width: 20% !important;">
-    <label for="repuesto">Repuesto:</label>
-    <input type="checkbox" id="repuesto" name="repuesto" value="1">
-    </div>
-
     <div class="user-input-box" style="width: 100% !important;">
-    <label for="detalle"></label>
-    <textarea id="detalle" rows="4" name="detalle"></textarea>
+        <label for="repuesto" style="width: 10% !important;">Repuesto:</label>
+        <input type="checkbox" id="repuesto" name="repuesto" value="1" style="width: 5% !important;"> 
+        <label for="detalle" style="width: 80% !important;"></label>
+        <textarea id="detalle" rows="4" name="detalle"></textarea>
     </div>
 
-    <div class="form-submit-btn">
-    <input type="submit" id="guardarBtn" name="agregar" value="Guardar" style="width: 100px;  text-align: center;"></input>
-    <input type="submit" name="editar" value="Editar" style="width: 90px;   text-align: center;"></input>
+    <div class="form-submit-btn" style="margin-top: 20px;">
+    <input type="submit" id="guardarBtn" name="agregar" value="Guardar" style="width: 100px;  text-align: center; margin: 12px"></input>
+    <input type="submit" name="editar" value="Editar" style="width: 100px;   text-align: center; margin: 12px"></input>
     </div>
     
 

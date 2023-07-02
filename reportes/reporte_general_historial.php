@@ -19,8 +19,8 @@
     <!-- Icon Font Stylesheet -->
     <link rel='stylesheet' href='https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css'> 
 <!-- Template Stylesheet -->
-<link rel="stylesheet" type="text/css" href="../css/sidebar.css">
-<link rel="stylesheet" type="text/css" href="../css/formularios.css">
+<link rel="stylesheet" type="text/css" href="../css/sidebar2.css">
+     <link rel="stylesheet" type="text/css" href="../css/formularios4.css">
 
 </head>
 <body>
@@ -119,9 +119,10 @@
 
 <div class="box">
 
-  <h1>General Historial</h1>
+  <h1>Historial General</h1>
 
   <form action="general_historial.php">
+
   <div class="form-submit-btn">
   <button type="submit">Generar PDF</button>
   </div>

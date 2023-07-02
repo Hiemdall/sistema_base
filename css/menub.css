@@ -34,6 +34,8 @@ a{
 }
 
 .cards .card{
+    display: grid;
+    place-content: center;
     width: 230px;
     height: 330px;
     padding-top: 20px;
