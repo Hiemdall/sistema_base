@@ -125,12 +125,13 @@
   <label for="sede">Seleccionar Sede:</label>
   <select id="sede" name="sede">
     <option value="">Seleccione una sede</option>
-    <option value="Charco Azul">Charco Azul</option>
-    <option value="Comuneros II">Comuneros II</option>
-    <option value="Calipso">Calipso</option>
+    <option value="Secretaria de Salud">Secretaria de Salud</option>
+    <option value="Secretaria de Hacienda">Secretaria de Hacienda</option>
+    <option value="Secretaria Cultura">Secretaria Cultura</option>
+    <option value="D.A.G.M.A">D.A.G.M.A</option>
+    <option value="U.A.E.G.B.S">U.A.E.G.B.S</option>
     <!-- Agrega más opciones según tus necesidades -->
   </select>
-  
   <div class="form-submit-btn">
   <button type="submit" name="Formulario">Generar PDF</button>
   </div>
