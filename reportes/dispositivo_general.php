@@ -1,10 +1,11 @@
+
 <!DOCTYPE html>
 <html lang="es">
 <head>
   <meta charset="UTF-8">
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Sede Historial</title>
+  <title>Reporte General</title>
 <!-- Google Web Fonts -->
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -12,17 +13,11 @@
     href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500&family=Roboto:wght@500;700&display=swap"
     rel="stylesheet">
 
-<!-- Libraries Stylesheet -->
-<link href="lib/animate/animate.min.css" rel="stylesheet">
-<link href="lib/owlcarousel/assets/owl.carousel.min.css" rel="stylesheet">
-<link href="lib/lightbox/css/lightbox.min.css" rel="stylesheet">
-
     <!-- Icon Font Stylesheet -->
     <link rel='stylesheet' href='https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css'> 
 <!-- Template Stylesheet -->
 <link rel="stylesheet" type="text/css" href="../css/sidebar.css">
      <link rel="stylesheet" type="text/css" href="../css/formulari.css">
-
 </head>
 <body>
 
@@ -66,7 +61,7 @@
 
     </div>
 
-    <div class="list-opcion">
+<div class="list-opcion">
     
     <ul>
       
@@ -95,17 +90,15 @@
     <li><a href="reporte_dispositivos.php">Dispositivo sede</a></li>
     </ul>
     </div>
-
   </ul>
     
-  </div>
+</div>
     
    
 
     <div class="exit">
-    <!--<a href="#"><i class="fa fa-cog" aria-hidden="true"></i></a>-->
-    <a href="../form_login.php"><i class='fa fa-sign-out'> Cerrar Sección</i></a>
-
+   <!--<a href="#"><i class="fa fa-cog" aria-hidden="true"></i></a>-->
+   <a href="../form_login.php"><i class='fa fa-sign-out'> Cerrar Sección</i></a>
 
     <footer> 
       <a href="/">Desarrollado por Integratic © 2023</a>
@@ -118,34 +111,23 @@
 
   </div>  
 
-<div style="margin-left: 50px;">  
+<div style="margin-left: 50px;">
 
 <div class="container">
 
-  <div class="box-sede">
+<div class="box-sede">
 
-  <h1>Historiales por Sede</h1>
+  <h1>Dispositivo General</h1>
 
-<form method="post" action="historial.php">
-  <label for="sede">Seleccionar Sede:</label>
-  <select id="sede" name="sede">
-    <option value="">Seleccione una sede</option>
-    <option value="Secretaria de Salud">Secretaria de Salud</option>
-    <option value="Secretaria de Hacienda">Secretaria de Hacienda</option>
-    <option value="Secretaria Cultura">Secretaria Cultura</option>
-    <option value="D.A.G.M.A">D.A.G.M.A</option>
-    <option value="U.A.E.G.B.S">U.A.E.G.B.S</option>
-    <!-- Agrega más opciones según tus necesidades -->
-  </select>
+  <form  method="post" action="general_dispositivo.php">
+
   <div class="form-submit-btn">
-  <button type="submit" name="Formulario">Generar PDF</button>
+  <button type="submit" name="Formulario">Generar PDF </button>
   </div>
 
 
+
 </form>
-
-
-
 
 
   </div>
@@ -155,3 +137,4 @@
 
 </body>
 </html>
+

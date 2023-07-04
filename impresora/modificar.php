@@ -27,12 +27,13 @@ if ($_SERVER['REQUEST_METHOD'] == 'POST') {
     $repuesto = ""; // Valor por defecto si no se proporciona el campo repuesto
   }
   $detalle = $_POST["detalle"];
+  $tipo_mant = $_POST["tipo_mant"];
   
 
   // Realizar la consulta para actualizar los campos
   $sql_datos = "UPDATE tbl_impresora SET empresa='$empresa', sede='$sede', departamento='$departamento', tipo_equipo='$tipo_equipo', 
   activo_fijo='$activo_fijo', ip_equipo='$ip_equipo', modelo='$modelo', fabricante='$fabricante', nom_tec='$username', diagnostico='$observacion',
-  recomendaciones='$recomendaciones',repuesto='$repuesto', detalle_repuesto='$detalle' WHERE serial='$serial'";
+  recomendaciones='$recomendaciones',repuesto='$repuesto', detalle_repuesto='$detalle' , tipo_mant='$tipo_mant' WHERE serial='$serial'";
 
   // Ejecutar la consulta SQL
   if (mysqli_query($conn, $sql_datos)) {

@@ -4,7 +4,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Ficha Impresora</title>
-    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="458.css">
     <link rel="stylesheet" type="text/css" href="../css/sidebar.css">
      <link rel="stylesheet" type="text/css" href="../css/formulari.css">
      <!-- Generar una alerta con SweetAlert -->
@@ -73,9 +73,9 @@
     
     <ul>
       
-      <li><a href="#"><i class="fa fa-fonticons" aria-hidden="true"></i>  Ficha Técnica</a></li>
+      <li><a href="../Ficha/index.php"><i class="fa fa-fonticons" aria-hidden="true"></i>  Ficha Técnica</a></li>
       <li><a href="../historico/"><i class="fa fa-history" aria-hidden="true"></i>  Historial</a></li>
-      <li><a href="../impresora/"><i class="fa fa-print" aria-hidden="true" style="color: white;"></i>  Impresora</a></li>
+      <li><a href="../impresora/"><i class="fa fa-print" aria-hidden="true"></i>  Dispositivos</a></li>
       <li><a href="/"><i class="fa fa-eye" aria-hidden="true"></i>  Vistas</a></li>
       
     
@@ -89,13 +89,16 @@
     <li><a href="reporte_sede.php">Ficha sede</a></li>
     <li><a href="reporte_sede_historial.php">historial Sede</a></li>
 
-    <li><a href="reporte_general.php">Serial Ficha</a></li>
-    <li><a href="reporte_general.php">Serial Historial</a></li>
+    <li><a href="/">Serial Ficha</a></li>
+    <li><a href="/">Serial Historial</a></li>
 
     <li><a href="reporte_general.php">General Ficha</a></li>
     <li><a href="reporte_general_historial.php">General Historial</a></li>
+
+    <li><a href="dispositivo_general.php">Dispositivo general</a></li>
+    <li><a href="reporte_dispositivos.php">Dispositivo sede</a></li>
     </ul>
-  </div>
+    </div>
 
    </ul>
 
@@ -104,8 +107,9 @@
    
 
     <div class="exit">
-    <a href="#"><i class="fa fa-cog" aria-hidden="true"></i></a>
-    <a href="form_login.php"><i class='fa fa-sign-out'> Cerrar Secciòn</i></a>
+       <!--<a href="#"><i class="fa fa-cog" aria-hidden="true"></i></a>-->
+       <a href="../form_login.php"><i class='fa fa-sign-out'> Cerrar Sección</i></a>
+
 
     <footer> 
       <a href="/">Desarrollado por Integratic © 2023</a>
@@ -118,11 +122,12 @@
 
   </div>
 
-<div style="margin-left: 50px;">  
+
 
 
 
 <!-- *****************************           Formulario de ficha de Dispositivos         *****************************************-->
+<div style="margin-left: 50px;">  
 <div class="container">
 
 <form method="post">
@@ -159,8 +164,8 @@ $fechaActual = date('d-m-y');
 <div class="main-user-info">
 
 
-    <div class="user-input-box" style="width: 100% !important; justify-content: start; ">
-    <div class="user-input-box">
+    <div class="user-input-box" style="width: 50% !important; justify-content: start; ">
+    <div class="user-input-box" style="width: 60% !important;">
     <label for="serial" style="margin: 5px;">Serial:</label>
     <input class="serial" type="text" id="serial" name="serial" placeholder="Serial del Equipo:" onkeydown="moveToNextInput(event, 'empresa')">
     </div>
@@ -205,7 +210,18 @@ $fechaActual = date('d-m-y');
      
     <div class="user-input-box">
     <label for="IP" style="margin: 5px;">IP del Equipo:</label>
-    <input type="text" id="ip_equipo" name="ip_equipo" placeholder="IP del Equipo:" onkeydown="moveToNextInput(event, 'tipo_equipo')">
+    <input type="text" id="ip_equipo" name="ip_equipo" placeholder="IP del Equipo:" onkeydown="moveToNextInput(event, 'tipo_mant')">
+    </div>
+
+    <div class="user-input-box">
+    <label for="" style="margin: 5px;">Tipo de Mantenimiento</label>
+    <select class="custom-select" id="tipo_mant" name="tipo_mant" onkeydown="moveToNextInput(event, 'tipo_equipo')">
+      <option value="">Tipo de Mantenimiento:</option>
+      <option value="Diagnóstico">Diagnóstico</option>
+      <option value="Preventivo">Preventivo</option>
+      <option value="Correctivo">Correctivo</option>
+      <option value="Remoto">Remoto</option>
+    </select>
     </div>
 
     <div class="user-input-box">
@@ -236,10 +252,10 @@ $fechaActual = date('d-m-y');
         <button class="poup" type="button" onclick="agregarRecomendacion()"><i class="fa fa-question-circle fa-lg" aria-hidden="true"></i></button>
       </div>
    
-     <div class="user-input-box" style="width: 100% !important;">
+      <div class="user-input-box" style="width: 100% !important; margin-bottom: 11px;">
         <label for="repuesto" style="width: 10% !important;">Repuesto:</label>
-        <input type="checkbox" id="repuesto" name="repuesto" value="1" style="width: 5% !important;"> 
-        <label for="detalle" style="width: 80% !important;"></label>
+        <input type="checkbox" id="repuesto" name="repuesto" value="1" style="width: 20px !important;"> 
+        <label for="detalle" style="width: 85% !important;"></label>
         <textarea id="detalle" rows="4" name="detalle"></textarea>
       </div>
 
@@ -260,33 +276,33 @@ $fechaActual = date('d-m-y');
 
 <div class="popup">
       <h1>Descripciones del diagnóstico de dispositivo</h1>
-    <p>diagnóstico # 1</p>
+    <p>Atasco de papel: Un problema común en las impresoras es el atasco de papel. Esto puede ocurrir cuando el papel se introduce incorrectamente en la bandeja de papel o cuando se utiliza papel arrugado o de mala calidad. </p>
        <h1>--------------------------------------------------------------------------------------</h1>
-    <p>diagnóstico # 2</p>
+    <p>Calidad de impresión deficiente: Si la calidad de impresión de sus documentos o imágenes es baja, es posible que haya un problema con los cartuchos de tinta o los cabezales de impresión. Verifique si los cartuchos de tinta están vacíos o a punto de agotarse y reemplácelos si es necesario.</p>
        <h1>--------------------------------------------------------------------------------------</h1>
-    <p>diagnóstico # 3</p>
+    <p>Mensajes de error en la pantalla: Las impresoras a menudo muestran mensajes de error en su pantalla para indicar problemas o situaciones anormales. Estos mensajes pueden incluir códigos de error específicos o mensajes descriptivos. Algunos ejemplos comunes de mensajes de error incluyen "sin papel", "cartucho vacío" o "atascado". </p>
     <button id="cerrar">Cerrar</button>  
 </div>
 
 <!-- Descripciones de solución -->
 <div class="popup1">
       <h1>Descripciones de la solución en dispositivo</h1>
-       <p>solución # 1</p>
+       <p>Se verificó el mecanismo de alimentación en busca de restos y se aseguró de utilizar papel de calidad y cargarlo correctamente. Después de encender la impresora, realizó una prueba de impresión para confirmar que el atasco se había resuelto y que el papel se alimentaba correctamente.</p>
        <h1>--------------------------------------------------------------------------------------</h1>
-       <p>solución # 2</p>
+       <p>Se verificó si los cartuchos de tinta estaban vacíos o a punto de agotarse y los reemplazó si era necesario. Luego, intentó limpiar los cabezales de impresión utilizando la función de limpieza de la impresora. Si el problema persistió, consideró reemplazar los cartuchos de tinta o los cabezales de impresión para mejorar la calidad de impresión.</p>
        <h1>--------------------------------------------------------------------------------------</h1>
-       <p>solución # 3</p>
+       <p>Se leyó detenidamente el mensaje de error y siguió las instrucciones proporcionadas. Consultó el manual de la impresora o buscó en línea el código de error para obtener más información sobre el problema y su solución. También pudo haber reiniciado la impresora y el equipo para restablecer la conexión. Si el problema persistió, pudo haber contactado al soporte técnico del fabricante para obtener ayuda adicional en el diagnóstico y la solución del problema.</p>
     <button id="cerrar1">Cerrar</button>  
 </div>
 
 <!-- Descripciones de respuestos -->
 <div class="popup2">
       <h1>Descripciones de respuestos en dispositivo</h1>
-       <p>respuestos # 1</p>
+       <p>KIT de unidad fusora</p>
        <h1>--------------------------------------------------------------------------------------</h1>
-       <p>respuestos # 2</p>
+       <p>Cabezales de impresión</p>
        <h1>--------------------------------------------------------------------------------------</h1>
-       <p>respuestos # 3</p>
+       <p>Rodillos de alimentación de papel</p>
     <button id="cerrar2">Cerrar</button>  
 </div>
 
@@ -395,6 +411,8 @@ if (this.readyState === XMLHttpRequest.DONE && this.status === 200) {
     document.getElementById("recomendaciones").value = response.recomendaciones;
     document.getElementById("detalle").value = response.detalle;
     
+
+    
     // Checkbox de repuesto
     var repuestoCheckbox = document.getElementById("repuesto");
         if (response.repuesto === "Sí") {
@@ -402,8 +420,6 @@ if (this.readyState === XMLHttpRequest.DONE && this.status === 200) {
         } else {
           repuestoCheckbox.checked = false;
         }
-
-
 
    //**************************** Select tipo de equipo *************************** */
    // Este código se utiliza para cargar el combobox con los valores de la base de datos
@@ -420,6 +436,22 @@ if (this.readyState === XMLHttpRequest.DONE && this.status === 200) {
   }   
   // Establecer el atributo selected de la opción
   optionTipoEquipo.selected = true;
+
+  //**************************** Select tipo de mantenimiento *************************** */
+   // Este código se utiliza para cargar el combobox con los valores de la base de datos
+    // Obtener el elemento select
+    const selectElementTipo_mant = document.getElementById("tipo_mant");
+   // Buscar si existe una opción con el valor de response.tipo_mant
+   let optionTipo_mant = selectElementTipo_mant.querySelector(`option[value="${response.tipo_mant}"]`);
+   if (!optionTipo_mant) {
+   // Si no existe la opción, agregar una nueva
+   optionTipo_mant = document.createElement("option");
+   optionTipo_mant.value = response.tipo_mant;
+   optionTipo_mant.textContent = response.tipo_mant;
+   selectElementTipo_mant.appendChild(optionTipo_mant);
+  }   
+  // Establecer el atributo selected de la opción
+  optionTipo_mant.selected = true;
 
   
   }

@@ -69,10 +69,11 @@
     
     <ul>
       
-      <li><a href="#"><i class="fa fa-fonticons" aria-hidden="true"></i>  Ficha Técnica</a></li>
+    <li><a href="#" style="color: yellow;"><i class="fa fa-fonticons" aria-hidden="true"></i> Ficha Técnica</a></li>
+
       <li><a href="../historico/"><i class="fa fa-history" aria-hidden="true"></i>  Historial</a></li>
-      <li><a href="../impresora/"><i class="fa fa-print" aria-hidden="true"></i>  Impresora</a></li>
-      <li><a href="/"><i class="fa fa-eye" aria-hidden="true"></i>  Vistas</a></li>
+      <li><a href="../impresora/"><i class="fa fa-print" aria-hidden="true"></i>  Dispositivos</a></li>
+      <li><a href="#"><i class="fa fa-eye" aria-hidden="true"></i>  Vistas</a></li>
       
     
 
@@ -80,16 +81,19 @@
 
 
     <div class="dropdown">
-    <li class="dropbtn"><a href="index.php"><i class="fa fa-history" aria-hidden="true"></i>  Reporte</a><li>
+    <li class="dropbtn"><a href="index.php"><i class="fa fa-history" aria-hidden="true"></i>  Reportes</a><li>
     <ul class="dropdown-content">
     <li><a href="reporte_sede.php">Ficha sede</a></li>
     <li><a href="reporte_sede_historial.php">historial Sede</a></li>
 
-    <li><a href="reporte_general.php">Serial Ficha</a></li>
-    <li><a href="reporte_general.php">Serial Historial</a></li>
+    <li><a href="/">Serial Ficha</a></li>
+    <li><a href="/">Serial Historial</a></li>
 
     <li><a href="reporte_general.php">General Ficha</a></li>
     <li><a href="reporte_general_historial.php">General Historial</a></li>
+
+    <li><a href="dispositivo_general.php">Dispositivo general</a></li>
+    <li><a href="reporte_dispositivos.php">Dispositivo sede</a></li>
     </ul>
     </div>
 
@@ -101,7 +105,7 @@
 
     <div class="exit">
     <!--<a href="#"><i class="fa fa-cog" aria-hidden="true"></i></a>-->
-    <a href="form_login.php"><i class='fa fa-sign-out'> Cerrar Secciòn</i></a>
+    <a href="../form_login.php"><i class='fa fa-sign-out'> Cerrar Sección</i></a>
 
     <footer> 
       <a href="/">Desarrollado por Integratic © 2023</a>
@@ -155,7 +159,7 @@ $fechaActual = date('d-m-y');
     <div class="user-input-box" style="width: 50% !important; justify-content: start;">
     <div class="user-input-box" style="width: 60% !important;">
     <label for="serial" style="margin: 5px;">Serial:</label>
-    <input class="serial" type="text" id="serial" name="serial" placeholder="Serial del Equipo:" onkeydown="moveToNextInput(event, 'empresa')">
+    <input class="serial" type="text" id="serial" name="serial" placeholder="Serial del Equipo:" onkeydown="moveToNextInput(event, 'empresa')" required>
     </div>
     </div>
 
@@ -168,57 +172,57 @@ $fechaActual = date('d-m-y');
 
     <div class="user-input-box">
     <label for="empresa" style="margin: 5px;">Empresa:</label>
-    <input type="text" id="empresa" name="empresa" placeholder="Nombre de la Empresa:" onkeydown="moveToNextInput(event, 'sede')">
+    <input type="text" id="empresa" name="empresa" placeholder="Nombre de la Empresa:" onkeydown="moveToNextInput(event, 'sede')" required>
     </div>
 
     <div class="user-input-box">
     <label for="sede" style="margin: 5px;">Sede:</label>
-    <input type="text" id="sede" name="sede" placeholder="Sede:" onkeydown="moveToNextInput(event, 'departamento')">
+    <input type="text" id="sede" name="sede" placeholder="Sede:" onkeydown="moveToNextInput(event, 'departamento')" required>
     </div>
 
     <div class="user-input-box">
     <label for="departamento" style="margin: 5px;">Departamento:</label>
-    <input type="text" id="departamento" name="departamento" placeholder="Departamento:" onkeydown="moveToNextInput(event, 'nom_usuario')">
+    <input type="text" id="departamento" name="departamento" placeholder="Departamento:" onkeydown="moveToNextInput(event, 'nom_usuario')" required>
     </div>
 
     <div class="user-input-box">
     <label for="usuario" style="margin: 5px;">Usuario:</label>
-    <input type="text" id="nom_usuario" name="nom_usuario" placeholder="Nombre de Usuario:" onkeydown="moveToNextInput(event, 'activo_fijo')">
+    <input type="text" id="nom_usuario" name="nom_usuario" placeholder="Nombre de Usuario:" onkeydown="moveToNextInput(event, 'activo_fijo')" required>
     </div>
 
     <div class="user-input-box">
     <label for="activo" style="margin: 5px;">Activo Fijo:</label>
-    <input type="text" id="activo_fijo" name="activo_fijo" placeholder="Activo Fijo:" onkeydown="moveToNextInput(event, 'modelo')">
+    <input type="text" id="activo_fijo" name="activo_fijo" placeholder="Activo Fijo:" onkeydown="moveToNextInput(event, 'modelo')" required>
     </div>
 
     <div class="user-input-box">
     <label for="modelo" style="margin: 5px;">Modelo:</label>
-    <input type="text" id="modelo" name="modelo" placeholder="Modelo:" onkeydown="moveToNextInput(event, 'fabricante')">
+    <input type="text" id="modelo" name="modelo" placeholder="Modelo:" onkeydown="moveToNextInput(event, 'fabricante')" required>
     </div>
 
     <div class="user-input-box">
     <label for="fabricante" style="margin: 5px;">Fabricante:</label>
-    <input type="text" id="fabricante" name="fabricante" placeholder="Fabricante:" onkeydown="moveToNextInput(event, 'nom_equipo')">
+    <input type="text" id="fabricante" name="fabricante" placeholder="Fabricante:" onkeydown="moveToNextInput(event, 'nom_equipo')" required>
     </div>
 
     <div class="user-input-box">
     <label for="n_equipo" style="margin: 5px;">Nombre de Equipo:</label>
-    <input type="text" id="nom_equipo" name="nom_equipo" placeholder="Nombre de Equipo:" onkeydown="moveToNextInput(event, 'ip_equipo')">
+    <input type="text" id="nom_equipo" name="nom_equipo" placeholder="Nombre de Equipo:" onkeydown="moveToNextInput(event, 'ip_equipo')" required>
     </div>
 
     <div class="user-input-box">
     <label for="IP" style="margin: 5px;">IP del Equipo:</label>
-    <input type="text" id="ip_equipo" name="ip_equipo" placeholder="IP del Equipo:" onkeydown="moveToNextInput(event, 'nom_procesador')">
+    <input type="text" id="ip_equipo" name="ip_equipo" placeholder="IP del Equipo:" onkeydown="moveToNextInput(event, 'nom_procesador')" required>
     </div>
 
     <div class="user-input-box">
     <label for="procesador" style="margin: 5px;">Procesador:</label>
-    <input type="text" id="nom_procesador" name="nom_procesador" placeholder="Nombre de Procesador:" onkeydown="moveToNextInput(event, 'so')">
+    <input type="text" id="nom_procesador" name="nom_procesador" placeholder="Nombre de Procesador:" onkeydown="moveToNextInput(event, 'so')" required>
     </div>
 
     <div class="user-input-box">
     <label for="" style="margin: 5px;">Sistema Operaivo:</label>
-    <select class="custom-select" id="so" name="so" onkeydown="moveToNextInput(event, 'tipo_equipo')">
+    <select class="custom-select" id="so" name="so" onkeydown="moveToNextInput(event, 'tipo_equipo')" required>
     <option value="">Sistema Operaivo:</option>
     <option value="Windows 10">Windows 10</option>
     <option value="Windows 11">Windows 11</option>
@@ -231,7 +235,7 @@ $fechaActual = date('d-m-y');
 
     <div class="user-input-box">
     <label for="" style="margin: 5px;">Tipo de Equipo:</label>
-    <select class="custom-select" id="tipo_equipo" name="tipo_equipo" onkeydown="moveToNextInput(event, 'ram')">
+    <select class="custom-select" id="tipo_equipo" name="tipo_equipo" onkeydown="moveToNextInput(event, 'ram')" required>
     <option value="">Tipo de Equipo:</option>
     <option value="Escritorio">Escritorio</option>
     <option value="Portátil">Portátil</option>
@@ -241,22 +245,22 @@ $fechaActual = date('d-m-y');
   
     <div class="user-input-box">
     <label for="ram">RAM:</label>
-    <input type="text" id="ram" name="ram" placeholder="8" onkeydown="moveToNextInput(event, 'slot')">
+    <input type="text" id="ram" name="ram" placeholder="8 GB RAM" onkeydown="moveToNextInput(event, 'slot')" required>
     </div>
 
     <div class="user-input-box">
     <label for="slot">Slot:</label>
-    <input type="text" id="slot" name="slot" placeholder="2" onkeydown="moveToNextInput(event, 'capacidad')">
+    <input type="text" id="slot" name="slot" placeholder="2" onkeydown="moveToNextInput(event, 'capacidad')" required>
     </div>
 
     <div class="user-input-box">
     <label for="capacidad">Disco:</label>
-    <input type="text" id="capacidad" name="capacidad" placeholder="500 GB HDD" onkeydown="moveToNextInput(event, 'comp_add')">
+    <input type="text" id="capacidad" name="capacidad" placeholder="500 GB HDD" onkeydown="moveToNextInput(event, 'comp_add')" required>
     </div>
 
     <div class="user-input-box" style="width: 100% !important;">
     <label for="comp_add">Componentes Adicionales:</label>
-    <textarea id="comp_add" rows="4" name="comp_add"></textarea>  
+    <textarea id="comp_add" rows="4" name="comp_add" required></textarea>  
     </div>
     
 

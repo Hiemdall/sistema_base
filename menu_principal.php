@@ -14,7 +14,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title></title>
   <link rel="stylesheet" type="text/css" href="css/sidebar.css">
-  <link rel="stylesheet" href="css/menub.css">
+  <link rel="stylesheet" href="css/menu5.css">
   <!-- Favicon -->
   <link href="logo.png" rel="icon">
 
@@ -25,10 +25,6 @@
     href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500&family=Roboto:wght@500;700&display=swap"
     rel="stylesheet">
 
-<!-- Libraries Stylesheet -->
-<link href="lib/animate/animate.min.css" rel="stylesheet">
-<link href="lib/owlcarousel/assets/owl.carousel.min.css" rel="stylesheet">
-<link href="lib/lightbox/css/lightbox.min.css" rel="stylesheet">
 
     <!-- Icon Font Stylesheet -->
     <link rel='stylesheet' href='https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css'> 
@@ -68,7 +64,7 @@
 
     <div class="exit">
     <!--<a href="#"><i class="fa fa-cog" aria-hidden="true"></i></a>-->
-    <a href="form_login.php"><i class='fa fa-sign-out'> Cerrar Secciòn</i></a>
+    <a href="form_login.php"><i class='fa fa-sign-out'> Cerrar Sección</i></a>
 
     <footer> 
       <a href="/">Desarrollado por Integratic © 2023</a>
@@ -110,7 +106,7 @@
      
     </div></a>
 
-    <a href="/"><div class="card">
+    <a href="./vistas/index.php"><div class="card">
         <i class="fa fa-eye fa-5x" aria-hidden="true" style="color: white;"></i>
         <h4>Vistas</h4>
     </div></a>
@@ -118,7 +114,7 @@
 
     <a href="/"><div class="card">
         <i class="fa fa-bar-chart fa-5x" aria-hidden="true" style="color: white;"></i>
-        <h4>Estadisticas</h4>
+        <h4>Estadísticas</h4>
       
     </div></a>
 

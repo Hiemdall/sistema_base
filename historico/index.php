@@ -5,7 +5,7 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Historial del Equipo</title>
-    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="58.css">
      <!-- Generar una alerta con SweetAlert -->
      <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/sweetalert2@11.0.18/dist/sweetalert2.min.css">
      <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11.0.18/dist/sweetalert2.min.js"></script>
@@ -20,10 +20,7 @@
     href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500&family=Roboto:wght@500;700&display=swap"
     rel="stylesheet">
 
-<!-- Libraries Stylesheet -->
-<link href="lib/animate/animate.min.css" rel="stylesheet">
-<link href="lib/owlcarousel/assets/owl.carousel.min.css" rel="stylesheet">
-<link href="lib/lightbox/css/lightbox.min.css" rel="stylesheet">
+
 
     <!-- Icon Font Stylesheet -->
     <link rel='stylesheet' href='https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css'> 
@@ -79,8 +76,8 @@
     <ul>
       
       <li><a href="../Ficha/index.php"><i class="fa fa-fonticons" aria-hidden="true"></i> Ficha Técnica</a></li>
-      <li><a href="#"><i class="fa fa-history" aria-hidden="true"></i> Historial</a></li>
-      <li><a href="../impresora/"><i class="fa fa-print" aria-hidden="true"></i>  Impresora</a></li>
+      <li><a href="#" style="color: yellow;"><i class="fa fa-history" aria-hidden="true"></i> Historial</a></li>
+      <li><a href="../impresora/"><i class="fa fa-print" aria-hidden="true"></i>  Dispositivos</a></li>
       <li><a href="/"><i class="fa fa-eye" aria-hidden="true"></i>  Vistas</a></li>
       
     
@@ -89,24 +86,31 @@
 
 
     <div class="dropdown">
-    <li class="dropbtn"><a href="index.php"><i class="fa fa-history" aria-hidden="true"></i> Reporte</a><li>
-    <ul class="dropdown-content" style="margin-left: 20px;">
-    <li><a href="../reportes/reporte_sede.php">Ficha por sede</a></li>
-    <li><a href="../reportes/reporte_sede_historial.php">historial por Sede</a></li>
+    <li class="dropbtn"><a href="index.php"><i class="fa fa-history" aria-hidden="true"></i>  Reporte</a><li>
+    <ul class="dropdown-content">
+    <li><a href="reporte_sede.php">Ficha sede</a></li>
+    <li><a href="reporte_sede_historial.php">historial Sede</a></li>
 
+    <li><a href="/">Serial Ficha</a></li>
+    <li><a href="/">Serial Historial</a></li>
 
-    <li><a href="reporte_general.php">Serial</a></li>
-    <li><a href="#">General</a></li>
+    <li><a href="reporte_general.php">General Ficha</a></li>
+    <li><a href="reporte_general_historial.php">General Historial</a></li>
+
+    <li><a href="dispositivo_general.php">Dispositivo general</a></li>
+    <li><a href="reporte_dispositivos.php">Dispositivo sede</a></li>
     </ul>
     </div>
+    </ul>
     
   </div>
     
    
 
     <div class="exit">
-    <a href="#"><i class="fa fa-cog" aria-hidden="true"></i></a>
-    <a href="form_login.php"><i class='fa fa-sign-out'> Cerrar Secciòn</i></a>
+       <!--<a href="#"><i class="fa fa-cog" aria-hidden="true"></i></a>-->
+       <a href="../form_login.php"><i class='fa fa-sign-out'> Cerrar Sección</i></a>
+
 
     <footer> 
       <a href="/">Desarrollado por Integratic © 2023</a>
@@ -171,17 +175,17 @@ $fechaActual = date('d-m-y');
 
     <div class="user-input-box">
     <label for="empresa" style="margin: 5px;">Empresa:</label>
-    <input type="text" id="empresa" name="empresa" placeholder="Nombre de la Empresa:" onkeydown="moveToNextInput(event, 'sede')">
+    <input type="text" id="empresa" name="empresa" placeholder="Nombre de la Empresa:" onkeydown="moveToNextInput(event, 'sede')" readonly>
     </div>
 
     <div class="user-input-box">
     <label for="sede" style="margin: 5px;">Sede:</label>
-    <input type="text" id="sede" name="sede" placeholder="Sede:" onkeydown="moveToNextInput(event, 'departamento')">
+    <input type="text" id="sede" name="sede" placeholder="Sede:" onkeydown="moveToNextInput(event, 'departamento')" readonly>
     </div>
 
     <div class="user-input-box">
     <label for="departamento" style="margin: 5px;">Departamento:</label>
-    <input type="text" id="departamento" name="departamento" placeholder="Departamento:" onkeydown="moveToNextInput(event, 'tipo_mant')">
+    <input type="text" id="departamento" name="departamento" placeholder="Departamento:" onkeydown="moveToNextInput(event, 'tipo_mant')" readonly>
     </div>
 
     <div class="user-input-box">
@@ -201,6 +205,7 @@ $fechaActual = date('d-m-y');
         <label for="observacion">Diagnostico:</label>
         <textarea id="observacion" rows="4" name="observacion"></textarea>
       </div>
+
       <div class="btos">
         <button class="poup" type="button" onclick="diagnostico()"><i class="fa fa-question-circle fa-lg" aria-hidden="true"></i></button>
       </div>
@@ -209,21 +214,21 @@ $fechaActual = date('d-m-y');
         <label for="recomendaciones">Solución:</label>
         <textarea id="recomendaciones" rows="4" name="recomendaciones"></textarea>
       </div>
+
       <div class="btos">
         <button class="poup" type="button" onclick="agregarRecomendacion()"><i class="fa fa-question-circle fa-lg" aria-hidden="true"></i></button>
       </div>
    
-     <div class="user-input-box" style="width: 100% !important;">
+     <div class="user-input-box" style="width: 100% !important; margin-bottom: 11px;">
         <label for="repuesto" style="width: 10% !important;">Repuesto:</label>
-        <input type="checkbox" id="repuesto" name="repuesto" value="1" style="width: 5% !important;"> 
-        <label for="detalle" style="width: 80% !important;"></label>
+        <input type="checkbox" id="repuesto" name="repuesto" value="1" style="width: 20px !important;"> 
+        <label for="detalle" style="width: 85% !important;"></label>
         <textarea id="detalle" rows="4" name="detalle"></textarea>
       </div>
 
       <div class="btos">
         <button class="poup" type="button" onclick="agregarRepuesto()"><i class="fa fa-question-circle fa-lg" aria-hidden="true"></i></button>
       </div>
-    
     
     <!-- Botones-->
     <div class="form-submit-btn">
@@ -234,6 +239,8 @@ $fechaActual = date('d-m-y');
 
 </div>
 </form>
+
+
 
 <!-- Descripciones de diagnóstico -->
 <div class="popup">

@@ -67,7 +67,7 @@
       
       <li><a href="../Ficha/index.php"><i class="fa fa-fonticons" aria-hidden="true"></i> Ficha Técnica</a></li>
       <li><a href="#"><i class="fa fa-history" aria-hidden="true"></i> Historial</a></li>
-      <li><a href="../impresora/"><i class="fa fa-print" aria-hidden="true"></i>  Impresora</a></li>
+      <li><a href="../impresora/"><i class="fa fa-print" aria-hidden="true"></i>  Dispositivos</a></li>
       <li><a href="/"><i class="fa fa-eye" aria-hidden="true"></i>  Vistas</a></li>
     
 
@@ -75,16 +75,19 @@
 
 
     <div class="dropdown">
-    <li class="dropbtn"><a href="index.php"><i class="fa fa-history" aria-hidden="true" style="color: white;"></i>  Reporte</a><li>
+    <li class="dropbtn"><a href="index.php"><i class="fa fa-history" aria-hidden="true"></i>  Reporte</a><li>
     <ul class="dropdown-content">
     <li><a href="reporte_sede.php">Ficha sede</a></li>
     <li><a href="reporte_sede_historial.php">historial Sede</a></li>
 
-    <li><a href="reporte_general.php">Serial Ficha</a></li>
-    <li><a href="reporte_general.php">Serial Historial</a></li>
+    <li><a href="/">Serial Ficha</a></li>
+    <li><a href="/">Serial Historial</a></li>
 
     <li><a href="reporte_general.php">General Ficha</a></li>
     <li><a href="reporte_general_historial.php">General Historial</a></li>
+
+    <li><a href="dispositivo_general.php">Dispositivo general</a></li>
+    <li><a href="reporte_dispositivos.php">Dispositivo sede</a></li>
     </ul>
     </div>
 
@@ -96,7 +99,8 @@
 
     <div class="exit">
    <!--<a href="#"><i class="fa fa-cog" aria-hidden="true"></i></a>-->
-    <a href="form_login.php"><i class='fa fa-sign-out'> Cerrar Secciòn</i></a>
+   <a href="../form_login.php"><i class='fa fa-sign-out'> Cerrar Sección</i></a>
+
 
     <footer> 
       <a href="/">Desarrollado por Integratic © 2023</a>
@@ -113,7 +117,7 @@
 
 <div class="container">
 
-<div class="box">
+<div class="box-sede">
 
   <h1>Ficha tecnica General</h1>
 

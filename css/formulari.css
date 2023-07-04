@@ -1,3 +1,7 @@
+body{
+  font-family: "Montserrat",sans-serif;
+}
+
 .container {
     display: flex;
     flex-direction: column;
@@ -36,7 +40,10 @@
     text-align: center;
     margin-bottom: 0;
     margin-top: 0;
+    color: rgb(13, 75, 133);
   }
+
+
   
   .main-user-info {
     display: flex;
