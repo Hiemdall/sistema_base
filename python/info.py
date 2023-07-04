@@ -53,8 +53,9 @@ print(f"Nombre del Técnico : ", nom_tec)
 
 # Fecha  y hora actual del registro
 fecha_actual = datetime.datetime.now().strftime("%d-%m-%Y")
+fecha_formateada = fecha_actual.replace("-", "/")
 hora_actual = datetime.datetime.now().strftime("%H:%M:%S")
-print("Fecha :", fecha_actual + " / " + "Hora : ", hora_actual + "\n")
+print("Fecha :", fecha_formateada + " / " + "Hora : ", hora_actual + "\n")
 
 # Datos adicionales
 print("Ejemplo de sedes : Secretaria de Salud Pública - Secretaria de Hacienda - Secretaria de Cultura - N/D")
@@ -178,7 +179,7 @@ if clave == "4020":
     data = {
     "empresa":emprersa,    
     "nombre": nom_tec,
-    "fecha": fecha_actual,
+    "fecha": fecha_formateada,
     "hora" : hora_actual,
     "sede": sede,
     "departamento": departamento,
