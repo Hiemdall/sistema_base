@@ -8,8 +8,10 @@ $access_level = $_SESSION['access_level'];
 $email = $_SESSION['email'];
 $archivo = $_SESSION['archivo'];
 
+$empresa = "D.A.C.P";
+
 // Obtener los valores del formulario
-$datos_empresa = $_POST['empresa'];
+//$datos_empresa = $_POST['empresa'];
 $sede = $_POST['sede'];
 $departamento = $_POST['departamento'];
 $nom_usuario = $_POST['nom_usuario'];
@@ -31,7 +33,7 @@ $componentes_add = $_POST['comp_add'];
 
 // Insertar los valores en la tabla datos_empresa
 $sql_datos_empresa = "INSERT INTO datos(empresa, sede, departamento, nombre, nom_usuario, fecha, hora, serial, activo_fijo, ip_equipo , tipo_equipo, modelo, fabricante, nom_equipo, nom_procesador, so, ram, slot, componentes_add, disco) 
-VALUES ('$datos_empresa', '$sede', '$departamento', '$username', '$nom_usuario', '$fecha', '$hora', '$serial', '$activo_fijo', '$ip_equipo', '$tipo_equipo', '$modelo', '$fabricante', '$nom_equipo', '$nom_procesador', '$so', '$ram', '$slot', '$componentes_add', '$disco')";
+VALUES ('$empresa', '$sede', '$departamento', '$username', '$nom_usuario', '$fecha', '$hora', '$serial', '$activo_fijo', '$ip_equipo', '$tipo_equipo', '$modelo', '$fabricante', '$nom_equipo', '$nom_procesador', '$so', '$ram', '$slot', '$componentes_add', '$disco')";
 
 if ($conn->query($sql_datos_empresa) === TRUE) {
     $empresa_id = $conn->insert_id;

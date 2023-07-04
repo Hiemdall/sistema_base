@@ -10,7 +10,7 @@ $username = $_SESSION['username'];
 if ($_SERVER['REQUEST_METHOD'] == 'POST') {
   // Obtener los valores del formulario
   $serial = $_POST['serial'];
-  $empresa = $_POST['empresa'];
+  //$empresa = $_POST['empresa'];
   $sede = $_POST['sede'];
   $departamento = $_POST['departamento'];
   $tipo_equipo = $_POST['tipo_equipo'];
@@ -31,7 +31,7 @@ if ($_SERVER['REQUEST_METHOD'] == 'POST') {
   
 
   // Realizar la consulta para actualizar los campos
-  $sql_datos = "UPDATE tbl_impresora SET empresa='$empresa', sede='$sede', departamento='$departamento', tipo_equipo='$tipo_equipo', 
+  $sql_datos = "UPDATE tbl_impresora SET  sede='$sede', departamento='$departamento', tipo_equipo='$tipo_equipo', 
   activo_fijo='$activo_fijo', ip_equipo='$ip_equipo', modelo='$modelo', fabricante='$fabricante', nom_tec='$username', diagnostico='$observacion',
   recomendaciones='$recomendaciones',repuesto='$repuesto', detalle_repuesto='$detalle' , tipo_mant='$tipo_mant' WHERE serial='$serial'";
 

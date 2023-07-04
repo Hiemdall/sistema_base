@@ -172,12 +172,20 @@ $fechaActual = date('d-m-y');
 
     <div class="user-input-box">
     <label for="empresa" style="margin: 5px;">Empresa:</label>
-    <input type="text" id="empresa" name="empresa" placeholder="Nombre de la Empresa:" onkeydown="moveToNextInput(event, 'sede')" required>
+    <input type="text" id="empresa" name="empresa" placeholder="D.A.C.P" readonly>
     </div>
 
     <div class="user-input-box">
-    <label for="sede" style="margin: 5px;">Sede:</label>
-    <input type="text" id="sede" name="sede" placeholder="Sede:" onkeydown="moveToNextInput(event, 'departamento')" required>
+    <label for="sede">Seleccionar Sede:</label>
+    <select id="sede" name="sede" onkeydown="moveToNextInput(event, 'departamento')">
+    <option value="">Seleccione una sede</option>
+    <option value="Secretaria de Salud">Secretaria de Salud</option>
+    <option value="Secretaria de Hacienda">Secretaria de Hacienda</option>
+    <option value="Secretaria Cultura">Secretaria Cultura</option>
+    <option value="D.A.G.M.A">D.A.G.M.A</option>
+    <option value="U.A.E.G.B.S">U.A.E.G.B.S</option>
+    <!-- Agrega más opciones según tus necesidades -->
+    </select>
     </div>
 
     <div class="user-input-box">
@@ -255,7 +263,7 @@ $fechaActual = date('d-m-y');
 
     <div class="user-input-box">
     <label for="capacidad">Disco:</label>
-    <input type="text" id="capacidad" name="capacidad" placeholder="500 GB HDD" onkeydown="moveToNextInput(event, 'comp_add')" required>
+    <input type="text" id="capacidad" name="capacidad" placeholder="500 GB HDD / SDD" onkeydown="moveToNextInput(event, 'comp_add')" required>
     </div>
 
     <div class="user-input-box" style="width: 100% !important;">
@@ -324,7 +332,7 @@ if (this.readyState === XMLHttpRequest.DONE && this.status === 200) {
   var response = JSON.parse(this.responseText);
   if (response.exists) {
     document.getElementById("empresa").value = response.empresa;
-    document.getElementById("sede").value = response.sede;
+   // document.getElementById("sede").value = response.sede;
     document.getElementById("departamento").value = response.departamento;
     document.getElementById("nom_usuario").value = response.nom_usuario;
     document.getElementById("fecha").value = response.fecha;
@@ -373,6 +381,23 @@ if (this.readyState === XMLHttpRequest.DONE && this.status === 200) {
   // Establecer el atributo selected de la opción
   optionTipoEquipo.selected = true;
   
+  //**************************** Select Sede *************************** */
+    // Este código se utiliza para cargar el combobox con los valores de la base de datos
+    // Obtener el elemento select
+    const selectElementSede = document.getElementById("sede");
+   // Buscar si existe una opción con el valor de response.sede
+   let optionSede = selectElementSede.querySelector(`option[value="${response.sede}"]`);
+   if (!optionSede) {
+   // Si no existe la opción, agregar una nueva
+   optionSede = document.createElement("option");
+   optionSede.value = response.sede;
+   optionSede.textContent = response.sede;
+   selectElementSede.appendChild(optionSede);
+  }   
+  // Establecer el atributo selected de la opción
+  optionSede.selected = true;
+
+
   }
 }
 };
