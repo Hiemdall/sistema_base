@@ -70,7 +70,7 @@ print("Ejemplo de tipo de equipo : Escritorio - Portátil - Servidor")
 tipo_equipo = input("Ingrese el Tipo de Equipo: ")
 print("Ejemplo de sistemas operativos : Windows 10 - Windows 7 - Linux - N/D")
 so = input("Ingrese el Sistema Operativo: ")
-print("Ejemplo de componentes adicionale : Disco Mecánico Sata 500 GB - Targeta Grafica 4 GB - Memoria RAM de 16 GB - N/D")
+print("Ejemplo de componentes adicionale : Monitor: HP Serial: DRf4587 - Disco Mecánico Sata 500 GB - Targeta Grafica 4 GB  - N/D")
 Componentes_add = input("Ingrese componetes adicionales: ")
 
 # Procesos para detectar los datos de computador
