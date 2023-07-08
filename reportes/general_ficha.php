@@ -195,6 +195,12 @@ $conexion = mysqli_connect("localhost", "root", "", "blockbl5_red_de_salud_orien
     while ($fila = mysqli_fetch_assoc($resultado)) {
       $html .= '<body>';
     
+      // Obtener el nombre del técnico
+     $tecnico = $fila['nombre'];
+
+     // Obtener la imagen de la firma del técnico
+     $imagenFirma = obtenerImagenFirma($tecnico);
+
       $html .= '<p class="empresa">Empresa: '. $fila['empresa'] .'</p>';
       $html .= '<p class="sede">Sede: '. $fila['sede'] .'</p>';
       $html .= '<p class="fecha">Fecha: '. $fila['fecha'] .'</p>';
@@ -215,16 +221,15 @@ $conexion = mysqli_connect("localhost", "root", "", "blockbl5_red_de_salud_orien
       $html .= '<p class="so">Sistema operativo: '. $fila['so'] .' </p>';
       $html .= '<p class="adi">Componentes adicionales: '. $fila['Componentes_add'] .' </p>';
       
-
-
-      $html .= '<p class="adi"></p>';
       
-  
-      $tecnico = $fila['nombre'];
-      $imagenFirma = obtenerImagenFirma($tecnico);
-  
+      // Obtener el nombre del técnico
+      //$tecnico = $fila['nombre'];
+      //$imagenFirma = obtenerImagenFirma($tecnico);
+      //$html .= '<img src="' . $imagenFirma . '" alt="Firma del técnico" class="img">';
+      
+      // Mostrar la imagen de la firma del técnico
       $html .= '<img src="' . $imagenFirma . '" alt="Firma del técnico" class="img">';
-  
+
       // Salto a la otra página si hay más registros
       $html .= '<div style="page-break-after: always;"></div>';
   
@@ -247,6 +252,8 @@ function obtenerImagenFirma($tecnico) {
   $firmaTecnicos = array(
       'Heimdall Rojas' => 'firmas/heimdall.jpg',
       'Denyer Bastida' => 'firmas/denyer.jpg',
+      'Andres Nose' => 'firmas/andres.jpg',
+      
      
       // Agrega más técnicos y sus respectivas rutas de imagen aquí
   );
