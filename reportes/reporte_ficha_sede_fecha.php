@@ -1,3 +1,18 @@
+<?php
+session_start(); // Iniciar la sesión
+
+if ($_SERVER['REQUEST_METHOD'] == 'POST' && isset($_POST['Formulario'])) {
+    // Obtener el valor de la sede seleccionada
+    $sede = $_POST['sede'];
+    $f_inicial = $_POST['fecha_inicial'];
+    $f_final = $_POST['fecha_final'];
+
+    // Redirigir al archivo generar_pdf.php y pasar la sede como parámetro
+    header('Location: Fichatecnica_fecha.php?sede=' . urlencode($sede) . '&f_inicial=' . urlencode($f_inicial) . '&f_final=' . urlencode($f_final));
+    exit();
+}
+?>
+
 <!DOCTYPE html>
 <html lang="es">
 <head>
@@ -138,25 +153,21 @@
     <!-- Agrega más opciones según tus necesidades -->
   </select>
 
+  <label for="fecha_inicial">Fecha Inicial</label>
+  <input type="date" id="fecha_inicial" name="fecha_inicial">
+
+  <label for="fecha_final">Fecha Final</label>
+  <input type="date" id="fecha_final" name="fecha_final">
+
   <div class="form-submit-btn">
   <button type="submit" name="Formulario">Generar PDF</button>
   </div>
 
-
-<?php
-// Verificar si se ha enviado el formulario para generar el PDF
-if ($_SERVER['REQUEST_METHOD'] == 'POST' && isset($_POST['Formulario'])) {
-// Obtener el valor de la sede seleccionada
-$sede = $_POST['sede'];
-
-// Redirigir al archivo generar_pdf.php y pasar la sede como parámetro
-header('Location: Fichatecnica.php?sede=' . urlencode($sede));
-exit();
-}
-?>
+  </form>
 
 
-</form>
+
+
 
 
   </div>

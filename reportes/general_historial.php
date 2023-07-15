@@ -3,7 +3,7 @@ require_once 'dompdf/autoload.inc.php';
 use Dompdf\Dompdf;
 $dompdf = new Dompdf();
 
-$conexion = mysqli_connect("localhost", "root", "", "blockbl5_red_de_salud_oriente");
+$conexion = mysqli_connect("localhost", "root", "", "blockbl5_hacienda");
 
 $consulta = "SELECT * FROM historial";
 $resultado = mysqli_query($conexion, $consulta);
@@ -207,6 +207,7 @@ $resultado = mysqli_query($conexion, $consulta);
       width: 660px;
       overflow: hidden;
       word-wrap: break-word;
+      font-size: 14px;
     }
 
     .recomendaciones{
@@ -216,6 +217,7 @@ $resultado = mysqli_query($conexion, $consulta);
       width: 660px;
       overflow: hidden;
       word-wrap: break-word;
+      font-size: 14px;
     }
 
     .repuesto{
@@ -225,6 +227,7 @@ $resultado = mysqli_query($conexion, $consulta);
       width: 660px;
       overflow: hidden;
       word-wrap: break-word;
+      font-size: 14px;
     }  
     </style>
 
@@ -243,7 +246,7 @@ $resultado = mysqli_query($conexion, $consulta);
       $html .= '<p class="visita">'. $fila['visita'] .'</p>';
       $html .= '<p class="observacion">'. $fila['observacion'] .'</p>';
       $html .= '<p class="recomendaciones">'. $fila['recomendaciones'] .'</p>';
-      $html .= '<p class="repuesto">Repuestos: '. $fila['repuesto'] .'</p>';
+      $html .= '<p class="repuesto">Repuestos: '. $fila['detalle_repuesto'] .'</p>';
 
   
       $tecnico = $fila['nom_tec'];
@@ -271,8 +274,12 @@ function obtenerImagenFirma($tecnico) {
   // Puedes implementar tu lógica para obtener la ruta de la imagen de firma según el técnico
   // Por ejemplo, puedes tener un array asociativo donde las claves sean los nombres de los técnicos y los valores sean las rutas de las imágenes
   $firmaTecnicos = array(
-      'Heimdall Rojas' => 'firmas/heimdall.jpg',
-      'Denyer Bastida' => 'firmas/denyer.jpg',
+    'Heimdall Rojas' => 'firmas/heimdall.jpg',
+    'Denyer Bastidas' => 'firmas/denyer.jpeg',
+    'Andrés Agudelo' => 'firmas/andres.jpg',
+    'Michael Asprilla' => 'firmas/michael.jpg',
+    'Michael Saavedra' => 'firmas/savedra.jpg',
+    'Luis Agredo' => 'firmas/luis.jpg',
      
       // Agrega más técnicos y sus respectivas rutas de imagen aquí
   );

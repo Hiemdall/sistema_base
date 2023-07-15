@@ -1,4 +1,4 @@
-﻿<?php
+<?php
 require_once 'dompdf/autoload.inc.php';
 use Dompdf\Dompdf;
 $dompdf = new Dompdf();
@@ -8,12 +8,15 @@ $conexion = mysqli_connect("localhost", "root", "", "blockbl5_hacienda");
 if ($_SERVER['REQUEST_METHOD'] == 'POST') {
   // Obtener el valor de la sede seleccionada
   $sede = $_POST['sede'];
+  $f_inicial = $_POST['fecha_inicial'];
+  $f_final = $_POST['fecha_final'];
 
   // Validar que se haya seleccionado una sede
   if (!empty($sede)) {
     // Modificar la consulta en la base de datos para filtrar por sede
-    $consulta = "SELECT * FROM datos WHERE sede = '$sede'";
+    $consulta = "SELECT * FROM datos WHERE sede = '$sede' AND fecha >= '$f_inicial' AND fecha <= '$f_final'";
     $resultado = mysqli_query($conexion, $consulta);
+    
 
     while ($fila = mysqli_fetch_assoc($resultado)) {
 
@@ -247,7 +250,7 @@ if ($_SERVER['REQUEST_METHOD'] == 'POST') {
     $dompdf->render();
   
     // Descargar el archivo PDF
-    $dompdf->stream("Historico.pdf", ["Attachment" => false]);
+    $dompdf->stream("Ficha_sede_fecha.pdf", ["Attachment" => false]);
   }
 }
 

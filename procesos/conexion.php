@@ -3,7 +3,7 @@
 $servername = "localhost";
 $username = "root";
 $password = "";
-$dbname = "blockbl5_red_de_salud_oriente";
+$dbname = "blockbl5_hacienda";
 //$dbname = "soporte_rso";
 
 // Crear conexi贸n

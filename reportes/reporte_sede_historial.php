@@ -137,16 +137,26 @@
     <option value="U.A.E.G.B.S">U.A.E.G.B.S</option>
     <!-- Agrega más opciones según tus necesidades -->
   </select>
+  
   <div class="form-submit-btn">
   <button type="submit" name="Formulario">Generar PDF</button>
   </div>
 
 
+<?php
+// Verificar si se ha enviado el formulario para generar el PDF
+if ($_SERVER['REQUEST_METHOD'] == 'POST' && isset($_POST['Formulario'])) {
+// Obtener el valor de la sede seleccionada
+$sede = $_POST['sede'];
+
+// Redirigir al archivo generar_pdf.php y pasar la sede como parámetro
+header('Location: general_ficha.php?sede=' . urlencode($sede));
+exit();
+}
+?>
+
+
 </form>
-
-
-
-
 
   </div>
 

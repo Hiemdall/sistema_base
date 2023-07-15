@@ -3,7 +3,7 @@ require_once 'dompdf/autoload.inc.php';
 use Dompdf\Dompdf;
 $dompdf = new Dompdf();
 
-$conexion = mysqli_connect("localhost", "root", "", "blockbl5_red_de_salud_oriente");
+$conexion = mysqli_connect("localhost", "root", "", "blockbl5_hacienda");
 
     $resultado = mysqli_query($conexion, "SELECT * FROM datos");
 
@@ -206,18 +206,18 @@ $conexion = mysqli_connect("localhost", "root", "", "blockbl5_red_de_salud_orien
       $html .= '<p class="modelo">Modelo: '. $fila['modelo'] .'</p>';
       $html .= '<p class="fabricante">Fabricante:  '. $fila['fabricante'] .' </p>';
       $html .= '<p class="equipo">Nombre del equipo:  '. $fila['nom_equipo'] .' </p>';
-      $html .= '<p class="ip">Ip del equipo: '. $fila['nom_procesador'] .'</p>';
-      $html .= '<p class="procesador">Procesador: '. $fila['ip_equipo'] .'</p>';
+      $html .= '<p class="ip">Ip del equipo: '. $fila['ip_equipo'] .'</p>';
+      $html .= '<p class="procesador">Procesador: '. $fila['nom_procesador'] .'</p>';
       $html .= '<p class="disco">Disco: '. $fila['disco'] .'</p>';
       $html .= '<p class="tequipo">Tipo de equipo: '. $fila['tipo_equipo'] .' </p>';
       $html .= '<p class="ram">Ram: '. $fila['ram'] .' </p>';
       $html .= '<p class="slot">slot: '. $fila['slot'] .' </p>';
       $html .= '<p class="so">Sistema operativo: '. $fila['so'] .' </p>';
       $html .= '<p class="adi">Componentes adicionales: '. $fila['Componentes_add'] .' </p>';
-      
+      //$html .= '<p class="">'. $fila['nombre'] .' </p>';
 
 
-      $html .= '<p class="adi"></p>';
+    
       
   
       $tecnico = $fila['nombre'];
@@ -246,8 +246,13 @@ function obtenerImagenFirma($tecnico) {
   // Por ejemplo, puedes tener un array asociativo donde las claves sean los nombres de los técnicos y los valores sean las rutas de las imágenes
   $firmaTecnicos = array(
       'Heimdall Rojas' => 'firmas/heimdall.jpg',
-      'Denyer Bastida' => 'firmas/denyer.jpg',
-     
+      'Denyer Bastidas' => 'firmas/denyer.jpeg',
+      'Andrés Agudelo' => 'firmas/andres.jpg',
+      'Michael Asprilla' => 'firmas/michael.jpg',
+      'Michael Saavedra' => 'firmas/savedra.jpg',
+      'Luis Agredo' => 'firmas/luis.jpg',
+      
+    
       // Agrega más técnicos y sus respectivas rutas de imagen aquí
   );
 
