@@ -7,18 +7,17 @@ $conexion = mysqli_connect("localhost", "root", "", "blockbl5_hacienda");
 
 if ($_SERVER['REQUEST_METHOD'] == 'POST') {
   // Obtener el valor de la sede seleccionada
-  $sede = $_POST['sede'];
+  
   $f_inicial = $_POST['fecha_inicial'];
   $f_final = $_POST['fecha_final'];
 
-  // Validar que se haya seleccionado una sede
-  if (!empty($sede)) {
+  // Validar que se haya seleccionado una se
     // Modificar la consulta en la base de datos para filtrar por sede
-    $consulta = "SELECT * FROM datos WHERE sede = '$sede' AND fecha >= '$f_inicial' AND fecha <= '$f_final'";
+    $consulta = "SELECT * FROM datos WHERE fecha >= '$f_inicial' AND fecha <= '$f_final'";
     $resultado = mysqli_query($conexion, $consulta);
     
 
-    while ($fila = mysqli_fetch_assoc($resultado)) {
+    
 
     $html = '<html>';
     $html .= '<head>
@@ -203,7 +202,7 @@ if ($_SERVER['REQUEST_METHOD'] == 'POST') {
         </style>
     </head>';
   
-    
+    while ($fila = mysqli_fetch_assoc($resultado)) {
       $html .= '<body>';
     
       $html .= '<p class="empresa">Empresa: '. $fila['empresa'] .'</p>';
@@ -238,11 +237,11 @@ if ($_SERVER['REQUEST_METHOD'] == 'POST') {
       $html .= '<div style="page-break-after: always;"></div>';
   
       $html .= '</body>';
-   
+    }
   
     $html .= '</html>';
   
-  }
+ 
 
 
     $dompdf->setPaper('A4', 'portrait');
@@ -252,7 +251,7 @@ if ($_SERVER['REQUEST_METHOD'] == 'POST') {
     // Descargar el archivo PDF
     $dompdf->stream("Ficha_sede_fecha.pdf", ["Attachment" => false]);
   }
-}
+
 
 function obtenerImagenFirma($tecnico) {
   // Puedes implementar tu lógica para obtener la ruta de la imagen defirma según el técnico

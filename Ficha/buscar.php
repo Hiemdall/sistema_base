@@ -7,6 +7,7 @@ include("../procesos/conexion.php");
    Asignar el valor a la variable $serial para su posterior procesamiento. */
 $serial = $_POST["input"];
 
+
 // Consulta en la base de datos
 $sql_datos = "SELECT empresa, sede, departamento, nom_usuario, fecha, hora, tipo_equipo, activo_fijo, modelo, fabricante, nom_equipo, nom_procesador, ram, slot, nombre, ip_equipo ,componentes_add, so, disco
 FROM datos WHERE serial = '$serial'";

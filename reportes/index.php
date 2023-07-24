@@ -16,12 +16,11 @@
     <link rel='stylesheet' href='https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css'> 
 <!-- Template Stylesheet -->
 <link rel="stylesheet" type="text/css" href="../css/sidebar.css">
-     <link rel="stylesheet" type="text/css" href="../css/formulari.css">
+<link rel="stylesheet" type="text/css" href="../css/menu5.css">
 </head>
 <body>
-
 <div class="sidebar">
-    <div class="logo"><a href="../menu_principal.php">
+  <div class="logo"><a href="../menu_principal.php">
         <img src="../img/logo.png" alt="Logo">
         </a>
     </div>
@@ -60,38 +59,18 @@
 
     </div>
 
-    <div class="list-opcion">
+  <div class="list-opcion">
     
     <ul>
       
-      <li><a href="../Ficha/index.php"><i class="fa fa-fonticons" aria-hidden="true"></i> Ficha Técnica</a></li>
-      <li><a href="#"><i class="fa fa-history" aria-hidden="true"></i> Historial</a></li>
+    <li><a href="#" style="color: yellow;"><i class="fa fa-fonticons" aria-hidden="true"></i> Ficha Técnica</a></li>
+
+      <li><a href="../historico/"><i class="fa fa-history" aria-hidden="true"></i>  Historial</a></li>
       <li><a href="../impresora/"><i class="fa fa-print" aria-hidden="true"></i>  Dispositivos</a></li>
-      <li><a href="/"><i class="fa fa-eye" aria-hidden="true"></i>  Vistas</a></li>
-    
+      <li><a href="#"><i class="fa fa-eye" aria-hidden="true"></i>  Vistas</a></li>
+      <li><a href="../reportes/index.php"><i class="fa fa-history" aria-hidden="true"></i>  Reportes</a><li>
 
-    <script src="../js/script.js"></script>
-
-
-    <div class="dropdown">
-    <li class="dropbtn"><a href="index.php"><i class="fa fa-history" aria-hidden="true"></i>  Reporte</a><li>
-    <ul class="dropdown-content">
-    <li><a href="reporte_sede.php">Ficha sede</a></li>
-    <li><a href="reporte_sede_historial.php">historial Sede</a></li>
-
-    <li><a href="/">Serial Ficha</a></li>
-    <li><a href="/">Serial Historial</a></li>
-
-    <li><a href="reporte_general.php">General Ficha</a></li>
-    <li><a href="reporte_general_historial.php">General Historial</a></li>
-
-    <li><a href="dispositivo_general.php">Dispositivo general</a></li>
-    <li><a href="reporte_dispositivos.php">Dispositivo sede</a></li>
     </ul>
-    </div>
-
-  </ul>
-    
   </div>
     
    
@@ -106,10 +85,93 @@
     </div>
 
     
+  </div>
+  <div class="container">
+    <h1 class="title">Reportes</h1>
+
+    <div class="cards">
 
 
+    
+    <a href="reporte_ficha_sede_fecha.php"><div class="card">
+        <i class="fa fa-file-text fa-5x" aria-hidden="true" style="color: white;"></i>
+        <h4>Ficha Fecha</h4>
+       
+    </div></a>
 
-  </div>  
+    <a href="historico"><div class="card">
+        <i class="fa fa-history fa-5x" aria-hidden="true" style="color: white;"></i>
+        <h4>Historial Fecha</h4>
+       
+    </div></a>
+
+    <a href="Ficha"><div class="card">
+        <i class="fa fa-file-text fa-5x" aria-hidden="true" style="color: white;"></i>
+        <h4>Dispostivos Fecha</h4>
+       
+    </div></a>
+
+    <a href="impresora"><div class="card">
+    <i class="fa fa-file-text fa-5x" aria-hidden="true" style="color: white;"></i>
+        <h4>Ficha General</h4>
+      
+    </div></a>
+
+    <a href="./reportes/"><div class="card">
+    <i class="fa fa-history fa-5x" aria-hidden="true" style="color: white;"></i>
+        <h4>Historial General</h4>
+     
+    </div></a>
+
+    <a href="Ficha"><div class="card">
+        <i class="fa fa-file-text fa-5x" aria-hidden="true" style="color: white;"></i>
+        <h4>Dispostivos General</h4>
+       
+    </div></a>
+
+    <a href="./vistas/index.php"><div class="card">
+    <i class="fa fa-file-text fa-5x" aria-hidden="true" style="color: white;"></i>
+        <h4>Ficha Serial</h4>
+    </div></a>
+
+
+    <a href="/"><div class="card">
+    <i class="fa fa-history fa-5x" aria-hidden="true" style="color: white;"></i>
+        <h4>Historial Serial</h4>
+      
+    </div></a> 
+
+    <a href="Ficha"><div class="card">
+        <i class="fa fa-file-text fa-5x" aria-hidden="true" style="color: white;"></i>
+        <h4>Dispostivos Serial</h4>
+       
+    </div></a>
+
+    <a href="reporte_sede.php"><div class="card">
+    <i class="fa fa-file-text fa-5x" aria-hidden="true" style="color: white;"></i>
+        <h4>Ficha Sede</h4>
+    </div></a>
+
+
+    <a href="reporte_sede_historial.php"><div class="card">
+    <i class="fa fa-history fa-5x" aria-hidden="true" style="color: white;"></i>
+        <h4>Historial Sede</h4>
+      
+    </div></a> 
+
+    <a href="Ficha"><div class="card">
+        <i class="fa fa-file-text fa-5x" aria-hidden="true" style="color: white;"></i>
+        <h4>Dispostivos Sede</h4>
+       
+    </div></a>
+
+    </div>
+
+    </div>
+
+    </div>
+
+   
 
 </body>
 </html>

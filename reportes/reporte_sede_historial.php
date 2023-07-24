@@ -126,7 +126,7 @@
 
   <h1>Historiales por Sede</h1>
 
-<form method="post" action="historial.php">
+<form action="historial.php" method="post" >
   <label for="sede">Seleccionar Sede:</label>
   <select id="sede" name="sede">
     <option value="">Seleccione una sede</option>
@@ -150,7 +150,7 @@ if ($_SERVER['REQUEST_METHOD'] == 'POST' && isset($_POST['Formulario'])) {
 $sede = $_POST['sede'];
 
 // Redirigir al archivo generar_pdf.php y pasar la sede como parámetro
-header('Location: general_ficha.php?sede=' . urlencode($sede));
+header('Location: historial.php?sede=' . urlencode($sede));
 exit();
 }
 ?>

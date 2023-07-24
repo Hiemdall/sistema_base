@@ -1,17 +1,3 @@
-<?php
-session_start(); // Iniciar la sesión
-
-if ($_SERVER['REQUEST_METHOD'] == 'POST' && isset($_POST['Formulario'])) {
-    // Obtener el valor de la sede seleccionada
-    $sede = $_POST['sede'];
-    $f_inicial = $_POST['fecha_inicial'];
-    $f_final = $_POST['fecha_final'];
-
-    // Redirigir al archivo generar_pdf.php y pasar la sede como parámetro
-    header('Location: Fichatecnica_fecha.php?sede=' . urlencode($sede) . '&f_inicial=' . urlencode($f_inicial) . '&f_final=' . urlencode($f_final));
-    exit();
-}
-?>
 
 <!DOCTYPE html>
 <html lang="es">
@@ -141,17 +127,7 @@ if ($_SERVER['REQUEST_METHOD'] == 'POST' && isset($_POST['Formulario'])) {
 
   <h1>Ficha técnica por Sede</h1>
 
-<form method="post">
-  <label for="sede">Seleccionar Sede:</label>
-  <select id="sede" name="sede">
-    <option value="">Seleccione una sede</option>
-    <option value="Secretaria de Salud">Secretaria de Salud</option>
-    <option value="Secretaria de Hacienda">Secretaria de Hacienda</option>
-    <option value="Secretaria Cultura">Secretaria Cultura</option>
-    <option value="D.A.G.M.A">D.A.G.M.A</option>
-    <option value="U.A.E.G.B.S">U.A.E.G.B.S</option>
-    <!-- Agrega más opciones según tus necesidades -->
-  </select>
+<form action="Fichatecnica_fecha.php" method="post">
 
   <label for="fecha_inicial">Fecha Inicial</label>
   <input type="date" id="fecha_inicial" name="fecha_inicial">
@@ -166,6 +142,20 @@ if ($_SERVER['REQUEST_METHOD'] == 'POST' && isset($_POST['Formulario'])) {
   </form>
 
 
+  <?php
+session_start(); // Iniciar la sesión
+
+if ($_SERVER['REQUEST_METHOD'] == 'POST' && isset($_POST['Formulario'])) {
+    // Obtener el valor de la sede seleccionada
+    
+    $f_inicial = $_POST['fecha_inicial'];
+    $f_final = $_POST['fecha_final'];
+
+    // Redirigir al archivo generar_pdf.php y pasar la sede como parámetro
+    header( '&f_inicial=' . urlencode($f_inicial) . '&f_final=' . urlencode($f_final));
+    exit();
+}
+?>
 
 
 

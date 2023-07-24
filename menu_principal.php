@@ -100,7 +100,7 @@
       
     </div></a>
 
-    <a href="./reportes/"><div class="card">
+    <a href="./reportes/index.php"><div class="card">
         <i class="fa fa-files-o fa-5x" aria-hidden="true" style="color: white;"></i>
         <h4>Reporte</h4>
      

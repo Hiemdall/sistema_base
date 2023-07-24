@@ -12,7 +12,7 @@ $archivo = $_SESSION['archivo'];
 if ($_SERVER['REQUEST_METHOD'] == 'POST') {
   // Obtener los valores del formulario
   $serial = $_POST['serial'];
-  $empresa = $_POST['empresa'];
+  //$empresa = $_POST['empresa'];
   $sede = $_POST['sede'];
   $departamento = $_POST['departamento'];
   $nom_usuario = $_POST['nom_usuario'];
@@ -30,7 +30,7 @@ if ($_SERVER['REQUEST_METHOD'] == 'POST') {
   $componentes_add = $_POST['comp_add'];
 
   // Realizar la consulta para actualizar los campos
-  $sql_datos = "UPDATE datos SET empresa='$empresa', sede='$sede', departamento='$departamento', nom_usuario='$nom_usuario', tipo_equipo='$tipo_equipo', 
+  $sql_datos = "UPDATE datos SET sede='$sede', departamento='$departamento', nom_usuario='$nom_usuario', tipo_equipo='$tipo_equipo', 
   activo_fijo='$activo_fijo', ip_equipo='$ip_equipo', modelo='$modelo', fabricante='$fabricante', nom_equipo='$nom_equipo', nom_procesador='$nom_procesador', so='$so', ram='$ram', 
   slot='$slot', nombre='$username', disco='$disco', componentes_add='$componentes_add' WHERE serial='$serial'";
 

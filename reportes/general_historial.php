@@ -276,10 +276,11 @@ function obtenerImagenFirma($tecnico) {
   $firmaTecnicos = array(
     'Heimdall Rojas' => 'firmas/heimdall.jpg',
     'Denyer Bastidas' => 'firmas/denyer.jpeg',
-    'Andrés Agudelo' => 'firmas/andres.jpg',
+    'Andrés Agudelo' => 'firmas/andres.jpeg',
     'Michael Asprilla' => 'firmas/michael.jpg',
     'Michael Saavedra' => 'firmas/savedra.jpg',
     'Luis Agredo' => 'firmas/luis.jpg',
+     
      
       // Agrega más técnicos y sus respectivas rutas de imagen aquí
   );

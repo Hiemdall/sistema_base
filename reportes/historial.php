@@ -3,7 +3,7 @@ require_once 'dompdf/autoload.inc.php';
 use Dompdf\Dompdf;
 $dompdf = new Dompdf();
 
-$conexion = mysqli_connect("localhost", "root", "", "blockbl5_red_de_salud_oriente");
+$conexion = mysqli_connect("localhost", "root", "", "blockbl5_hacienda");
 
 if ($_SERVER['REQUEST_METHOD'] == 'POST') {
   // Obtener el valor de la sede seleccionada

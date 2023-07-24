@@ -51,25 +51,106 @@ print("-------------------------------------------------------------------------
 print("Información:")    
 print(f"Nombre del Técnico : ", nom_tec)
 
+
 # Fecha  y hora actual del registro
 fecha_actual = datetime.datetime.now().strftime("%d-%m-%Y")
+fecha_formateada = fecha_actual.replace("-", "/")
 hora_actual = datetime.datetime.now().strftime("%H:%M:%S")
-print("Fecha :", fecha_actual + " / " + "Hora : ", hora_actual + "\n")
+print("Fecha :", fecha_formateada + " / " + "Hora : ", hora_actual + "\n")
 
 # Datos adicionales
-print("Ejemplo de sedes : Secretaria de Salud Pública - Secretaria de Hacienda - Secretaria de Cultura - N/D")
-sede = input("Ingrese la Sede: ")
+# print("Ejemplo de sedes : Secretaria de Salud Pública - Secretaria de Hacienda - Secretaria de Cultura - N/D")
+# sede = input("Ingrese la Sede: ")
+
+#********* Sedes *********
+sedes = [
+    "Secretaria de Salud",
+    "Secretaria de Hacienda",
+    "Secretaria Cultura",
+    "D.A.G.M.A",
+    "U.A.E.G.B.S",
+]
+
+print("Lista de las Sedes:")
+print("Seleccione la sede:")
+for i, sede in enumerate(sedes):
+    print(f"{i+1}. {sede}")
+
+# Pedir al usuario que elija un técnico
+indice = int(input("Ingrese la sede deseada: "))
+
+# Verificar la validez del índice ingresado
+if indice < 1 or indice > len(sedes):
+    print("¡Índice inválido!")
+else:
+    sede_p = sedes[indice - 1]
+
+print(f"Nombre de la sede : ", sede_p)
+print("-----------------------------------------------------------------------------------------------------------------------") 
+
 print("Ejemplo departamento : Administración - Tesoreria - Soporte Técnico - N/D")
 departamento = input("Ingrese el Departamento: ")
 print("Ejemplo nombre de usuario : Patricia Garcia - María López - Alejandro Rodríguez - N/D")
 nom_usuario = input("Ingrese el Nombre del Usuario: ")
 print("Ejemplo de activo fijo : Int-8036 - 75941 - 8541-Hacienda - N/D")
 activo_fijo = input("Ingrese el Activo Fijo del Equipo: ")
-print("Ejemplo de tipo de equipo : Escritorio - Portátil - Servidor")
-tipo_equipo = input("Ingrese el Tipo de Equipo: ")
-print("Ejemplo de sistemas operativos : Windows 10 - Windows 7 - Linux - N/D")
-so = input("Ingrese el Sistema Operativo: ")
-print("Ejemplo de componentes adicionale : Disco Mecánico Sata 500 GB - Targeta Grafica 4 GB - Memoria RAM de 16 GB - N/D")
+
+#********* Tipo de Equipos *********
+Tipos = [
+    "Escritorio",
+    "Portátil",
+    "Servidor",
+    ]
+
+print("Lista de los Tipos de equipos:")
+print("Seleccione la tipo:")
+for i, tipo in enumerate(Tipos):
+    print(f"{i+1}. {tipo}")
+
+# Pedir al usuario que elija un técnico
+indice = int(input("Ingrese el tipo de equipo: "))
+
+# Verificar la validez del índice ingresado
+if indice < 1 or indice > len(Tipos):
+    print("¡Índice inválido!")
+else:
+    tipo_E = Tipos[indice - 1]
+   
+print(f"Tipo de equipo : ", tipo_E)
+print("-----------------------------------------------------------------------------------------------------------------------") 
+
+#print("Ejemplo de sistemas operativos : Windows 10 - Windows 7 - Linux - N/D")
+#so = input("Ingrese el Sistema Operativo: ")
+
+#********* Sistema Operativo *********
+sistemas_operativos = [
+    "Windows 10",
+    "Windows 11",
+    "Windows 8",
+    "Windows 7",
+    "Linux",
+    "macOS",
+]
+
+print("Lista de los Sistemas Operativos:")
+print("Seleccione el sistema operativo:")
+for i, sistema_operativo in enumerate(sistemas_operativos):
+    print(f"{i + 1}. {sistema_operativo}")
+
+# Pedir al usuario que elija un sistema operativo
+indice = int(input("Ingrese el sistema operativo: "))
+
+# Verificar la validez del índice ingresado
+if indice < 1 or indice > len(sistemas_operativos):
+    print("¡Índice inválido!")
+else:
+    sistema_operativo = sistemas_operativos[indice - 1]
+
+print(f"Sistema Operativo: {sistema_operativo}")
+print("-----------------------------------------------------------------------------------------------------------------------")
+
+
+print("Ejemplo de componentes adicionale : Monitor: HP Serial: DRf4587 - Disco Mecánico Sata 500 GB - Targeta Grafica 4 GB  - N/D")
 Componentes_add = input("Ingrese componetes adicionales: ")
 
 # Procesos para detectar los datos de computador
@@ -172,19 +253,19 @@ if clave == "4020":
     # Servidor
     url = "https://sys.integratic.com.co/DACP/procesos/proceso_python.php"
     # Local
-    # url = "http://localhost/Proyectos_Integratic/sistema-base/python/proceso_python.php"
+    #  url = "http://localhost/Proyectos_Integratic/sistema-base/python/proceso_python.php"
     #--------------------------------------------------------------------------------------------------------------------------------
     # Datos que quieres enviar
     data = {
     "empresa":emprersa,    
     "nombre": nom_tec,
-    "fecha": fecha_actual,
+    "fecha": fecha_formateada,
     "hora" : hora_actual,
-    "sede": sede,
+    "sede": sede_p,
     "departamento": departamento,
     "nom_usuario": nom_usuario,
     "activo_fijo": activo_fijo,
-    "tipo_equipo": tipo_equipo,
+    "tipo_equipo": tipo_E,
     "serial": V_serial,
     "modelo": V_modelo,
     "fabricante": fabricante,
@@ -194,7 +275,7 @@ if clave == "4020":
     "slots" : slots,
     "ip" : direccion_ip,
     "disco" : capacidad,
-    "so" : so,
+    "so" : sistema_operativo,
     "compo" : Componentes_add,
     }
   # Enviar la solicitud POST

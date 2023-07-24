@@ -126,7 +126,7 @@
 
   <h1>Ficha técnica por Sede</h1>
 
-<form method="post">
+<form action="Fichatecnica.php" method="post">
   <label for="sede">Seleccionar Sede:</label>
   <select id="sede" name="sede">
     <option value="">Seleccione una sede</option>
@@ -137,7 +137,6 @@
     <option value="U.A.E.G.B.S">U.A.E.G.B.S</option>
     <!-- Agrega más opciones según tus necesidades -->
   </select>
-
   <div class="form-submit-btn">
   <button type="submit" name="Formulario">Generar PDF</button>
   </div>
@@ -157,6 +156,9 @@ exit();
 
 
 </form>
+
+
+
 
 
   </div>

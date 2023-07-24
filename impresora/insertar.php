@@ -5,10 +5,11 @@ include("../procesos/conexion.php");
 // Obtener los valores de la sesión
 $username = $_SESSION['username'];
 
+$empresa = "D.A.C.P";
 define("VISITA", 1); 
 
 // Obtener los valores del formulario
-$datos_empresa = $_POST['empresa'];
+//$datos_empresa = $_POST['empresa'];
 $sede = $_POST['sede'];
 $departamento = $_POST['departamento'];
 $fecha = $_POST['fecha'];
@@ -32,7 +33,7 @@ $tipo_mant = $_POST["tipo_mant"];
 
 // Insertar los valores en la tabla datos_empresa
 $sql_datos_empresa = "INSERT INTO tbl_impresora(empresa, sede, departamento, nom_tec, fecha, hora, serial, activo_fijo, ip_equipo , tipo_equipo, modelo, fabricante, visita, diagnostico, recomendaciones, repuesto, detalle_repuesto ,tipo_mant) 
-VALUES ('$datos_empresa', '$sede', '$departamento', '$username','$fecha', '$hora', '$serial', '$activo_fijo', '$ip_equipo', '$tipo_equipo', '$modelo', '$fabricante',".VISITA.", '$observacion', '$recomendaciones', '$repuesto', '$detalle', '$tipo_mant')";
+VALUES ('$empresa', '$sede', '$departamento', '$username','$fecha', '$hora', '$serial', '$activo_fijo', '$ip_equipo', '$tipo_equipo', '$modelo', '$fabricante',".VISITA.", '$observacion', '$recomendaciones', '$repuesto', '$detalle', '$tipo_mant')";
 
 if ($conn->query($sql_datos_empresa) === TRUE) {
     // Obtener el ID del último registro insertado en datos_empresa

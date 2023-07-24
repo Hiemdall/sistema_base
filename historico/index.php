@@ -71,7 +71,7 @@
 
     </div>
 
-    <div class="list-opcion">
+  <div class="list-opcion">
     
     <ul>
       
@@ -79,28 +79,8 @@
       <li><a href="#" style="color: yellow;"><i class="fa fa-history" aria-hidden="true"></i> Historial</a></li>
       <li><a href="../impresora/"><i class="fa fa-print" aria-hidden="true"></i>  Dispositivos</a></li>
       <li><a href="/"><i class="fa fa-eye" aria-hidden="true"></i>  Vistas</a></li>
-      
+      <li><a href="./reportes/index.php"><i class="fa fa-history" aria-hidden="true"></i>  Reportes</a><li>
     
-
-    <script src="../js/script.js"></script>
-
-
-    <div class="dropdown">
-    <li class="dropbtn"><a href="index.php"><i class="fa fa-history" aria-hidden="true"></i>  Reporte</a><li>
-    <ul class="dropdown-content">
-    <li><a href="reporte_sede.php">Ficha sede</a></li>
-    <li><a href="reporte_sede_historial.php">historial Sede</a></li>
-
-    <li><a href="/">Serial Ficha</a></li>
-    <li><a href="/">Serial Historial</a></li>
-
-    <li><a href="reporte_general.php">General Ficha</a></li>
-    <li><a href="reporte_general_historial.php">General Historial</a></li>
-
-    <li><a href="dispositivo_general.php">Dispositivo general</a></li>
-    <li><a href="reporte_dispositivos.php">Dispositivo sede</a></li>
-    </ul>
-    </div>
     </ul>
     
   </div>
